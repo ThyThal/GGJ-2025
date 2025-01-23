@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu( fileName = "New Dialogue Node", menuName = "Scriptable Objects/New Dialogue Node")]
@@ -32,10 +33,11 @@ public class DialogueNodeSO : ScriptableObject
     }
 }
 
+[Serializable]
 public struct DialogueLine
 {
-    public string dialogueID;
-    public bool player;
+    public CharacterDataSO character;
+    [TextArea] public string dialogueID;
     public bool isDecisionLine;
 }
 

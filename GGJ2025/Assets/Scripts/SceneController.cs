@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -11,6 +13,8 @@ public class SceneController : MonoBehaviour
     [SerializeField] private Vector3 otherCharacterPosition;
     
     [SerializeField] private DialogueController dialogueController;
+
+    [ShowInInspector] private Dictionary<CharacterDataSO, Person> test;
 
     private bool isWritingDialogue = false;
     private void OnEnable()

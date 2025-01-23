@@ -8,7 +8,9 @@ public class CharacterObject : MonoBehaviour
     [SerializeField] protected CharacterDataSO data;
     [SerializeField] protected SpriteRenderer bodySpriteRenderer;
     [SerializeField] protected SpriteRenderer faceSpriteRenderer;
-    [SerializeField] protected AudioClip currentVoice;
+    [SerializeField] protected AudioSource audioSource;
+
+    protected AudioClip currentVoice;
 
     public void SetData(CharacterDataSO data, BubbleType initialType = BubbleType.Normal)
     {
@@ -16,6 +18,16 @@ public class CharacterObject : MonoBehaviour
         
         bodySpriteRenderer.sprite = data.bodySprite;
         faceSpriteRenderer.sprite = data.GetFace(initialType);
-        currentVoice = data.GetVoice(initialType);
+        ChangeVoice(initialType);
+    }
+
+    public void ChangeVoice(BubbleType type = BubbleType.Normal)
+    {
+        currentVoice = data.GetVoice(type);
+    }
+
+    public void ChangeFace(BubbleType type = BubbleType.Normal)
+    {
+        faceSpriteRenderer.sprite = data.GetFace(type);
     }
 }

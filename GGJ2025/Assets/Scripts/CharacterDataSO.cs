@@ -7,6 +7,9 @@ using UnityEngine.TextCore.Text;
 [CreateAssetMenu(fileName = "New Character Data", menuName = "Scriptable Objects/Character Data")]
 public class CharacterDataSO : ScriptableObject
 {
+    [Header("Info")]
+    public string characterName;
+        
     [Header("Body")]
     public Sprite bodySprite;
     
