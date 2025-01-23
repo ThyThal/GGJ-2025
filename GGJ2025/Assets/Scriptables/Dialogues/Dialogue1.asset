@@ -22,9 +22,6 @@ MonoBehaviour:
   - character: {fileID: 0}
     dialogueID: Chau
     isDecisionLine: 1
-  - character: {fileID: 0}
-    dialogueID: ASFas f
-    isDecisionLine: 0
   isDecision: 0
   normalNextDialogue: {fileID: 11400000, guid: 2961e42388ef5704cba238c371dcbabc, type: 2}
   screamNextDialogue: {fileID: 11400000, guid: f3d40577d7b6a2041a02828be48955c4, type: 2}
