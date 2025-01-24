@@ -12,7 +12,7 @@ public class BubblesUIManager : MonoBehaviour
     [SerializeField] private BubbleUI[] playerBubbles;
     [SerializeField] private BubbleUI[] otherCharacterBubbles;
 
-    [SerializeField] private BubbleEmotionSprite[] bubbleSprites;
+    [SerializeField] private EmotionBubbleDataSO bubbleSprites;
     
     public TextMeshProUGUI GetBubbleTarget(bool isPlayer, int index, Emotion emotion)
     {
@@ -24,7 +24,7 @@ public class BubblesUIManager : MonoBehaviour
         
         BubbleUI targetBubble = isPlayer ? playerBubbles[index] : otherCharacterBubbles[index];
         targetBubble.Show();
-        targetBubble.SetSprite(bubbleSprites.FirstOrDefault(b => b.emotion == emotion).sprite);
+        targetBubble.SetSprite(bubbleSprites.GetSpriteFromEmotion(emotion));
         
         return targetBubble.TextComponent;
     }

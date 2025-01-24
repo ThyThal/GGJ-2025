@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      screamingdialogue_0: 6242369578910039535
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

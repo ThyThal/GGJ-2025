@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ComicBackgroundYellow_0: 4022836619013373077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

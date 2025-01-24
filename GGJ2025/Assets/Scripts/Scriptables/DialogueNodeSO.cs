@@ -34,6 +34,9 @@ public struct DialogueLine
     [TextArea] public string dialogueID;
     public bool isDecisionLine;
     public Emotion emotion;
+    [Range(0.03f, 0.1f)]
+    public float typeSpeed;
+    public float dialogueTime;
 }
 
 [Serializable]
@@ -47,5 +50,6 @@ public enum Emotion
 {
     Normal,
     Scream,
-    Thinking
+    Thinking,
+    Undefined
 }

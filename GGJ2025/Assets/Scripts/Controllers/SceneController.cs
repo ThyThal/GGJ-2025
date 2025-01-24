@@ -15,6 +15,7 @@ public class SceneController : MonoBehaviour
     
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private BubblesUIManager bubblesUIManager;
+    [SerializeField] private DecisionsUIManager decisionsUIManager;
     [SerializeField] private SpriteRenderer backgroundRenderer;
     
     [SerializeField] private CharacterObject playerCharacter;
@@ -24,14 +25,17 @@ public class SceneController : MonoBehaviour
 
     SceneDataSO currentSceneData;
 
+    private float decisionTimer;
+
     private bool isWritingDialogue = false;
     private bool playerChose = false;
-    private Emotion playerChoice;
+    private Emotion playerDecision;
     private void OnEnable()
     {
         dialogueController.OnDialogueChanged += DialogueChangedHandler;
         dialogueController.OnDialogueLineChanged += LineChangedHandler;
         dialogueController.OnDialogueFinished += DialogueFinishedHandler;
+        decisionsUIManager.OnPlayerClickedDecision += OnPlayerChoseHandler;
     }
 
     private void OnDisable()
@@ -39,6 +43,20 @@ public class SceneController : MonoBehaviour
         dialogueController.OnDialogueChanged -= DialogueChangedHandler;
         dialogueController.OnDialogueLineChanged -= LineChangedHandler;
         dialogueController.OnDialogueFinished -= DialogueFinishedHandler;
+        decisionsUIManager.OnPlayerClickedDecision += OnPlayerChoseHandler;
+    }
+
+    private void Update()
+    {
+        if (decisionTimer > 0)
+        {
+            decisionTimer -= Time.deltaTime;
+            if (decisionTimer <= 0)
+            {
+                
+                playerChose = true;
+            }
+        }
     }
 
     private void DialogueFinishedHandler()
@@ -61,10 +79,11 @@ public class SceneController : MonoBehaviour
         {
             StartCoroutine(WriteDialogueLineRoutine(newLine, dialogueController.CurrentLineIndex));
         }
-        else
+        else // Start decision process
         {
             // WriteDecisionLine();
-            StartDialogueTimer(dialogueController.CurrentDialogue, newLine);
+            WriteDialogueLineInstantly(newLine, dialogueController.CurrentLineIndex);
+            StartDecisionTimer(dialogueController.CurrentDialogue, newLine);
         }
     }
     private void DialogueChangedHandler(DialogueNodeSO newDialogue)
@@ -100,48 +119,69 @@ public class SceneController : MonoBehaviour
         otherCharacter.SetData(currentSceneData.otherCharacter);
     }
 
-    private void StartDialogueTimer(DialogueNodeSO currentDialogue, DialogueLine currentLine)
+    private void StartDecisionTimer(DialogueNodeSO currentDialogue, DialogueLine currentLine)
     {
+        decisionsUIManager.Setup(currentDialogue.GetPossibleEmotions());
+        
+        //ResetDecision();
+        decisionTimer = currentLine.dialogueTime;
+        
         // Start timer, wait for player decision
+
     }
-    
+
+    private void ResetDecision()
+    {
+        decisionTimer = 0;
+        playerChose = false;
+    }
 
     public void MoveToNextDialogue()
     {
         // Get next dialogue according to choice
-        dialogueController.NextDialogue(playerChoice);
+        dialogueController.NextDialogue(playerDecision);
         
         // Reset player choice
-        playerChoice = default;
+        playerDecision = default;
         playerChose = false;
+        decisionTimer = 0;
         
         nextButton.SetActive(false);
     }
 
-    public void OnPlayerChoseHandler()
+    public void OnPlayerChoseHandler(Emotion decision)
     {
+        if (playerChose) return;
         
+        playerChose = true;
+        playerDecision = decision;
+
+        decisionsUIManager.Hide();
+        StartCoroutine(WriteDialogueLineRoutine(dialogueController.CurrentLine, dialogueController.CurrentLineIndex, true));
     }
     
-    private void WriteDialogueLine(DialogueLine newLine, int index)
+    private void WriteDialogueLineInstantly(DialogueLine newLine, int index)
     {
-        
+        // To write line that needs a decision, before deciding and rewriting it with animation and audio
+        var bubble = bubblesUIManager.GetBubbleTarget(newLine.isPlayerLine, index, Emotion.Undefined);
     }
     
-    private IEnumerator WriteDialogueLineRoutine(DialogueLine newLine, int index)
+    private IEnumerator WriteDialogueLineRoutine(DialogueLine newLine, int index, bool isDecisionLine = false)
     {
-        var bubble = bubblesUIManager.GetBubbleTarget(newLine.isPlayerLine, index, newLine.emotion);
+        var bubble = bubblesUIManager.GetBubbleTarget(newLine.isPlayerLine, index, isDecisionLine ? playerDecision : newLine.emotion);
         isWritingDialogue = true;
 
         char[] line = newLine.dialogueID.ToCharArray();
         
+        // TODO: Wait for bubble anim to show before start writing
+        
         for (int i = 0; i < line.Length; i++)
         {
             bubble.text += line[i];
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(newLine.typeSpeed);
         }
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(newLine.dialogueTime);
 
         isWritingDialogue = false;
         
