@@ -12,17 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
   m_Name: Dialoge 2-1
   m_EditorClassIdentifier: 
-  isDecision: 0
   nextDialogues: []
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: AAAAAAAAAAAA
     isDecisionLine: 0
     emotion: 1
+    typeSpeed: 0.05
+    dialogueTime: 1
   - isPlayerLine: 1
     dialogueID: que te pasa flaco
     isDecisionLine: 0
     emotion: 2
+    typeSpeed: 0.05
+    dialogueTime: 1
   initialPlayerEmotion: 0
   initialOtherEmotion: 1
   sceneData: {fileID: 11400000, guid: 34bfe73a08255654fb15327e9f78918d, type: 2}

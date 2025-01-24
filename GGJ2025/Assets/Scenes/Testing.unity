@@ -2147,9 +2147,9 @@ RectTransform:
   - {fileID: 183503628}
   m_Father: {fileID: 1683569071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 2.25, y: -0.5}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1084085549
@@ -2328,7 +2328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1215087872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3597,9 +3597,9 @@ RectTransform:
   - {fileID: 1075749098}
   m_Father: {fileID: 1683569071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0.75, y: -0.5}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1861996331
@@ -4150,7 +4150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueController: {fileID: 647312677}
   bubblesUIManager: {fileID: 2021433680}
-  decisionsUIManager: {fileID: 0}
+  decisionsUIManager: {fileID: 1215087872}
   backgroundRenderer: {fileID: 493740525}
   playerCharacter: {fileID: 1824582650}
   otherCharacter: {fileID: 1905483591}
