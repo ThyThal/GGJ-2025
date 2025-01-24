@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
-  m_Name: Dialoge 1-1
+  m_Script: {fileID: 11500000, guid: 3e69567dd4f392a4091a58922855100f, type: 3}
+  m_Name: Scene 2
   m_EditorClassIdentifier: 
-  dialogueLines: []
-  isDecision: 0
-  normalNextDialogue: {fileID: 0}
-  screamNextDialogue: {fileID: 0}
-  thinkingNextDialogue: {fileID: 0}
+  sceneName: Scene 1
+  background: {fileID: 5576546608880503339, guid: 8a2c55c7d5b42aa4da17264df0d604c9, type: 3}
+  otherCharacter: {fileID: 11400000, guid: 8ebf8c49c2f4976479e658336f4bee31, type: 2}

@@ -13,9 +13,5 @@ MonoBehaviour:
   m_Name: Scene 1
   m_EditorClassIdentifier: 
   sceneName: Scene 1
-  characters:
-  - character: {fileID: 1342161345905591665, guid: 741bbbe194a2d204bb1147f87b0319e7, type: 3}
-    position: {x: 0, y: 0, z: 0}
-  - character: {fileID: 2439882148448790536, guid: 871b83ee8506c8c4897c48df81934694, type: 3}
-    position: {x: 0, y: 0, z: 0}
-  initialDialogue: {fileID: 11400000, guid: 054fa82a4be194e42af0843191c27aa3, type: 2}
+  background: {fileID: -8855690875876968426, guid: 006eaed5329f1074ca4df44a57a3e56b, type: 3}
+  otherCharacter: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}

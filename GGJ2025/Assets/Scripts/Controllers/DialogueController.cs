@@ -7,37 +7,48 @@ public class DialogueController : MonoBehaviour
 {
     [SerializeField] private DialogueNodeSO initialDialogue;
 
-    private int currentLineIndex = 0;
-    DialogueNodeSO currentDialogue;
+    private int _currentLineIndex = 0;
+    DialogueNodeSO _currentDialogue;
     
+    public DialogueNodeSO CurrentDialogue => _currentDialogue;
+    public int CurrentLineIndex => _currentLineIndex;
+    public DialogueLine CurrentLine => _currentDialogue.dialogueLines[_currentLineIndex];
     public event Action<DialogueNodeSO> OnDialogueChanged;
     public event Action<DialogueLine> OnDialogueLineChanged;
+    public event Action OnDialogueFinished;
+
+    private void Awake()
+    {
+        _currentDialogue = initialDialogue;
+    }
+
     void Start()
     {
-        currentDialogue = initialDialogue;
+        // TODO: Para iniciar facil, cambiar
+        OnDialogueChanged?.Invoke(_currentDialogue);
     }
-    
-    public void NextDialogue(BubbleType decision = BubbleType.Normal)
+    public void NextDialogue(Emotion decision = Emotion.Normal)
     {
         // Reset line index
+        _currentLineIndex = 0;
         
-        currentLineIndex = 0;
-        var previousDialogue = currentDialogue;
-        currentDialogue = previousDialogue.GetNextDialogue(decision);
+        var previousDialogue = _currentDialogue;
+        _currentDialogue = previousDialogue.GetNextDialogue(decision);
         
-        OnDialogueChanged?.Invoke(currentDialogue);
+        OnDialogueChanged?.Invoke(_currentDialogue);
     }
 
     // TODO: A definir: El dialogo a elegir siempre se escribe ultimo? Se van a escribir todos los dialogos a la vez y se elige solo la burbuja?
     // TODO: Se va a escribir siempre un dialogo de otro personaje y luego del jugador? O se podran intercalar libremente?
     public void NextLine()
     {
-        if (currentLineIndex < currentDialogue.TotalLines - 1)
+        if (_currentLineIndex < _currentDialogue.TotalLines - 1)
         {
-            currentLineIndex++;
-            var newLine = currentDialogue.dialogueLines[currentLineIndex];
+            _currentLineIndex++;
+            var newLine = _currentDialogue.dialogueLines[_currentLineIndex];
             
             OnDialogueLineChanged?.Invoke(newLine);
         }
+        else OnDialogueFinished?.Invoke();
     }
 }

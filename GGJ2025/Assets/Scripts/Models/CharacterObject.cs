@@ -12,22 +12,29 @@ public class CharacterObject : MonoBehaviour
 
     protected AudioClip currentVoice;
 
-    public void SetData(CharacterDataSO data, BubbleType initialType = BubbleType.Normal)
+    public void SetData(CharacterDataSO data, Emotion initialType = Emotion.Normal)
     {
         this.data = data;
         
         bodySpriteRenderer.sprite = data.bodySprite;
-        faceSpriteRenderer.sprite = data.GetFace(initialType);
-        ChangeVoice(initialType);
+        ChangeFace(initialType);
+        //ChangeVoice(initialType);
     }
 
-    public void ChangeVoice(BubbleType type = BubbleType.Normal)
+    public void UpdateEmotion(Emotion type)
+    {
+        //ChangeVoice(type);
+        ChangeFace(type);
+    }
+    public void ChangeVoice(Emotion type = Emotion.Normal)
     {
         currentVoice = data.GetVoice(type);
     }
 
-    public void ChangeFace(BubbleType type = BubbleType.Normal)
+    public void ChangeFace(Emotion type = Emotion.Normal)
     {
         faceSpriteRenderer.sprite = data.GetFace(type);
     }
+    
+    public bool IsActive => gameObject.activeInHierarchy;
 }

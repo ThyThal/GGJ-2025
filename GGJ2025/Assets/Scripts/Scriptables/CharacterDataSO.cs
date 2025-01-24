@@ -23,24 +23,24 @@ public class CharacterDataSO : ScriptableObject
     public AudioClip angryVoice;
     public AudioClip thinkingVoice;
 
-    public Sprite GetFace(BubbleType type)
+    public Sprite GetFace(Emotion type)
     {
         return type switch
         {
-            BubbleType.Normal => normalFaceSprite,
-            BubbleType.Scream => angryFaceSprite,
-            BubbleType.Thinking => thinkingFaceSprite,
+            Emotion.Normal => normalFaceSprite,
+            Emotion.Scream => angryFaceSprite,
+            Emotion.Thinking => thinkingFaceSprite,
             _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
         };
     }
     
-    public AudioClip GetVoice(BubbleType type)
+    public AudioClip GetVoice(Emotion type)
     {
         return type switch
         {
-            BubbleType.Normal => normalVoice,
-            BubbleType.Scream => angryVoice,
-            BubbleType.Thinking => thinkingVoice,
+            Emotion.Normal => normalVoice,
+            Emotion.Scream => angryVoice,
+            Emotion.Thinking => thinkingVoice,
             _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
         };
     }

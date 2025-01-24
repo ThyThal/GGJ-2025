@@ -7,22 +7,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SceneDataSO", menuName = "Scriptable Objects/SceneDataSO")]
 public class SceneDataSO : ScriptableObject
 {
-    [SerializeField] private string sceneName = "Scene 1";
-    [SerializeField] List<CharacterAndPosition> characters = new List<CharacterAndPosition>();
-    [SerializeField] private DialogueNodeSO initialDialogue;
-    
-    [ShowInInspector] private Dictionary<CharacterDataSO, Person> test;
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string sceneName = "Scene 1";
+    public Sprite background;
+    public CharacterDataSO otherCharacter;
+    //public DialogueNodeSO initialDialogue;
 }
 
 [Serializable]

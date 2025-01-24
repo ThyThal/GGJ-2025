@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8043d3c1381e6b24fa4997d0e7d6445f, type: 3}
   m_Name: Detective
   m_EditorClassIdentifier: 
-  bodySprite: {fileID: 21300000, guid: 395f6b9556f14704790df6035be6ee3a, type: 3}
-  normalFaceSprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  angryFaceSprite: {fileID: 0}
-  thinkingFaceSprite: {fileID: 0}
+  characterName: 
+  bodySprite: {fileID: 21300000, guid: 748ae8b33df036b46a86e0387f1602cf, type: 3}
+  normalFaceSprite: {fileID: 4870768335085534292, guid: ae0f163b897967f4eb5950eaa13a1469, type: 3}
+  angryFaceSprite: {fileID: -5319128435067074178, guid: 5c7db1d5f8cdeca40b74f97d0671dd22, type: 3}
+  thinkingFaceSprite: {fileID: -4137265307173148636, guid: 23ec584e4a864994a98e4bb66d490bb8, type: 3}
   normalVoice: {fileID: 0}
   angryVoice: {fileID: 0}
   thinkingVoice: {fileID: 0}

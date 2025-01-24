@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
-  m_Name: Dialoge 1-2
+  m_Name: Dialoge 2-2
   m_EditorClassIdentifier: 
   dialogueLines: []
   isDecision: 0
