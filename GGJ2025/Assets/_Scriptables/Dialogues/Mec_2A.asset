@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Mec_2A
   m_EditorClassIdentifier: 
   nextDialogues:
-  - emotion: 1
-    dialogueNode: {fileID: 11400000, guid: 530bc18a610e55442bf3799a2359a7d4, type: 2}
   - emotion: 2
+    dialogueNode: {fileID: 11400000, guid: 530bc18a610e55442bf3799a2359a7d4, type: 2}
+  - emotion: 1
     dialogueNode: {fileID: 11400000, guid: edd432da21f5c0b47ba08257dbdfad99, type: 2}
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "\xA1H-hoy antes d-del incidente!"
     isDecisionLine: 0
-    emotion: 1
+    emotion: 2
     typeSpeed: 0.055
     dialogueTime: 1
     decisionTime: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
   - isPlayerLine: 0
     dialogueID: "\xA1Le juro q-que yo no hice nada, p-por favor!"
     isDecisionLine: 0
-    emotion: 1
+    emotion: 2
     typeSpeed: 0.05
     dialogueTime: 1
     decisionTime: 0
@@ -42,8 +42,8 @@ MonoBehaviour:
     dialogueTime: 1
     decisionTime: 5
     branches: []
-  initialPlayerEmotion: 0
-  initialOtherEmotion: 0
+  initialPlayerEmotion: 3
+  initialOtherEmotion: 2
   sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}
   isInteractionEnd: 0
   characterToUnlock: {fileID: 0}

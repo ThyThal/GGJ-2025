@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mec_1
   m_EditorClassIdentifier: 
   nextDialogues:
-  - emotion: 1
+  - emotion: 2
     dialogueNode: {fileID: 11400000, guid: 9ad3ca4e6d628b44493e3002545093e1, type: 2}
   - emotion: 0
     dialogueNode: {fileID: 0}
@@ -37,7 +37,7 @@ MonoBehaviour:
   - isPlayerLine: 0
     dialogueID: "\xA1Oh, c-cierto! No quise\u2026 perd\xF3n"
     isDecisionLine: 0
-    emotion: 1
+    emotion: 2
     typeSpeed: 0.04
     dialogueTime: 1.5
     decisionTime: 0

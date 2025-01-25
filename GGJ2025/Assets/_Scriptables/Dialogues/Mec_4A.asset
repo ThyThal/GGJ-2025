@@ -17,7 +17,7 @@ MonoBehaviour:
   - isPlayerLine: 0
     dialogueID: "Yo\u2026 no, es que\u2026"
     isDecisionLine: 0
-    emotion: 2
+    emotion: 0
     typeSpeed: 0.05
     dialogueTime: 2
     decisionTime: 0

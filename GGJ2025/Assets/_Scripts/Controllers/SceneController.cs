@@ -181,7 +181,7 @@ public class SceneController : MonoBehaviour
         decisionsUIManager.Setup(currentDialogue.GetPossibleEmotions());
         
         //ResetDecision();
-        timerUI.UpdateMax(5); // Cambiar a que el max y timer dependan de la line, testeando ahora
+        timerUI.UpdateMax(currentLine.decisionTime); // Cambiar a que el max y timer dependan de la line, testeando ahora
         decisionTimer = currentLine.decisionTime;
         
         // Start timer, wait for player decision

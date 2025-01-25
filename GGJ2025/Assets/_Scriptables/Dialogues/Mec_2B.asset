@@ -12,8 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
   m_Name: Mec_2B
   m_EditorClassIdentifier: 
-  nextDialogues: []
-  dialogueLines: []
+  nextDialogues:
+  - emotion: 2
+    dialogueNode: {fileID: 11400000, guid: d4a401f049ca3c84fba9d647c292dbb4, type: 2}
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: e673ae5062a80d547a3dd883340e5431, type: 2}
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "Oh, ehm... hoy por la ma\xF1ana la vi en el taller junto al conserje."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.06
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFEso es todo? Hay algo que no me est\xE1 queriendo decir, \xBFno?"
+    isDecisionLine: 1
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 0
+    decisionTime: 5
+    branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0
   sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}

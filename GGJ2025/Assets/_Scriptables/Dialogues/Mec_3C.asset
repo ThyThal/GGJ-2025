@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
-  m_Name: Mec_3B
+  m_Name: Mec_3C
   m_EditorClassIdentifier: 
   nextDialogues:
   - emotion: 2
@@ -19,9 +19,9 @@ MonoBehaviour:
     dialogueNode: {fileID: 11400000, guid: e673ae5062a80d547a3dd883340e5431, type: 2}
   dialogueLines:
   - isPlayerLine: 0
-    dialogueID: "Yo\u2026 no, es que\u2026"
+    dialogueID: "\xA1Le juro q-que yo no hice nada, p-por favor!"
     isDecisionLine: 0
-    emotion: 0
+    emotion: 2
     typeSpeed: 0.05
     dialogueTime: 2
     decisionTime: 0

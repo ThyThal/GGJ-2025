@@ -18,9 +18,10 @@ MonoBehaviour:
     dialogueID: "B-bueno, \xA1por favor no le diga al conserje!, le promet\xED no
       decir nada, pero\u2026"
     isDecisionLine: 0
-    emotion: 2
+    emotion: 1
     typeSpeed: 0.05
     dialogueTime: 2
+    decisionTime: 0
     branches: []
   - isPlayerLine: 0
     dialogueID: Los vi subiendo juntos al piso superior poco antes del incidente.
@@ -28,6 +29,7 @@ MonoBehaviour:
     emotion: 0
     typeSpeed: 0.05
     dialogueTime: 1
+    decisionTime: 0
     branches: []
   - isPlayerLine: 0
     dialogueID: "\xA1Eso es todo lo que s\xE9, lo juro!, si quiere m\xE1s informaci\xF3n
@@ -36,6 +38,7 @@ MonoBehaviour:
     emotion: 0
     typeSpeed: 0.04
     dialogueTime: 2
+    decisionTime: 0
     branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0
