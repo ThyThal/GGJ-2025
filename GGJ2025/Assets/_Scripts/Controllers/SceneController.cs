@@ -275,31 +275,21 @@ public class SceneController : MonoBehaviour
         }
         else
         {
-            Debug.Log("BubbleComponents found, clearing text.");
             bubbleComponents.textComponent.text = string.Empty;
         }
 
         char[] line = newLine.dialogueID.ToCharArray();
-
-        // Debug: Log the dialogue line
-        Debug.Log($"Dialogue Line: {newLine.dialogueID}");
-
+        
         // Animate the bubble with the appropriate emotion
         yield return bubblesUIManager.AnimateBubble(targetBubble, newLine.isDecisionLine ? playerDecision : newLine.emotion);
 
+        var textComp = targetBubble.GetCurrentBubbleComponents().textComponent;
+        textComp.text = string.Empty;
         for (int i = 0; i < line.Length; i++)
         {
-            // Debug: Log each character as it is being added
-            Debug.Log($"Writing character: {line[i]}");
-
-            bubbleComponents.textComponent.text += line[i];
-
+            textComp.text += line[i];
             // Play audio based on the emotion of the line
             dialogueController.writingAudio.PlayEmotionAudio(newLine.emotion);
-
-            // Debug: Log audio playing
-            Debug.Log($"Playing emotion audio for emotion: {newLine.emotion}");
-
             yield return new WaitForSeconds(newLine.typeSpeed);
         }
 

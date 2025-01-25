@@ -23,8 +23,8 @@ public class BubbleUI : MonoBehaviour
         return CurrentEmotion;
     }
 
-    private GameObject currentPrefab;
-    private BubbleComponents currentBubbleComponents;
+    [SerializeField] private GameObject currentPrefab;
+    [SerializeField] private BubbleComponents currentBubbleComponents;
 
     public void SetEmotion(Emotion emotion)
     {
@@ -73,6 +73,7 @@ public class BubbleUI : MonoBehaviour
 
             // Set the new prefab and activate it
             currentPrefab = emotionPrefab.prefab;
+            currentBubbleComponents = GetCurrentBubbleComponents();
             currentPrefab.SetActive(true);
         }
 
@@ -102,27 +103,7 @@ public class BubbleUI : MonoBehaviour
 
         isShowing = false;
         transform.localScale = Vector3.zero;
-
-        // Destroy current prefab if any
-        if (currentPrefab != null)
-        {
-            Destroy(currentPrefab);
-        }
-    }
-
-    public bool IsPrefabSet(GameObject prefab)
-    {
-        return currentPrefab != null && currentPrefab == prefab;
-    }
-
-    public void SetPrefab(GameObject prefab)
-    {
-        // If a prefab is set, instantiate it as a child of the current game object
-        if (prefab != null && currentPrefab == null)
-        {
-            currentPrefab = prefab;
-            currentPrefab.SetActive(false); // Ensure it starts inactive
-        }
+        currentPrefab = null;
     }
 }
 
