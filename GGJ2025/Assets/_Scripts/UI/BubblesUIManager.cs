@@ -15,19 +15,34 @@ public class BubblesUIManager : MonoBehaviour
 
     [FormerlySerializedAs("bubbleSprites")] [SerializeField] private EmotionSpriteDataSO spriteSprites;
     
-    public TextMeshProUGUI GetBubbleTarget(bool isPlayer, int index, Emotion emotion)
-    {        
+    public BubbleUI GetTargetBubble(bool isPlayer)
+    {
         BubbleUI targetBubble = isPlayer ? playerBubble : otherCharacterBubble;
-        targetBubble.Show();
-        targetBubble.SetSprite(spriteSprites.GetSpriteFromEmotion(emotion));
-        
-        return targetBubble.TextComponent;
+        return targetBubble;
+    }
+    
+    public IEnumerator AnimateBubble(BubbleUI target, Emotion emotion)
+    {
+        var newSprite = spriteSprites.GetSpriteFromEmotion(emotion);
+
+        // Don't animate if sprite already set
+        if (target.IsSpriteSet(newSprite) && target.IsShowing) yield break;
+
+        if (target.IsShowing)
+        {
+            target.Hide();
+            yield return new WaitForSeconds(target.HideTime);
+            //waitTime += targetBubble.HideTime;
+        }
+        target.SetSprite(newSprite);
+        target.Show();
+        yield return new WaitForSeconds(target.ShowTime);
     }
 
     public void HideAllBubbles()
     {
-        playerBubble.Hide();
-        otherCharacterBubble.Hide();
+        playerBubble.TurnOff();
+        otherCharacterBubble.TurnOff();
     }
 }
 

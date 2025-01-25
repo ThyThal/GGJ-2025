@@ -93,12 +93,12 @@ public class SceneController : MonoBehaviour
         {
             // Update target character's face and voice according to emotion
             target.UpdateEmotion(newLine.emotion);
-            StartCoroutine(WriteDialogueLineRoutine(newLine, dialogueController.CurrentLineIndex));
+            StartCoroutine(WriteDialogueLineRoutine(newLine));
         }
         else // Start decision process
         {
             // WriteDecisionLine();
-            WriteDialogueLineInstantly(newLine, dialogueController.CurrentLineIndex);
+            StartCoroutine(WriteDecisionDialogue(newLine));
             StartDecisionTimer(dialogueController.CurrentDialogue, newLine);
         }
     }
@@ -231,33 +231,36 @@ public class SceneController : MonoBehaviour
 
         playerCharacter.UpdateEmotion(decision);
         decisionsUIManager.Hide();
-        StartCoroutine(WriteDialogueLineRoutine(dialogueController.CurrentLine, dialogueController.CurrentLineIndex, true));
+        StartCoroutine(WriteDialogueLineRoutine(dialogueController.CurrentLine, true));
         
         var branch = dialogueController.CurrentDialogue
             .GetEmotionLineBranch(decision, dialogueController.CurrentLineIndex).branchLines;
         if(branch is not null) dialogueController.AddNewLines(branch);
     }
     
-    private void WriteDialogueLineInstantly(DialogueLine newLine, int index)
+    private IEnumerator WriteDecisionDialogue(DialogueLine newLine)
     {
+        // TODO: Maybe do Coroutine as well, and animate Undefined bubble
         // To write line that needs a decision, before deciding and rewriting it with animation and audio
-        var bubble = bubblesUIManager.GetBubbleTarget(newLine.isPlayerLine, index, Emotion.Undefined);
-        bubble.text = newLine.dialogueID;
+        var targetBubble = bubblesUIManager.GetTargetBubble(newLine.isPlayerLine);
+        yield return bubblesUIManager.AnimateBubble(targetBubble, Emotion.Undefined);
+        targetBubble.TextComponent.text = newLine.dialogueID;
     }
     
-    private IEnumerator WriteDialogueLineRoutine(DialogueLine newLine, int index, bool isDecisionLine = false)
+    private IEnumerator WriteDialogueLineRoutine(DialogueLine newLine, bool isDecisionLine = false)
     {
         //TODO: ACHICAR LA OTRA BURBUJA Y OSCURECER
-        var bubble = bubblesUIManager.GetBubbleTarget(newLine.isPlayerLine, index, isDecisionLine ? playerDecision : newLine.emotion);
+        var targetBubble = bubblesUIManager.GetTargetBubble(newLine.isPlayerLine);
         isWritingDialogue = true;
-        bubble.text = string.Empty;
+        targetBubble.TextComponent.text = string.Empty;
         char[] line = newLine.dialogueID.ToCharArray();
         
-        // TODO: Wait for bubble anim to show before start writing
+        // TODO: WaitForSeconds dictionary?
+        yield return bubblesUIManager.AnimateBubble(targetBubble, newLine.isDecisionLine ? playerDecision : newLine.emotion);
         
         for (int i = 0; i < line.Length; i++)
         {
-            bubble.text += line[i];
+            targetBubble.TextComponent.text += line[i];
             dialogueController.writingAudio.PlayEmotionAudio(newLine.emotion);
             yield return new WaitForSeconds(newLine.typeSpeed);
         }
