@@ -1,0 +1,490 @@
+fileFormatVersion: 2
+guid: dc621dcf8315e614fa7353f91f77c23c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2482820029646460006
+    second: Asset_Decision_Burbuja_Susurro_0
+  - first:
+      213: -4390917355478367305
+    second: Asset_Decision_Burbuja_Susurro_1
+  - first:
+      213: 8531215106008273068
+    second: Asset_Decision_Burbuja_Susurro_2
+  - first:
+      213: 2742669266578422892
+    second: Asset_Decision_Burbuja_Susurro_3
+  - first:
+      213: -4694201731961115381
+    second: Asset_Decision_Burbuja_Susurro_4
+  - first:
+      213: -9014303277820020603
+    second: Asset_Decision_Burbuja_Susurro_5
+  - first:
+      213: -5170971789222951150
+    second: Asset_Decision_Burbuja_Susurro_6
+  - first:
+      213: -6483219911352079298
+    second: Asset_Decision_Burbuja_Susurro_7
+  - first:
+      213: -8713096806681484320
+    second: Asset_Decision_Burbuja_Susurro_8
+  - first:
+      213: 3083210895697146646
+    second: Asset_Decision_Burbuja_Susurro_9
+  - first:
+      213: -8541625101561694997
+    second: Asset_Decision_Burbuja_Susurro_10
+  - first:
+      213: 6361808239658242682
+    second: Asset_Decision_Burbuja_Susurro_11
+  - first:
+      213: -3713186685689937474
+    second: Asset_Decision_Burbuja_Susurro_12
+  - first:
+      213: 8410840091726345727
+    second: Asset_Decision_Burbuja_Susurro_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 225
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_0
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 154
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6645d4499afb47220800000000000000
+      internalID: 2482820029646460006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 161
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b34d94ede35013c0800000000000000
+      internalID: -4390917355478367305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_2
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 159
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0d11840f6f46670800000000000000
+      internalID: 8531215106008273068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 145
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6cb9caaa2bef0620800000000000000
+      internalID: 2742669266578422892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 138
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d2f6e4568dadeb0800000000000000
+      internalID: -4694201731961115381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_5
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 120
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588f5ebbde2c6e280800000000000000
+      internalID: -9014303277820020603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_6
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 112
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217cccffd840d38b0800000000000000
+      internalID: -5170971789222951150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 96
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cae1717d9f606a0800000000000000
+      internalID: -6483219911352079298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_8
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 93
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e3e8284e9cd41780800000000000000
+      internalID: -8713096806681484320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 78
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61374ad59f3c9ca20800000000000000
+      internalID: 3083210895697146646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 74
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be4fad0c93d067980800000000000000
+      internalID: -8541625101561694997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_11
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 65
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a729bfd33eea94850800000000000000
+      internalID: 6361808239658242682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_12
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 65
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb1cdb6f16c187cc0800000000000000
+      internalID: -3713186685689937474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset_Decision_Burbuja_Susurro_13
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 64
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff576f9308e49b470800000000000000
+      internalID: 8410840091726345727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Asset_Decision_Burbuja_Susurro_0: 2482820029646460006
+      Asset_Decision_Burbuja_Susurro_1: -4390917355478367305
+      Asset_Decision_Burbuja_Susurro_10: -8541625101561694997
+      Asset_Decision_Burbuja_Susurro_11: 6361808239658242682
+      Asset_Decision_Burbuja_Susurro_12: -3713186685689937474
+      Asset_Decision_Burbuja_Susurro_13: 8410840091726345727
+      Asset_Decision_Burbuja_Susurro_2: 8531215106008273068
+      Asset_Decision_Burbuja_Susurro_3: 2742669266578422892
+      Asset_Decision_Burbuja_Susurro_4: -4694201731961115381
+      Asset_Decision_Burbuja_Susurro_5: -9014303277820020603
+      Asset_Decision_Burbuja_Susurro_6: -5170971789222951150
+      Asset_Decision_Burbuja_Susurro_7: -6483219911352079298
+      Asset_Decision_Burbuja_Susurro_8: -8713096806681484320
+      Asset_Decision_Burbuja_Susurro_9: 3083210895697146646
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
