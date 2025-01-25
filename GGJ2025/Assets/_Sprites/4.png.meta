@@ -51,8 +51,13 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   spritePixelsToUnits: 64
   spriteBorder: {x: 123, y: 122, z: 81, w: 110}
+=======
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 123, y: 122, z: 81, w: 112}
+>>>>>>> Stashed changes
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1

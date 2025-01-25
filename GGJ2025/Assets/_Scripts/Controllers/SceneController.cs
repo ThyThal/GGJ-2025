@@ -148,7 +148,7 @@ public class SceneController : MonoBehaviour
         
         backgroundRenderer.sprite = currentSceneData.background;
 
-        // If new scene has character data, and it is different than current, update data and leave scene
+        // If new scene has character data, and it is different from current, update data and leave scene
         if (currentSceneData.otherCharacter)
         {
             if (otherCharacter.CurrentData != currentSceneData.otherCharacter)
@@ -244,31 +244,73 @@ public class SceneController : MonoBehaviour
         // To write line that needs a decision, before deciding and rewriting it with animation and audio
         var targetBubble = bubblesUIManager.GetTargetBubble(newLine.isPlayerLine);
         yield return bubblesUIManager.AnimateBubble(targetBubble, Emotion.Undefined);
-        targetBubble.TextComponent.text = newLine.dialogueID;
+        targetBubble.GetCurrentBubbleComponents().textComponent.text = newLine.dialogueID;
     }
     
     private IEnumerator WriteDialogueLineRoutine(DialogueLine newLine, bool isDecisionLine = false)
     {
-        //TODO: ACHICAR LA OTRA BURBUJA Y OSCURECER
+        // Debug: Log the beginning of the method and the parameters
+        Debug.Log($"WriteDialogueLineRoutine started. Player Line: {newLine.isPlayerLine}, Decision Line: {isDecisionLine}");
+
         var targetBubble = bubblesUIManager.GetTargetBubble(newLine.isPlayerLine);
+        
+        // Debug: Log the selected bubble
+        if (targetBubble == null)
+        {
+            Debug.LogError("Target bubble is null.");
+        }
+        else
+        {
+            Debug.Log($"Target bubble for {newLine.isPlayerLine} is: {targetBubble.gameObject.name}");
+        }
+
+        targetBubble.gameObject.SetActive(true);
         isWritingDialogue = true;
-        targetBubble.TextComponent.text = string.Empty;
+
+        // Clear the existing text in the bubble
+        var bubbleComponents = targetBubble.GetCurrentBubbleComponents();
+        if (bubbleComponents == null)
+        {
+            Debug.LogError("BubbleComponents not found in the target bubble.");
+        }
+        else
+        {
+            Debug.Log("BubbleComponents found, clearing text.");
+            bubbleComponents.textComponent.text = string.Empty;
+        }
+
         char[] line = newLine.dialogueID.ToCharArray();
-        
-        // TODO: WaitForSeconds dictionary?
+
+        // Debug: Log the dialogue line
+        Debug.Log($"Dialogue Line: {newLine.dialogueID}");
+
+        // Animate the bubble with the appropriate emotion
         yield return bubblesUIManager.AnimateBubble(targetBubble, newLine.isDecisionLine ? playerDecision : newLine.emotion);
-        
+
         for (int i = 0; i < line.Length; i++)
         {
-            targetBubble.TextComponent.text += line[i];
+            // Debug: Log each character as it is being added
+            Debug.Log($"Writing character: {line[i]}");
+
+            bubbleComponents.textComponent.text += line[i];
+
+            // Play audio based on the emotion of the line
             dialogueController.writingAudio.PlayEmotionAudio(newLine.emotion);
+
+            // Debug: Log audio playing
+            Debug.Log($"Playing emotion audio for emotion: {newLine.emotion}");
+
             yield return new WaitForSeconds(newLine.typeSpeed);
         }
-        
+
         yield return new WaitForSeconds(newLine.dialogueTime);
 
         isWritingDialogue = false;
-        //yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
+        // Debug: Log end of dialogue line writing
+        Debug.Log("Dialogue line writing complete.");
+
+        // Move to the next line
         dialogueController.NextLine();
     }
 }
