@@ -25,11 +25,6 @@ public class BubblesSequentialUIManager : MonoBehaviour
         
         BubbleUI targetBubble = isPlayer ? playerBubbles[index] : otherCharacterBubbles[index];
         targetBubble.Show();
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
-        
         return targetBubble.GetCurrentBubbleComponents().textComponent;
     }
 

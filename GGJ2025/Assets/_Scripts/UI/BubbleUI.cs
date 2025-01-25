@@ -12,27 +12,16 @@ public class BubbleUI : MonoBehaviour
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private Emotion CurrentEmotion;
     [SerializeField] public List<EmotionPrefab> emotionPrefabs;  // List of EmotionPrefab
-<<<<<<< Updated upstream
-
-    public TextMeshProUGUI TextComponent => textComponent;
-=======
     
->>>>>>> Stashed changes
     private bool isShowing;
     public float ShowTime => showTime;
     public float HideTime => hideTime;
     public bool IsShowing => isShowing;
-    public void SetEmotion(Emotion emotion)
-    {
-        CurrentEmotion = emotion;
-    }
-    
+
     public Emotion GetEmotion()
     {
         return CurrentEmotion;
     }
-
-    private GameObject currentPrefab;
 
     private GameObject currentPrefab;
     private BubbleComponents currentBubbleComponents;
@@ -40,11 +29,6 @@ public class BubbleUI : MonoBehaviour
     public void SetEmotion(Emotion emotion)
     {
         CurrentEmotion = emotion;
-    }
-    
-    public Emotion GetEmotion()
-    {
-        return CurrentEmotion;
     }
     
     public BubbleComponents GetCurrentBubbleComponents()
@@ -75,10 +59,6 @@ public class BubbleUI : MonoBehaviour
 
     public void Show()
     {
-<<<<<<< Updated upstream
-        //TODO: Tween animation
-=======
->>>>>>> Stashed changes
         // Find the prefab corresponding to the current emotion
         var emotionPrefab = emotionPrefabs.Find(ep => ep.emotion == CurrentEmotion);
 
@@ -96,11 +76,6 @@ public class BubbleUI : MonoBehaviour
             currentPrefab.SetActive(true);
         }
 
-<<<<<<< Updated upstream
-        // Show the bubble
-=======
-        // Always keep the BubbleUI game object active
->>>>>>> Stashed changes
         gameObject.SetActive(true);
         isShowing = true;
         LeanTween.scale(gameObject, Vector3.one, showTime).setEaseOutElastic();
@@ -135,15 +110,6 @@ public class BubbleUI : MonoBehaviour
         }
     }
 
-    public void SetPrefab(GameObject prefab)
-    {
-        // If a prefab is set, instantiate it as a child of the current game object
-        if (prefab != null && currentPrefab == null)
-        {
-            currentPrefab = Instantiate(prefab, transform); // Instantiate the prefab under this BubbleUI
-        }
-    }
-
     public bool IsPrefabSet(GameObject prefab)
     {
         return currentPrefab != null && currentPrefab == prefab;
@@ -158,14 +124,6 @@ public class BubbleUI : MonoBehaviour
             currentPrefab.SetActive(false); // Ensure it starts inactive
         }
     }
-<<<<<<< Updated upstream
-
-    public bool IsSpriteSet(Sprite sprite)
-    {
-        return image.sprite == sprite;
-    }
-=======
->>>>>>> Stashed changes
 }
 
 [Serializable]
