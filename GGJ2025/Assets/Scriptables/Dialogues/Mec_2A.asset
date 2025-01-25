@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Mec_2A
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: 530bc18a610e55442bf3799a2359a7d4, type: 2}
+  - emotion: 2
+    dialogueNode: {fileID: 11400000, guid: edd432da21f5c0b47ba08257dbdfad99, type: 2}
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "\xA1H-hoy antes d-del incidente!"
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.055
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xA1Le juro q-que yo no hice nada, p-por favor!"
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFEso es todo? Hay algo que no me est\xE1 queriendo decir, \xBFno?"
+    isDecisionLine: 1
+    emotion: 0
+    typeSpeed: 0.04
+    dialogueTime: 1
+    decisionTime: 5
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

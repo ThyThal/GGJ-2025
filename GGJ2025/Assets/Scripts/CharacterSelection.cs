@@ -9,18 +9,29 @@ public class CharacterSelection : MonoBehaviour
 {
     bool isSelected = false;
 
+    private void Start()
+    {
+        FadeController.Instance.FadeIn();
+    }
+
     public void CharacterSelected(CharacterDataSO character)
     {
         if (isSelected) return;
         
         if(GameProgression.Instance.SelectCharacter(character))
         {
-            SceneManager.LoadScene(2); // TODO: Cambiar a otro index/string/lo que sea
+            StartCoroutine(LoadScene(2)); // TODO: Cambiar a otro index/string/lo que sea
             isSelected = true;
         }
         else
         {
             
         }
+    }
+
+    public IEnumerator LoadScene(int sceneIndex)
+    {
+        yield return new WaitForSeconds(FadeController.Instance.FadeOut());
+        SceneManager.LoadScene(sceneIndex);
     }
 }

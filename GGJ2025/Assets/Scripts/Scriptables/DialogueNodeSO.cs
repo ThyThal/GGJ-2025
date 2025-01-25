@@ -53,6 +53,7 @@ public struct DialogueLine
     [Range(0.03f, 0.1f)]
     public float typeSpeed;
     public float dialogueTime;
+    public float decisionTime;
     [Header("Branching")]
     public EmotionLinesBranch[] branches;
 }

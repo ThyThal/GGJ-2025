@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e69567dd4f392a4091a58922855100f, type: 3}
+  m_Name: Scene 1_AltBG
+  m_EditorClassIdentifier: 
+  sceneName: Scene 1
+  background: {fileID: 5576546608880503339, guid: 8a2c55c7d5b42aa4da17264df0d604c9, type: 3}
+  otherCharacter: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}
+  music: {fileID: 0}

@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
-  m_Name: Dialogue 3-1_Mech
+  m_Name: Mec_2B
   m_EditorClassIdentifier: 
   nextDialogues: []
-  dialogueLines:
-  - isPlayerLine: 0
-    dialogueID: ME GRITASTE DENUVO
-    isDecisionLine: 0
-    emotion: 1
-    typeSpeed: 0.03
-    dialogueTime: 1
-    branches: []
-  initialPlayerEmotion: 1
-  initialOtherEmotion: 1
+  dialogueLines: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
   sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

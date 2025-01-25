@@ -10,6 +10,7 @@ public class BranchLoader : MonoBehaviour
     [SerializeField] DialogueController dialogueController;
     void Start()
     {
+        if (!GameProgression.Instance || !GameProgression.Instance.SelectedCharacter) return;
         LoadBranch(GameProgression.Instance.SelectedCharacter);
     }
 

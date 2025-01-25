@@ -10,32 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
-  m_Name: Dialogue 1_Mech
+  m_Name: Mec_3A
   m_EditorClassIdentifier: 
-  nextDialogues:
-  - emotion: 0
-    dialogueNode: {fileID: 11400000, guid: 2961e42388ef5704cba238c371dcbabc, type: 2}
-  - emotion: 1
-    dialogueNode: {fileID: 11400000, guid: f3d40577d7b6a2041a02828be48955c4, type: 2}
+  nextDialogues: []
   dialogueLines:
-  - isPlayerLine: 1
-    dialogueID: Ola toy buscando a tal
-    isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.05
-    dialogueTime: 1
   - isPlayerLine: 0
-    dialogueID: Tal? nose quien es
-    isDecisionLine: 0
-    emotion: 2
-    typeSpeed: 0.05
-    dialogueTime: 1
-  - isPlayerLine: 1
-    dialogueID: COMO QUE NOOOO
+    dialogueID: "\xA1Le juro que yo no s\xE9 nada, por favor detective ya no me grite!"
     isDecisionLine: 0
     emotion: 1
     typeSpeed: 0.05
-    dialogueTime: 1
+    dialogueTime: 0
+    branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0
   sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}

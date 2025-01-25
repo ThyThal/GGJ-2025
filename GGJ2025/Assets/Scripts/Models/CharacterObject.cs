@@ -11,7 +11,11 @@ public class CharacterObject : MonoBehaviour
     [SerializeField] protected SpriteRenderer faceSpriteRenderer;
     [SerializeField] protected AudioSource audioSource;
 
+    [SerializeField] protected Transform dialoguePosition;
+    [SerializeField] protected Transform leavePosition;
+
     protected AudioClip currentVoice;
+    public CharacterDataSO CurrentData => data;
 
     public void SetData(CharacterDataSO data, Emotion initialType = Emotion.Normal)
     {
@@ -42,6 +46,27 @@ public class CharacterObject : MonoBehaviour
     public void ChangeFace(Emotion type = Emotion.Normal)
     {
         faceSpriteRenderer.sprite = data.GetFace(type);
+    }
+
+    public void EnterScene()
+    {
+        //transform.parent.position = leavePosition.position;
+        Debug.Log(data.characterName + " entered scene");
+        transform.parent.gameObject.SetActive(true);
+        LeanTween.move(transform.parent.gameObject, dialoguePosition.position, 1.5f).setEaseOutElastic();
+    }
+    
+    public void LeaveScene()
+    {
+        //transform.parent.position = dialoguePosition.position;
+        LeanTween.move(transform.parent.gameObject, leavePosition.position, 1.5f).setEaseOutElastic()
+            .setOnComplete(() => transform.parent.gameObject.SetActive(false));
+    }
+
+    public void ForceLeaveScene()
+    {
+        transform.parent.position = leavePosition.position;
+        transform.parent.gameObject.SetActive(false);
     }
     
     public bool IsActive => gameObject.activeInHierarchy;

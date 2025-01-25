@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
-    //[SerializeField] private DialogueNodeSO initialDialogue;
+    [SerializeField] private DialogueNodeSO initialDialogue;
+    [SerializeField] private bool testingScene;
 
     private int _currentLineIndex = 0;
     DialogueNodeSO _currentDialogue;
@@ -23,6 +24,7 @@ public class DialogueController : MonoBehaviour
 
     private void Awake()
     {
+        //if (!testingScene) return;
         //_currentDialogue = initialDialogue;
         //currentLines = initialDialogue.dialogueLines.ToList();
     }
@@ -30,16 +32,30 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         // TODO: Para iniciar facil, cambiar
+        if(testingScene) StartDialogues(initialDialogue);
         //OnDialogueChanged?.Invoke(_currentDialogue);
     }
 
     public void StartDialogues(DialogueNodeSO initialNode)
     {
+        //StartCoroutine(StartDialogueCoroutine(initialNode));
         _currentDialogue = initialNode;
         currentLines = initialNode.dialogueLines.ToList();
         
         OnDialogueChanged?.Invoke(_currentDialogue);
     }
+
+    IEnumerator StartDialogueCoroutine(DialogueNodeSO initialNode)
+    {
+        yield return new WaitForSeconds(FadeController.Instance.FadeIn());
+        
+        _currentDialogue = initialNode;
+        currentLines = initialNode.dialogueLines.ToList();
+        
+        OnDialogueChanged?.Invoke(_currentDialogue);
+    }
+    
+    public DialogueNodeSO PeekNextDialogue(Emotion decision) => _currentDialogue.GetNextDialogue(decision);
     public void NextDialogue(Emotion decision = Emotion.Normal)
     {
         // Reset line index
@@ -75,6 +91,7 @@ public class DialogueController : MonoBehaviour
 
     public void AddNewLines(DialogueLine[] newLines)
     {
+        //if (newLines is null) return;
         currentLines.AddRange(newLines);
     }
 }

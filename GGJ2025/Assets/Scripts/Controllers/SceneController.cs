@@ -71,7 +71,7 @@ public class SceneController : MonoBehaviour
     private void DialogueFinishedHandler(DialogueNodeSO dialogue)
     {
         // Activate Next/Skip button, fade and load next dialogue
-        if (dialogue.isInteractionEnd || dialogue.GetNextDialogue() == null) // Ended interaction, lock/unlock character, go back to selection
+        if (dialogue.isInteractionEnd || dialogue.GetNextDialogue(playerDecision) == null) // Ended interaction, lock/unlock character, go back to selection
         {
             if(dialogue.characterToBlock) GameProgression.Instance.TryLockCharacter(dialogue.characterToBlock);
             if(dialogue.characterToUnlock) GameProgression.Instance.TryUnlockCharacter(dialogue.characterToUnlock);
@@ -104,7 +104,11 @@ public class SceneController : MonoBehaviour
     }
     private void DialogueChangedHandler(DialogueNodeSO newDialogue)
     {
-       // ...Wait FadeIn/Transition
+        StartCoroutine(DialogueChangeCoroutine(newDialogue));
+    }
+
+    IEnumerator DialogueChangeCoroutine(DialogueNodeSO newDialogue)
+    {
         if (newDialogue.sceneData != currentSceneData)
         {
             UpdateScene(newDialogue.sceneData);
@@ -115,12 +119,16 @@ public class SceneController : MonoBehaviour
         // Checking IsActive to be able to use this SceneController even in cutscenes where there are no characters, or only one
         if(playerCharacter.IsActive) playerCharacter.UpdateEmotion(newDialogue.initialPlayerEmotion);
         if(otherCharacter.IsActive) otherCharacter.UpdateEmotion(newDialogue.initialOtherEmotion);
-        // ...Fade Out
-        
-        // ...Start delay
 
-        if (dialogueController.CurrentDialogue.TotalLines == 0) return;
+        // ...Fade In
+        yield return new WaitForSeconds(FadeController.Instance.TryFadeIn());
         
+        // ...Move character in, if existent
+        if (newDialogue.sceneData.otherCharacter) yield return new WaitForSeconds(UpdateCharacter(newDialogue.sceneData.otherCharacter));
+        
+        if (dialogueController.CurrentDialogue.TotalLines == 0) yield break;
+        
+        // Force start of new dialog's lines
         LineChangedHandler(dialogueController.CurrentLine);
         
 
@@ -136,8 +144,35 @@ public class SceneController : MonoBehaviour
             audioSource.clip = newDialogueSceneData.music;
             audioSource.Play();
         } 
+        
+        
         backgroundRenderer.sprite = currentSceneData.background;
-        otherCharacter.SetData(currentSceneData.otherCharacter);
+
+        // If new scene has character data, and it is different than current, update data and leave scene
+        if (currentSceneData.otherCharacter)
+        {
+            if (otherCharacter.CurrentData != currentSceneData.otherCharacter)
+            {
+                otherCharacter.ForceLeaveScene();
+                //otherCharacter.SetData(currentSceneData.otherCharacter);
+            }
+        }
+        else otherCharacter.ForceLeaveScene();
+        
+    }
+
+    float UpdateCharacter(CharacterDataSO characterData)
+    {
+        if (otherCharacter.CurrentData != characterData) otherCharacter.SetData(characterData);
+        else return 0;
+            
+        // Enter scene if unactive
+        if (!otherCharacter.IsActive)
+        {
+            otherCharacter.EnterScene();
+            return 1.5f; // Hardcoded: character entry time
+        }
+        else return 0; // Should never reach this
     }
 
     private void StartDecisionTimer(DialogueNodeSO currentDialogue, DialogueLine currentLine)
@@ -147,7 +182,7 @@ public class SceneController : MonoBehaviour
         
         //ResetDecision();
         timerUI.UpdateMax(5); // Cambiar a que el max y timer dependan de la line, testeando ahora
-        decisionTimer = 5f;
+        decisionTimer = currentLine.decisionTime;
         
         // Start timer, wait for player decision
 
@@ -165,8 +200,18 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void MoveToNextDialogue()
+    public void OnClickNextButton()
     {
+        StartCoroutine(MoveToNextDialogue());
+    }
+    public IEnumerator MoveToNextDialogue()
+    {
+        // TODO: Make character leave scene here probably
+        nextButton.SetActive(false);
+        
+        // Only fade out if something in scene changes
+        if(dialogueController.PeekNextDialogue(playerDecision)?.sceneData != currentSceneData ) yield return new WaitForSeconds(FadeController.Instance.FadeOut());
+        
         // Get next dialogue according to choice
         dialogueController.NextDialogue(playerDecision);
         
@@ -175,7 +220,6 @@ public class SceneController : MonoBehaviour
         playerChose = false;
         decisionTimer = 0;
         
-        nextButton.SetActive(false);
     }
 
     public void OnPlayerChoseHandler(Emotion decision)
@@ -188,7 +232,10 @@ public class SceneController : MonoBehaviour
         playerCharacter.UpdateEmotion(decision);
         decisionsUIManager.Hide();
         StartCoroutine(WriteDialogueLineRoutine(dialogueController.CurrentLine, dialogueController.CurrentLineIndex, true));
-        dialogueController.AddNewLines(dialogueController.CurrentDialogue.GetEmotionLineBranch(decision, dialogueController.CurrentLineIndex).branchLines);
+        
+        var branch = dialogueController.CurrentDialogue
+            .GetEmotionLineBranch(decision, dialogueController.CurrentLineIndex).branchLines;
+        if(branch is not null) dialogueController.AddNewLines(branch);
     }
     
     private void WriteDialogueLineInstantly(DialogueLine newLine, int index)
