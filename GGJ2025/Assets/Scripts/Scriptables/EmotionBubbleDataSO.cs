@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EmotionBubbleDataSO", menuName = "Scriptable Objects/Emotion Bubble Sprite Data")]
 public class EmotionBubbleDataSO : ScriptableObject
 {
-    public BubbleEmotionSprite[] bubbleSprites;
+    public EmotionSprite[] bubbleSprites;
 
     public Sprite GetSpriteFromEmotion(Emotion emotion)
     {

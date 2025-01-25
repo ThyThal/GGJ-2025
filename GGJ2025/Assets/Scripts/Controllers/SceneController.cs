@@ -6,6 +6,7 @@ using Sirenix.Serialization;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SceneController : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private CharacterObject otherCharacter;    
 
     [SerializeField] private GameObject nextButton;
+    [SerializeField] TimerUI timerUI;
 
     SceneDataSO currentSceneData;
 
@@ -48,13 +50,16 @@ public class SceneController : MonoBehaviour
 
     private void Update()
     {
-        if (decisionTimer > 0)
+        if (!playerChose && decisionTimer > 0)
         {
             decisionTimer -= Time.deltaTime;
+            timerUI.UpdateFill(decisionTimer);
             if (decisionTimer <= 0)
             {
-                
-                playerChose = true;
+                Debug.Log("Player did not decide on time");
+                //playerChose = true;
+                var possibilities = dialogueController.CurrentDialogue.GetPossibleEmotions();
+                OnPlayerChoseHandler(possibilities[Random.Range(0, possibilities.Length)]);
             }
         }
     }
@@ -70,13 +75,12 @@ public class SceneController : MonoBehaviour
     {
         var target = newLine.isPlayerLine ? playerCharacter : otherCharacter;
         
-        // Update target character's face and voice according to emotion
-        target.UpdateEmotion(newLine.emotion);
-        
         // TODO: Si es decisiva, escribir la linea en UI de una, capaz en gris? y luego de elegir la burbuja escribirla con el sonido correspondiente y tal vez un efectito
         // Write line if not decisive, else, start timer and wait for player to choose bubble
         if (!newLine.isDecisionLine)
         {
+            // Update target character's face and voice according to emotion
+            target.UpdateEmotion(newLine.emotion);
             StartCoroutine(WriteDialogueLineRoutine(newLine, dialogueController.CurrentLineIndex));
         }
         else // Start decision process
@@ -121,10 +125,12 @@ public class SceneController : MonoBehaviour
 
     private void StartDecisionTimer(DialogueNodeSO currentDialogue, DialogueLine currentLine)
     {
+        decisionsUIManager.Show();
         decisionsUIManager.Setup(currentDialogue.GetPossibleEmotions());
         
         //ResetDecision();
-        decisionTimer = currentLine.dialogueTime;
+        timerUI.UpdateMax(5); // Cambiar a que el max y timer dependan de la line, testeando ahora
+        decisionTimer = 5f;
         
         // Start timer, wait for player decision
 
@@ -156,21 +162,25 @@ public class SceneController : MonoBehaviour
         playerChose = true;
         playerDecision = decision;
 
+        playerCharacter.UpdateEmotion(decision);
         decisionsUIManager.Hide();
         StartCoroutine(WriteDialogueLineRoutine(dialogueController.CurrentLine, dialogueController.CurrentLineIndex, true));
+        dialogueController.AddNewLines(dialogueController.CurrentDialogue.GetEmotionLineBranch(decision, dialogueController.CurrentLineIndex).branchLines);
     }
     
     private void WriteDialogueLineInstantly(DialogueLine newLine, int index)
     {
         // To write line that needs a decision, before deciding and rewriting it with animation and audio
         var bubble = bubblesUIManager.GetBubbleTarget(newLine.isPlayerLine, index, Emotion.Undefined);
+        bubble.text = newLine.dialogueID;
     }
     
     private IEnumerator WriteDialogueLineRoutine(DialogueLine newLine, int index, bool isDecisionLine = false)
     {
+        //TODO: ACHICAR LA OTRA BURBUJA Y OSCURECER
         var bubble = bubblesUIManager.GetBubbleTarget(newLine.isPlayerLine, index, isDecisionLine ? playerDecision : newLine.emotion);
         isWritingDialogue = true;
-
+        bubble.text = string.Empty;
         char[] line = newLine.dialogueID.ToCharArray();
         
         // TODO: Wait for bubble anim to show before start writing
@@ -184,7 +194,7 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(newLine.dialogueTime);
 
         isWritingDialogue = false;
-        
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         dialogueController.NextLine();
     }
 }

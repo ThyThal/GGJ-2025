@@ -19,6 +19,7 @@ public class DialogueNodeSO : ScriptableObject
     
     // Normal decision passed as default parameter, to use with normal dialogues that don't require a player decision
     public DialogueNodeSO GetNextDialogue(Emotion decision = Emotion.Normal) => nextDialogues.FirstOrDefault(d => d.emotion == decision).dialogueNode;
+    public EmotionLinesBranch GetEmotionLineBranch(Emotion decision, int index) => dialogueLines[index].branches.FirstOrDefault(b => b.emotion == decision);
 
     /// <summary>
     /// Get all possible emotions in this Dialogue, to populate decisions UI
@@ -37,6 +38,7 @@ public struct DialogueLine
     [Range(0.03f, 0.1f)]
     public float typeSpeed;
     public float dialogueTime;
+    public EmotionLinesBranch[] branches;
 }
 
 [Serializable]
@@ -44,6 +46,13 @@ public struct EmotionToDialogue
 {
     public Emotion emotion;
     public DialogueNodeSO dialogueNode;
+}
+
+[Serializable]
+public struct EmotionLinesBranch
+{
+    public Emotion emotion;
+    public DialogueLine[] branchLines;
 }
 
 public enum Emotion

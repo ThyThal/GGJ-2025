@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.TextCore.Text;
 
 [CreateAssetMenu(fileName = "New Character Data", menuName = "Scriptable Objects/Character Data")]
@@ -12,6 +14,8 @@ public class CharacterDataSO : ScriptableObject
         
     [Header("Body")]
     public Sprite bodySprite;
+    public Sprite bodyScared;
+    public EmotionSprite[] emotionBodySprites;
     
     [Header("Face")]
     public Sprite normalFaceSprite;
@@ -23,6 +27,11 @@ public class CharacterDataSO : ScriptableObject
     public AudioClip angryVoice;
     public AudioClip thinkingVoice;
 
+    public Sprite GetBody(Emotion type)
+    { 
+        var sprite = emotionBodySprites.FirstOrDefault(e => e.emotion == type).sprite;
+        return sprite ? sprite : bodySprite;
+    }
     public Sprite GetFace(Emotion type)
     {
         return type switch
@@ -45,3 +54,4 @@ public class CharacterDataSO : ScriptableObject
         };
     }
 }
+

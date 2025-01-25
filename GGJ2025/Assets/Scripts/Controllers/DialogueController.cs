@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DialogueController : MonoBehaviour
@@ -17,9 +18,12 @@ public class DialogueController : MonoBehaviour
     public event Action<DialogueLine> OnDialogueLineChanged;
     public event Action OnDialogueFinished;
 
+    private List<DialogueLine> currentLines;
+
     private void Awake()
     {
         _currentDialogue = initialDialogue;
+        currentLines = initialDialogue.dialogueLines.ToList();
     }
 
     void Start()
@@ -30,25 +34,32 @@ public class DialogueController : MonoBehaviour
     public void NextDialogue(Emotion decision = Emotion.Normal)
     {
         // Reset line index
+        currentLines.Clear();
         _currentLineIndex = 0;
         
         var previousDialogue = _currentDialogue;
         _currentDialogue = previousDialogue.GetNextDialogue(decision);
         
         OnDialogueChanged?.Invoke(_currentDialogue);
+        currentLines = _currentDialogue.dialogueLines.ToList();
     }
 
     // TODO: A definir: El dialogo a elegir siempre se escribe ultimo? Se van a escribir todos los dialogos a la vez y se elige solo la burbuja?
     // TODO: Se va a escribir siempre un dialogo de otro personaje y luego del jugador? O se podran intercalar libremente?
     public void NextLine()
     {
-        if (_currentLineIndex < _currentDialogue.TotalLines - 1)
+        if (_currentLineIndex < currentLines.Count - 1)
         {
             _currentLineIndex++;
-            var newLine = _currentDialogue.dialogueLines[_currentLineIndex];
+            var newLine = currentLines[_currentLineIndex];
             
             OnDialogueLineChanged?.Invoke(newLine);
         }
         else OnDialogueFinished?.Invoke();
+    }
+
+    public void AddNewLines(DialogueLine[] newLines)
+    {
+        currentLines.AddRange(newLines);
     }
 }

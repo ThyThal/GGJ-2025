@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: Suspect1
   m_EditorClassIdentifier: 
   characterName: Suspect 1
-  bodySprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
+  bodySprite: {fileID: 1090217281897295437, guid: 9b652a774b25b0248bc846930bd68c0a, type: 3}
+  bodyScared: {fileID: 8526343892206179572, guid: bb3e2b4205cd93f469f94e7b80a1b168, type: 3}
+  emotionBodySprites:
+  - emotion: 0
+    sprite: {fileID: 1090217281897295437, guid: 9b652a774b25b0248bc846930bd68c0a, type: 3}
+  - emotion: 1
+    sprite: {fileID: 8526343892206179572, guid: bb3e2b4205cd93f469f94e7b80a1b168, type: 3}
   normalFaceSprite: {fileID: 4870768335085534292, guid: ae0f163b897967f4eb5950eaa13a1469, type: 3}
   angryFaceSprite: {fileID: -5319128435067074178, guid: 5c7db1d5f8cdeca40b74f97d0671dd22, type: 3}
   thinkingFaceSprite: {fileID: -4137265307173148636, guid: 23ec584e4a864994a98e4bb66d490bb8, type: 3}

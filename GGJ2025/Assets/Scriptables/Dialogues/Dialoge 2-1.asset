@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
   m_Name: Dialoge 2-1
   m_EditorClassIdentifier: 
-  nextDialogues: []
+  nextDialogues:
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: e85990e0f63ba6a42aa697ec0accfaf9, type: 2}
+  - emotion: 0
+    dialogueNode: {fileID: 11400000, guid: b7ea65dc817e25f49bc065ae3f65f330, type: 2}
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: AAAAAAAAAAAA
@@ -20,12 +24,39 @@ MonoBehaviour:
     emotion: 1
     typeSpeed: 0.05
     dialogueTime: 1
+    branches: []
   - isPlayerLine: 1
     dialogueID: que te pasa flaco
-    isDecisionLine: 0
+    isDecisionLine: 1
     emotion: 2
     typeSpeed: 0.05
     dialogueTime: 1
+    branches:
+    - emotion: 1
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: AAAAAAASKLFNASLKF NOMEGRITES
+        isDecisionLine: 0
+        emotion: 1
+        typeSpeed: 0.03
+        dialogueTime: 1
+        branches: []
+    - emotion: 0
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: A weno perdon
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: No pasa nada tonces
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.0494
+        dialogueTime: 1
+        branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 1
-  sceneData: {fileID: 11400000, guid: 34bfe73a08255654fb15327e9f78918d, type: 2}
+  sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,14 +18,21 @@ public class CharacterObject : MonoBehaviour
         this.data = data;
         
         bodySpriteRenderer.sprite = data.bodySprite;
-        ChangeFace(initialType);
+        ChangeBody(initialType);
+        //ChangeFace(initialType);
         //ChangeVoice(initialType);
+    }
+
+    private void ChangeBody(Emotion initialType)
+    {
+        bodySpriteRenderer.sprite = data.GetBody(initialType);
     }
 
     public void UpdateEmotion(Emotion type)
     {
+        ChangeBody(type);
         //ChangeVoice(type);
-        ChangeFace(type);
+        //ChangeFace(type);
     }
     public void ChangeVoice(Emotion type = Emotion.Normal)
     {

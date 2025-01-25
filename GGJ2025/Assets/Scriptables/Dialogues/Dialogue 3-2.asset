@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
   m_Name: Dialogue 3-2
   m_EditorClassIdentifier: 
-  isDecision: 0
   nextDialogues: []
-  dialogueLines: []
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: no me gritaste garsias
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.06
+    dialogueTime: 1
+    branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0
-  sceneData: {fileID: 0}
+  sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}
