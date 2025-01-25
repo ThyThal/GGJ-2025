@@ -6,19 +6,20 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BubblesUIManager : MonoBehaviour
 {
     [SerializeField] private BubbleUI playerBubble;
     [SerializeField] private BubbleUI otherCharacterBubble;
 
-    [SerializeField] private EmotionBubbleDataSO bubbleSprites;
+    [FormerlySerializedAs("bubbleSprites")] [SerializeField] private EmotionSpriteDataSO spriteSprites;
     
     public TextMeshProUGUI GetBubbleTarget(bool isPlayer, int index, Emotion emotion)
     {        
         BubbleUI targetBubble = isPlayer ? playerBubble : otherCharacterBubble;
         targetBubble.Show();
-        targetBubble.SetSprite(bubbleSprites.GetSpriteFromEmotion(emotion));
+        targetBubble.SetSprite(spriteSprites.GetSpriteFromEmotion(emotion));
         
         return targetBubble.TextComponent;
     }

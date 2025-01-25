@@ -6,13 +6,14 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BubblesSequentialUIManager : MonoBehaviour
 {
     [SerializeField] private BubbleUI[] playerBubbles;
     [SerializeField] private BubbleUI[] otherCharacterBubbles;
 
-    [SerializeField] private EmotionBubbleDataSO bubbleSprites;
+    [FormerlySerializedAs("bubbleSprites")] [SerializeField] private EmotionSpriteDataSO spriteSprites;
     
     public TextMeshProUGUI GetBubbleTarget(bool isPlayer, int index, Emotion emotion)
     {
@@ -24,7 +25,7 @@ public class BubblesSequentialUIManager : MonoBehaviour
         
         BubbleUI targetBubble = isPlayer ? playerBubbles[index] : otherCharacterBubbles[index];
         targetBubble.Show();
-        targetBubble.SetSprite(bubbleSprites.GetSpriteFromEmotion(emotion));
+        targetBubble.SetSprite(spriteSprites.GetSpriteFromEmotion(emotion));
         
         return targetBubble.TextComponent;
     }

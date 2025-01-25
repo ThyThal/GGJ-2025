@@ -6,6 +6,7 @@ using Sirenix.Serialization;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class SceneController : MonoBehaviour
@@ -23,7 +24,10 @@ public class SceneController : MonoBehaviour
     [SerializeField] private CharacterObject otherCharacter;    
 
     [SerializeField] private GameObject nextButton;
+    [SerializeField] private GameObject backButton;
     [SerializeField] TimerUI timerUI;
+    
+    [SerializeField] AudioSource audioSource;
 
     SceneDataSO currentSceneData;
 
@@ -64,11 +68,19 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    private void DialogueFinishedHandler()
+    private void DialogueFinishedHandler(DialogueNodeSO dialogue)
     {
         // Activate Next/Skip button, fade and load next dialogue
-        nextButton.SetActive(true);
-        
+        if (dialogue.isInteractionEnd || dialogue.GetNextDialogue() == null) // Ended interaction, lock/unlock character, go back to selection
+        {
+            if(dialogue.characterToBlock) GameProgression.Instance.TryLockCharacter(dialogue.characterToBlock);
+            if(dialogue.characterToUnlock) GameProgression.Instance.TryUnlockCharacter(dialogue.characterToUnlock);
+            backButton.SetActive(true);
+        }
+        else
+        {
+            nextButton.SetActive(true);
+        }
     }
     
     private void LineChangedHandler(DialogueLine newLine)
@@ -119,6 +131,11 @@ public class SceneController : MonoBehaviour
     {
         currentSceneData = newDialogueSceneData;
 
+        if (newDialogueSceneData.music)
+        {
+            audioSource.clip = newDialogueSceneData.music;
+            audioSource.Play();
+        } 
         backgroundRenderer.sprite = currentSceneData.background;
         otherCharacter.SetData(currentSceneData.otherCharacter);
     }
@@ -140,6 +157,12 @@ public class SceneController : MonoBehaviour
     {
         decisionTimer = 0;
         playerChose = false;
+    }
+
+    //TODO: Capaz mover a un SceneController o algo? ya tiene muchas funciones esta clase
+    public void BackToCharacterSelection()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void MoveToNextDialogue()
@@ -194,7 +217,7 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(newLine.dialogueTime);
 
         isWritingDialogue = false;
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        //yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         dialogueController.NextLine();
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour
 {
-    [SerializeField] private DialogueNodeSO initialDialogue;
+    //[SerializeField] private DialogueNodeSO initialDialogue;
 
     private int _currentLineIndex = 0;
     DialogueNodeSO _currentDialogue;
@@ -16,19 +16,28 @@ public class DialogueController : MonoBehaviour
     public DialogueLine CurrentLine => _currentDialogue.dialogueLines[_currentLineIndex];
     public event Action<DialogueNodeSO> OnDialogueChanged;
     public event Action<DialogueLine> OnDialogueLineChanged;
-    public event Action OnDialogueFinished;
+    public event Action<DialogueNodeSO> OnDialogueFinished;
+    public event Action OnInteractionFinished;
 
     private List<DialogueLine> currentLines;
 
     private void Awake()
     {
-        _currentDialogue = initialDialogue;
-        currentLines = initialDialogue.dialogueLines.ToList();
+        //_currentDialogue = initialDialogue;
+        //currentLines = initialDialogue.dialogueLines.ToList();
     }
 
     void Start()
     {
         // TODO: Para iniciar facil, cambiar
+        //OnDialogueChanged?.Invoke(_currentDialogue);
+    }
+
+    public void StartDialogues(DialogueNodeSO initialNode)
+    {
+        _currentDialogue = initialNode;
+        currentLines = initialNode.dialogueLines.ToList();
+        
         OnDialogueChanged?.Invoke(_currentDialogue);
     }
     public void NextDialogue(Emotion decision = Emotion.Normal)
@@ -39,6 +48,12 @@ public class DialogueController : MonoBehaviour
         
         var previousDialogue = _currentDialogue;
         _currentDialogue = previousDialogue.GetNextDialogue(decision);
+        
+        // Is dialogue tree ending
+        if (_currentDialogue.isInteractionEnd)
+        {
+            OnInteractionFinished?.Invoke();
+        }
         
         OnDialogueChanged?.Invoke(_currentDialogue);
         currentLines = _currentDialogue.dialogueLines.ToList();
@@ -55,7 +70,7 @@ public class DialogueController : MonoBehaviour
             
             OnDialogueLineChanged?.Invoke(newLine);
         }
-        else OnDialogueFinished?.Invoke();
+        else OnDialogueFinished?.Invoke(_currentDialogue);
     }
 
     public void AddNewLines(DialogueLine[] newLines)

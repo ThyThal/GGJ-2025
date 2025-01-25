@@ -10,6 +10,8 @@ public class SceneDataSO : ScriptableObject
     public string sceneName = "Scene 1";
     public Sprite background;
     public CharacterDataSO otherCharacter;
+
+    public AudioClip music;
     //public DialogueNodeSO initialDialogue;
 }
 
