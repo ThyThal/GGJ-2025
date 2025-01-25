@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/_Scenes/MainMenu.unity
     guid: 87f480135a4db4249a47b42b861f3b45
   - enabled: 1
-    path: Assets/Scenes/CharacterSelection.unity
+    path: Assets/_Scenes/CharacterSelection.unity
     guid: 1e0662d9365eb93418bdc05a7b4bba6f
   - enabled: 1
-    path: Assets/Scenes/TestingFranco.unity
+    path: Assets/_Scenes/TestingFranco.unity
     guid: 68a3d842db50f794b88d5cb0111167dd
   - enabled: 1
-    path: Assets/Scenes/Gameplay.unity
+    path: Assets/_Scenes/Gameplay.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

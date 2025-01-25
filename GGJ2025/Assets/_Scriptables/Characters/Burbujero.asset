@@ -21,6 +21,3 @@ MonoBehaviour:
   normalFaceSprite: {fileID: 21300000, guid: 5c7db1d5f8cdeca40b74f97d0671dd22, type: 3}
   angryFaceSprite: {fileID: -5319128435067074178, guid: 5c7db1d5f8cdeca40b74f97d0671dd22, type: 3}
   thinkingFaceSprite: {fileID: -4137265307173148636, guid: 23ec584e4a864994a98e4bb66d490bb8, type: 3}
-  normalVoice: {fileID: 8300000, guid: 7052737c6c473ed4fb1cd163edb36e78, type: 3}
-  angryVoice: {fileID: 0}
-  thinkingVoice: {fileID: 0}

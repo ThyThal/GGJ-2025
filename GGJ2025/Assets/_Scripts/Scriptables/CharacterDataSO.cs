@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.TextCore.Text;
@@ -23,10 +24,8 @@ public class CharacterDataSO : ScriptableObject
     public Sprite thinkingFaceSprite;
     
     [Header("Audio")]
-    public AudioClip normalVoice;
-    public AudioClip angryVoice;
-    public AudioClip thinkingVoice;
-
+    [ShowInInspector] public Dictionary<Emotion, List<AudioClip>> emotionAudioClips;
+    
     public Sprite GetBody(Emotion type)
     { 
         var sprite = emotionBodySprites.FirstOrDefault(e => e.emotion == type).sprite;
@@ -39,17 +38,6 @@ public class CharacterDataSO : ScriptableObject
             Emotion.Normal => normalFaceSprite,
             Emotion.Scream => angryFaceSprite,
             Emotion.Thinking => thinkingFaceSprite,
-            _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
-        };
-    }
-    
-    public AudioClip GetVoice(Emotion type)
-    {
-        return type switch
-        {
-            Emotion.Normal => normalVoice,
-            Emotion.Scream => angryVoice,
-            Emotion.Thinking => thinkingVoice,
             _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
         };
     }

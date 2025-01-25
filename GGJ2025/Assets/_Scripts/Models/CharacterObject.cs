@@ -9,13 +9,17 @@ public class CharacterObject : MonoBehaviour
     [SerializeField] protected CharacterDataSO data;
     [SerializeField] protected SpriteRenderer bodySpriteRenderer;
     [SerializeField] protected SpriteRenderer faceSpriteRenderer;
-    [SerializeField] protected AudioSource audioSource;
+    [SerializeField] protected PersonAudio personAudio;
 
     [SerializeField] protected Transform dialoguePosition;
     [SerializeField] protected Transform leavePosition;
-
-    protected AudioClip currentVoice;
     public CharacterDataSO CurrentData => data;
+
+    private void Awake()
+    {
+        if (personAudio == null ) personAudio = GetComponentInChildren<PersonAudio>();
+        if (personAudio != null) personAudio.SetCharacterData(data);
+    }
 
     public void SetData(CharacterDataSO data, Emotion initialType = Emotion.Normal)
     {
@@ -38,11 +42,7 @@ public class CharacterObject : MonoBehaviour
         //ChangeVoice(type);
         //ChangeFace(type);
     }
-    public void ChangeVoice(Emotion type = Emotion.Normal)
-    {
-        currentVoice = data.GetVoice(type);
-    }
-
+    
     public void ChangeFace(Emotion type = Emotion.Normal)
     {
         faceSpriteRenderer.sprite = data.GetFace(type);

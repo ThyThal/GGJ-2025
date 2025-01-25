@@ -71,11 +71,3 @@ public struct EmotionLinesBranch
     public Emotion emotion;
     public DialogueLine[] branchLines;
 }
-
-public enum Emotion
-{
-    Normal,
-    Scream,
-    Thinking,
-    Undefined
-}
