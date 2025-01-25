@@ -243,7 +243,7 @@ public class SceneController : MonoBehaviour
         // TODO: Maybe do Coroutine as well, and animate Undefined bubble
         // To write line that needs a decision, before deciding and rewriting it with animation and audio
         var targetBubble = bubblesUIManager.GetTargetBubble(newLine.isPlayerLine);
-        yield return bubblesUIManager.AnimateBubble(targetBubble, Emotion.Undefined);
+        yield return bubblesUIManager.AnimateBubble(targetBubble, Emotion.Thinking);
         targetBubble.GetCurrentBubbleComponents().textComponent.text = newLine.dialogueID;
     }
     

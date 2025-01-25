@@ -25,6 +25,7 @@ public class BubblesUIManager : MonoBehaviour
             target.Hide();
             yield return new WaitForSeconds(target.HideTime);
         }
+        
         target.SetEmotion(emotion);
         target.Show();
         yield return new WaitForSeconds(target.ShowTime);

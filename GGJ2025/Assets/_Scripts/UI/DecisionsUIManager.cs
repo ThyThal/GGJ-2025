@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public class DecisionsUIManager : MonoBehaviour
 {
     [SerializeField] private DecisionUI[] decisionButtons;
-    [FormerlySerializedAs("bubbleSprites")] [SerializeField] private EmotionSpriteDataSO spriteSprites;
+    [SerializeField] private EmotionSpriteDataSO decisionSprites;
 
     public event Action<Emotion> OnPlayerClickedDecision;
 
@@ -25,7 +25,8 @@ public class DecisionsUIManager : MonoBehaviour
     {
         for (int i = 0; i < decisionButtons.Length; i++)
         {
-            decisionButtons[i].Setup(spriteSprites.GetSpriteFromEmotion(emotions[i]), emotions[i]);
+            Debug.LogWarning("Setting up " + decisionButtons[i].name + " with emotion " + emotions[i]);
+            decisionButtons[i].Setup(decisionSprites.GetSpriteFromEmotion(emotions[i]), emotions[i]);
         }
     }
 

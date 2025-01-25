@@ -74,17 +74,18 @@ public class BubbleUI : MonoBehaviour
             // Set the new prefab and activate it
             currentPrefab = emotionPrefab.prefab;
             currentBubbleComponents = GetCurrentBubbleComponents();
-            currentPrefab.SetActive(true);
         }
 
-        gameObject.SetActive(true);
+        currentPrefab.SetActive(true);
+        //gameObject.SetActive(true);
         isShowing = true;
-        LeanTween.scale(gameObject, Vector3.one, showTime).setEaseOutElastic();
+        LeanTween.scale(currentPrefab, Vector3.one, showTime).setEaseOutElastic();
     }
 
     public void Hide()
     {
-        LeanTween.scale(gameObject, Vector3.zero, hideTime).setEaseInCubic().setOnComplete(TurnOff);
+        if (currentPrefab == null) return;
+        LeanTween.scale(currentPrefab, Vector3.zero, hideTime).setEaseInCubic().setOnComplete(TurnOff);
     }
 
     public void TurnOff()
@@ -92,6 +93,7 @@ public class BubbleUI : MonoBehaviour
         // Deactivate the current emotion prefab (but keep the main BubbleUI active)
         if (currentPrefab != null)
         {
+            currentPrefab.transform.localScale = Vector3.zero;
             currentPrefab.SetActive(false);
         }
 
@@ -102,7 +104,6 @@ public class BubbleUI : MonoBehaviour
         }
 
         isShowing = false;
-        transform.localScale = Vector3.zero;
         currentPrefab = null;
     }
 }
