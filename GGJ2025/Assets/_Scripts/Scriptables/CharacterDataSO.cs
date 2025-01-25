@@ -24,13 +24,31 @@ public class CharacterDataSO : ScriptableObject
     public Sprite thinkingFaceSprite;
     
     [Header("Audio")]
-    [ShowInInspector] public Dictionary<Emotion, List<AudioClip>> emotionAudioClips;
-    
+    [ShowInInspector]
+    [SerializeField]
+    private List<EmotionAudio> emotionAudioList;
+
+    private Dictionary<Emotion, List<AudioClip>> _emotionAudioClips;
+
+    [ShowInInspector]
+    public Dictionary<Emotion, List<AudioClip>> EmotionAudioClips
+    {
+        get
+        {
+            if (_emotionAudioClips == null)
+            {
+                _emotionAudioClips = emotionAudioList.ToDictionary(e => e.emotion, e => e.audioClips);
+            }
+            return _emotionAudioClips;
+        }
+    }
+
     public Sprite GetBody(Emotion type)
     { 
         var sprite = emotionBodySprites.FirstOrDefault(e => e.emotion == type).sprite;
         return sprite ? sprite : bodySprite;
     }
+
     public Sprite GetFace(Emotion type)
     {
         return type switch
@@ -40,6 +58,13 @@ public class CharacterDataSO : ScriptableObject
             Emotion.Thinking => thinkingFaceSprite,
             _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
         };
+    }
+
+    [Serializable]
+    public class EmotionAudio
+    {
+        public Emotion emotion;
+        public List<AudioClip> audioClips;
     }
 }
 
