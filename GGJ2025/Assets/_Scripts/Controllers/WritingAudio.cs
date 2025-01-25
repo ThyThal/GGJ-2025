@@ -6,27 +6,39 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class WritingAudio : MonoBehaviour
 {
-    [ShowInInspector] 
+    [ShowInInspector]
     [SerializeField] private List<EmotionAudioClip> emotionAudioClips = new(); // Use a list of EmotionAudioClip to make it serializable
+    [SerializeField] private List<AudioSource> audioSources = new();
 
-    [SerializeField] private AudioSource audioSource;
-
+    private AudioSource mainAudioSource;
     private AudioClip lastPlayedClip;
+    private int currentAudioSourceIndex = 0; // To track the current AudioSource index
 
     private void Start()
     {
-        // If the audioSource is still null, try to find it
-        if (audioSource == null)
+        // If the mainAudioSource is still null, try to find it
+        if (mainAudioSource == null)
         {
-            audioSource = GetComponent<AudioSource>();
-            if (audioSource == null)
+            mainAudioSource = GetComponent<AudioSource>();
+            if (mainAudioSource == null)
             {
-                Debug.LogError("AudioSource component is missing even though it is required.");
+                Debug.LogError("Main AudioSource component is missing even though it is required.");
             }
         }
 
-        // Ensure the AudioSource doesn't play on awake
-        audioSource.playOnAwake = false;
+        // Ensure the main AudioSource doesn't play on awake
+        mainAudioSource.playOnAwake = false;
+
+        // Add additional audio sources if they don't exist yet
+        if (audioSources.Count == 0)
+        {
+            for (int i = 0; i < 3; i++)  // Example: Create 3 additional sources
+            {
+                var newSource = gameObject.AddComponent<AudioSource>();
+                newSource.playOnAwake = false;
+                audioSources.Add(newSource);
+            }
+        }
     }
 
     public void SetEmotionAudioClips(List<EmotionAudioClip> newEmotionAudioClips)
@@ -36,17 +48,26 @@ public class WritingAudio : MonoBehaviour
 
     public void PlayEmotionAudio(Emotion emotion)
     {
-        var emotionClip = emotionAudioClips.Find(e => e.emotion == emotion);
-
-        if (emotionClip != null && emotionClip.audioClips.Count > 0)
+        var emotionAudioClip = emotionAudioClips.Find(e => e.emotion == emotion);
+        if (emotionAudioClip != null && emotionAudioClip.audioClips.Count > 0)
         {
-            var clip = GetNextAudioClip(emotionClip.audioClips);
+            var clip = GetNextAudioClip(emotionAudioClip.audioClips);
 
             if (clip != null)
             {
-                audioSource.clip = clip;
-                audioSource.Play();
-                lastPlayedClip = clip;
+                // Get the next AudioSource in a cyclic manner
+                AudioSource availableSource = GetNextAudioSource();
+
+                if (availableSource != null)
+                {
+                    availableSource.clip = clip;
+                    availableSource.Play();
+                    lastPlayedClip = clip;
+                }
+                else
+                {
+                    Debug.LogWarning("No available audio sources to play the new clip.");
+                }
             }
             else
             {
@@ -57,6 +78,15 @@ public class WritingAudio : MonoBehaviour
         {
             Debug.LogWarning($"No audio clips found for emotion: {emotion}");
         }
+    }
+
+    private AudioSource GetNextAudioSource()
+    {
+        // Cycle through the AudioSources by using the currentAudioSourceIndex and modulo operation
+        AudioSource selectedSource = audioSources[currentAudioSourceIndex];
+        currentAudioSourceIndex = (currentAudioSourceIndex + 1) % audioSources.Count; // Loop back to 0 when reaching the end
+
+        return selectedSource;
     }
 
     private AudioClip GetNextAudioClip(List<AudioClip> audioClips)

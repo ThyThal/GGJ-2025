@@ -258,6 +258,7 @@ public class SceneController : MonoBehaviour
         for (int i = 0; i < line.Length; i++)
         {
             bubble.text += line[i];
+            dialogueController.writingAudio.PlayEmotionAudio(newLine.emotion);
             yield return new WaitForSeconds(newLine.typeSpeed);
         }
         

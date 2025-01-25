@@ -7,6 +7,7 @@ using UnityEngine;
 public class DialogueController : MonoBehaviour
 {
     [SerializeField] private DialogueNodeSO initialDialogue;
+    [SerializeField] public WritingAudio writingAudio;
     [SerializeField] private bool testingScene;
 
     private int _currentLineIndex = 0;
