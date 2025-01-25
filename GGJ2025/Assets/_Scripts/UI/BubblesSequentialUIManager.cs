@@ -25,7 +25,7 @@ public class BubblesSequentialUIManager : MonoBehaviour
         
         BubbleUI targetBubble = isPlayer ? playerBubbles[index] : otherCharacterBubbles[index];
         targetBubble.Show();
-        targetBubble.SetSprite(spriteSprites.GetSpriteFromEmotion(emotion));
+
         
         return targetBubble.TextComponent;
     }

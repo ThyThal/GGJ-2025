@@ -12,8 +12,6 @@ public class BubblesUIManager : MonoBehaviour
 {
     [SerializeField] private BubbleUI playerBubble;
     [SerializeField] private BubbleUI otherCharacterBubble;
-
-    [FormerlySerializedAs("bubbleSprites")] [SerializeField] private EmotionSpriteDataSO spriteSprites;
     
     public BubbleUI GetTargetBubble(bool isPlayer)
     {
@@ -23,10 +21,8 @@ public class BubblesUIManager : MonoBehaviour
     
     public IEnumerator AnimateBubble(BubbleUI target, Emotion emotion)
     {
-        var newSprite = spriteSprites.GetSpriteFromEmotion(emotion);
-
         // Don't animate if sprite already set
-        if (target.IsSpriteSet(newSprite) && target.IsShowing) yield break;
+        if (target.GetEmotion() == emotion) yield break;
 
         if (target.IsShowing)
         {
@@ -34,7 +30,7 @@ public class BubblesUIManager : MonoBehaviour
             yield return new WaitForSeconds(target.HideTime);
             //waitTime += targetBubble.HideTime;
         }
-        target.SetSprite(newSprite);
+        target.SetEmotion(emotion);
         target.Show();
         yield return new WaitForSeconds(target.ShowTime);
     }
@@ -44,11 +40,4 @@ public class BubblesUIManager : MonoBehaviour
         playerBubble.TurnOff();
         otherCharacterBubble.TurnOff();
     }
-}
-
-[Serializable]
-public struct EmotionSprite
-{
-    public Emotion emotion;
-    public Sprite sprite;
 }
