@@ -64,5 +64,6 @@ public class GameProgression : MonoBehaviour
     public void ResetProgress()
     {
         unlockedCharacters = initialCharacters;
+        BranchLoader.didIntro = false;
     }
 }
