@@ -15,7 +15,7 @@ MonoBehaviour:
   nextDialogues:
   - emotion: 2
     dialogueNode: {fileID: 11400000, guid: 9ad3ca4e6d628b44493e3002545093e1, type: 2}
-  - emotion: 0
+  - emotion: 1
     dialogueNode: {fileID: 11400000, guid: b6ccc594411769e42ac4cc9a0545243e, type: 2}
   dialogueLines:
   - isPlayerLine: 0

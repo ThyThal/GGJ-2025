@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Mec_2B
   m_EditorClassIdentifier: 
   nextDialogues:
-  - emotion: 2
+  - emotion: 3
     dialogueNode: {fileID: 11400000, guid: d4a401f049ca3c84fba9d647c292dbb4, type: 2}
-  - emotion: 1
+  - emotion: 5
     dialogueNode: {fileID: 11400000, guid: e673ae5062a80d547a3dd883340e5431, type: 2}
   dialogueLines:
   - isPlayerLine: 0

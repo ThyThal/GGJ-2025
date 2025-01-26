@@ -98,6 +98,13 @@ public class SceneController : MonoBehaviour
                 GameProgression.Instance.TryUnlockCharacter(dialogue.characterToUnlock);
                 GameManager.Instance.audioManager.PlayUnlockCharacter();
             }
+
+            if (GameProgression.Instance.TotalUnlockedCharacters == 0)
+            {
+                // BAD ENDING
+                specialEvents.PlayEvent(GameEvents.FinalBurbujaExplota);
+                return;
+            }
             
             gameUIManager.ShowBackButton(true);
         }

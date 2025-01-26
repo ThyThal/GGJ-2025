@@ -1053,6 +1053,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: aa30b272e97b539428dab19ae20728c7, type: 3}
     - {fileID: 8300000, guid: 5e17929572f18aa47a4827eb40933e0c, type: 3}
     - {fileID: 8300000, guid: b7953c9cfcf29f84da552fe3965761bb, type: 3}
+  - emotion: 6
+    audioClips:
+    - {fileID: 8300000, guid: 19836289783bc98458974bca09b5ab3a, type: 3}
+    - {fileID: 8300000, guid: aa30b272e97b539428dab19ae20728c7, type: 3}
+    - {fileID: 8300000, guid: 5e17929572f18aa47a4827eb40933e0c, type: 3}
+    - {fileID: 8300000, guid: b7953c9cfcf29f84da552fe3965761bb, type: 3}
   audioSources:
   - {fileID: 647312680}
   - {fileID: 647312683}

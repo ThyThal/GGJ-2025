@@ -9,6 +9,7 @@ public class GameProgression : MonoBehaviour
     [SerializeField] List <CharacterDataSO> initialCharacters = new List<CharacterDataSO>();
     
     public CharacterDataSO SelectedCharacter {get; private set;}
+    public int TotalUnlockedCharacters => unlockedCharacters.Count;
     public static GameProgression Instance {get; private set;}
     private void Awake()
     {
@@ -59,6 +60,11 @@ public class GameProgression : MonoBehaviour
 
         SelectedCharacter = character;
         return true;
+    }
+
+    public void SetNoCharactersEnding()
+    {
+        SelectedCharacter = null;
     }
 
     public void ResetProgress()

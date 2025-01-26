@@ -39,7 +39,7 @@ public class BranchLoader : MonoBehaviour
             return;
         }
         
-        if (!GameProgression.Instance || !GameProgression.Instance.SelectedCharacter) return;
+        if (!GameProgression.Instance) return;
         LoadBranch(GameProgression.Instance.SelectedCharacter);
     }
 
