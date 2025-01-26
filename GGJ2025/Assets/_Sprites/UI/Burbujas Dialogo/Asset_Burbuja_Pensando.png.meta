@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6d785216f4bf58b4b8529506784b88f2
+guid: 95f5e8f98917e19448bb670b8aaa8349
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7226405695312399860
-    second: Pausa_0
+      213: 1214297135841236905
+    second: Asset_Burbuja_Pensando_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,11 +48,11 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1080
-  spriteBorder: {x: 4, y: 8, z: 4, w: 0}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,22 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pausa_0
+      name: Asset_Burbuja_Pensando_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1928
-        height: 1088
+        x: 17
+        y: 18
+        width: 610
+        height: 301
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fd84f751b9594460800000000000000
-      internalID: 7226405695312399860
+      spriteID: 9a75799bfcc0ad010800000000000000
+      internalID: 1214297135841236905
       vertices: []
       indices: 
       edges: []
@@ -124,14 +124,14 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pausa_0: 7226405695312399860
+      Asset_Burbuja_Pensando_0: 1214297135841236905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6d785216f4bf58b4b8529506784b88f2
+guid: d4024819685feef4fbad6387ec8f684f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7226405695312399860
-    second: Pausa_0
+      213: 6333710762350691264
+    second: Mecanico_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1080
-  spriteBorder: {x: 4, y: 8, z: 4, w: 0}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,22 +100,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pausa_0
+      name: Mecanico_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1928
-        height: 1088
+        width: 376
+        height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fd84f751b9594460800000000000000
-      internalID: 7226405695312399860
+      spriteID: 0c34bf3816cd5e750800000000000000
+      internalID: 6333710762350691264
       vertices: []
       indices: 
       edges: []
@@ -123,15 +123,15 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    spriteID: 
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Pausa_0: 7226405695312399860
+      Mecanico_0: 6333710762350691264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

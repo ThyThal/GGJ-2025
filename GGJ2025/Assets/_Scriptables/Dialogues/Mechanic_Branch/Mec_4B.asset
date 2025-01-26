@@ -44,5 +44,5 @@ MonoBehaviour:
   initialOtherEmotion: 0
   sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}
   isInteractionEnd: 1
-  characterToUnlock: {fileID: 11400000, guid: 8ebf8c49c2f4976479e658336f4bee31, type: 2}
-  characterToBlock: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}
+  characterToUnlock: {fileID: 11400000, guid: b750d0d5026653d47bb06570f8eae3c9, type: 2}
+  characterToBlock: {fileID: 11400000, guid: 07aa04e349f0c374b8e65959880988bb, type: 2}

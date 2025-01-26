@@ -33,7 +33,7 @@ public class DialogueController : MonoBehaviour
     void Start()
     {
         // TODO: Para iniciar facil, cambiar
-        if(testingScene) StartDialogues(initialDialogue);
+        if(testingScene && !GameProgression.Instance) StartDialogues(initialDialogue);
         //OnDialogueChanged?.Invoke(_currentDialogue);
     }
 
