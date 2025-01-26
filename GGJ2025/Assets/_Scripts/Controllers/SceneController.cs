@@ -7,6 +7,7 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class SceneController : MonoBehaviour
@@ -18,13 +19,12 @@ public class SceneController : MonoBehaviour
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private BubblesUIManager bubblesUIManager;
     [SerializeField] private DecisionsUIManager decisionsUIManager;
+    [SerializeField] private GameUIManager gameUIManager;
     [SerializeField] private SpriteRenderer backgroundRenderer;
     
     [SerializeField] private CharacterObject playerCharacter;
     [SerializeField] private CharacterObject otherCharacter;    
 
-    [SerializeField] private GameObject nextButton;
-    [SerializeField] private GameObject backButton;
     [SerializeField] TimerUI timerUI;
     
     [SerializeField] AudioSource audioSource;
@@ -34,6 +34,7 @@ public class SceneController : MonoBehaviour
     private float decisionTimer;
 
     private bool isWritingDialogue = false;
+    bool skippedDialogue = false;
     private bool playerChose = false;
     private Emotion playerDecision;
     private void OnEnable()
@@ -54,6 +55,11 @@ public class SceneController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TrySkipDialogue();
+        }
+        
         if (!playerChose && decisionTimer > 0)
         {
             decisionTimer -= Time.deltaTime;
@@ -75,11 +81,11 @@ public class SceneController : MonoBehaviour
         {
             if(dialogue.characterToBlock) GameProgression.Instance.TryLockCharacter(dialogue.characterToBlock);
             if(dialogue.characterToUnlock) GameProgression.Instance.TryUnlockCharacter(dialogue.characterToUnlock);
-            backButton.SetActive(true);
+            gameUIManager.ShowBackButton(true);
         }
         else
         {
-            nextButton.SetActive(true);
+            gameUIManager.ShowNextButton(true);
         }
     }
     
@@ -207,7 +213,7 @@ public class SceneController : MonoBehaviour
     public IEnumerator MoveToNextDialogue()
     {
         // TODO: Make character leave scene here probably
-        nextButton.SetActive(false);
+        gameUIManager.ShowNextButton(false);
         
         // Only fade out if something in scene changes
         if(dialogueController.PeekNextDialogue(playerDecision)?.sceneData != currentSceneData ) yield return new WaitForSeconds(FadeController.Instance.FadeOut());
@@ -291,16 +297,29 @@ public class SceneController : MonoBehaviour
             // Play audio based on the emotion of the line
             dialogueController.writingAudio.PlayEmotionAudio(newLine.emotion);
             yield return new WaitForSeconds(newLine.typeSpeed);
+
+            if (skippedDialogue)
+            {
+                // If skipped, write dialogue and break for
+                textComp.text = newLine.dialogueID;
+                break;
+            }
         }
-
-        yield return new WaitForSeconds(newLine.dialogueTime);
-
+        
+        skippedDialogue = false;
         isWritingDialogue = false;
 
+        yield return new WaitForSeconds(newLine.dialogueTime);
+        
         // Debug: Log end of dialogue line writing
         Debug.Log("Dialogue line writing complete.");
 
         // Move to the next line
         dialogueController.NextLine();
+    }
+
+    public void TrySkipDialogue()
+    {
+         if(isWritingDialogue) skippedDialogue = true;
     }
 }

@@ -37,6 +37,7 @@ public class FadeController : MonoBehaviour
     {
         if (IsFaded)
         {
+            Debug.Log("Fade in");
             LeanTween.alphaCanvas(canvasGroup, 0, fadeSpeed);
             return fadeSpeed;
         }
