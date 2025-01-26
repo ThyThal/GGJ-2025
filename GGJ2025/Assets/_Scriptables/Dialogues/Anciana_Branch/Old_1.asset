@@ -16,7 +16,7 @@ MonoBehaviour:
   - emotion: 2
     dialogueNode: {fileID: 11400000, guid: ec7d00df3f0cb664b8c94b1dc7bd113e, type: 2}
   - emotion: 1
-    dialogueNode: {fileID: 0}
+    dialogueNode: {fileID: 11400000, guid: 8a95182c63365d2428d24931091a4a33, type: 2}
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: " \xA1Oh, un nuevo cliente!, \xA1pase, pase! \xBFQu\xE9 lo trae por
@@ -100,7 +100,7 @@ MonoBehaviour:
         branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0
-  sceneData: {fileID: 0}
+  sceneData: {fileID: 11400000, guid: d38e91024fa74c74b9de1f31694330b0, type: 2}
   isInteractionEnd: 0
   characterToUnlock: {fileID: 0}
   characterToBlock: {fileID: 0}

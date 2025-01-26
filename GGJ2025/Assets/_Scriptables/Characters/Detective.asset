@@ -27,4 +27,6 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 92e3a758532675e45acb71c461e3a807, type: 3}
   - emotion: 4
     sprite: {fileID: 21300000, guid: 92e3a758532675e45acb71c461e3a807, type: 3}
+  - emotion: 6
+    sprite: {fileID: 21300000, guid: 44d57b08c5fc91a43a830a03abc9d776, type: 3}
   emotionAudioList: []

@@ -61,7 +61,7 @@ MonoBehaviour:
     branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0
-  sceneData: {fileID: 0}
+  sceneData: {fileID: 11400000, guid: 87ae6c94cb7598d41b7ac28d11392ed4, type: 2}
   isInteractionEnd: 0
   characterToUnlock: {fileID: 0}
   characterToBlock: {fileID: 0}
