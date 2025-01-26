@@ -145,7 +145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8786519341539752133}
-  - component: {fileID: 6738239229193905541}
+  - component: {fileID: 3639767969522403514}
   m_Layer: 5
   m_Name: Whisper
   m_TagString: Untagged
@@ -174,7 +174,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030517578, y: 200}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &6738239229193905541
+--- !u!114 &3639767969522403514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 217106639046676234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929e755fb1ccffc439b7f013126e57ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4336c4d9d2d4744b3ccc63a43a0cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 3404390943153126930}
@@ -332,7 +332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6754978257882266685}
-  - component: {fileID: 247172670300193271}
+  - component: {fileID: 1844836712930523813}
   m_Layer: 5
   m_Name: Scream
   m_TagString: Untagged
@@ -361,7 +361,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030517578, y: 200}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &247172670300193271
+--- !u!114 &1844836712930523813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 428974569637286009}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929e755fb1ccffc439b7f013126e57ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4336c4d9d2d4744b3ccc63a43a0cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2879702378810659297}
@@ -713,7 +713,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1839925082374631792}
-  - component: {fileID: 3201098929204014081}
+  - component: {fileID: 4126770888547985413}
   m_Layer: 5
   m_Name: Serious
   m_TagString: Untagged
@@ -742,7 +742,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030517578, y: 200}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &3201098929204014081
+--- !u!114 &4126770888547985413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1815003616516233191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929e755fb1ccffc439b7f013126e57ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4336c4d9d2d4744b3ccc63a43a0cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1658028234914050839}
@@ -1433,7 +1433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6315021457741016931}
-  - component: {fileID: 8347208144647382415}
+  - component: {fileID: 37568576110119866}
   m_Layer: 5
   m_Name: Normal
   m_TagString: Untagged
@@ -1462,7 +1462,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030517578, y: 200}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &8347208144647382415
+--- !u!114 &37568576110119866
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1471,7 +1471,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3656384734601681393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929e755fb1ccffc439b7f013126e57ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4336c4d9d2d4744b3ccc63a43a0cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 2466967189173289522}
@@ -1683,7 +1683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3999456877540687826}
-  - component: {fileID: 8194455530604457973}
+  - component: {fileID: 2313442089263127842}
   m_Layer: 5
   m_Name: Kind
   m_TagString: Untagged
@@ -1712,7 +1712,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.000030517578, y: 200}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &8194455530604457973
+--- !u!114 &2313442089263127842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1721,7 +1721,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4317649807238400488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929e755fb1ccffc439b7f013126e57ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4336c4d9d2d4744b3ccc63a43a0cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 6764938899241780056}
@@ -2442,14 +2442,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8740146708595837731}
-  - component: {fileID: 8895117414886565749}
+  - component: {fileID: 8784280477590917767}
   m_Layer: 5
   m_Name: Sarcasm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8740146708595837731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2471,7 +2471,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 200.00002}
   m_SizeDelta: {x: 800, y: 300}
   m_Pivot: {x: 0.5, y: 0}
---- !u!114 &8895117414886565749
+--- !u!114 &8784280477590917767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2480,7 +2480,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5907618137746109759}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 929e755fb1ccffc439b7f013126e57ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4336c4d9d2d4744b3ccc63a43a0cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 6758285931425285042}
