@@ -15,4 +15,4 @@ MonoBehaviour:
   sceneName: Empleada Fabrica
   background: {fileID: 21300000, guid: cc14c4f35b991524382185c714989d1e, type: 3}
   otherCharacter: {fileID: 11400000, guid: 0eabbfe3af6e67f44a8b7a733fc8790b, type: 2}
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: be7de8c15cc1cee5685b2736ba2f1c3f, type: 3}
