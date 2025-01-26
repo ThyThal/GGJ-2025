@@ -205,9 +205,9 @@ MonoBehaviour:
       displayTime: 2
   - eventType: 1
     spriteDisplays:
-    - sprite: {fileID: 21300000, guid: cef2b6a7b60073046a18c9902151c82d, type: 3}
+    - sprite: {fileID: 21300000, guid: 9cdb93838cc6446488d62f682b978024, type: 3}
       displayTime: 0.1
-    - sprite: {fileID: -7869857643730520092, guid: bf9c9998bad69ab4d8032203cf3250a2, type: 3}
+    - sprite: {fileID: 21300000, guid: cef2b6a7b60073046a18c9902151c82d, type: 3}
       displayTime: 2
   - eventType: 2
     spriteDisplays:
