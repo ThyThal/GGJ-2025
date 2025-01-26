@@ -8,6 +8,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class SceneController : MonoBehaviour
@@ -21,7 +22,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private DecisionsUIManager decisionsUIManager;
     [SerializeField] private GameUIManager gameUIManager;
     [SerializeField] private SpriteRenderer backgroundRenderer;
-    
+    [SerializeField] private Image barRenderer;
     [SerializeField] private CharacterObject playerCharacter;
     [SerializeField] private CharacterObject otherCharacter;    
 
@@ -147,6 +148,7 @@ public class SceneController : MonoBehaviour
         PlaySceneSong(newDialogueSceneData);
         
         backgroundRenderer.sprite = currentSceneData.background;
+        barRenderer.sprite = currentSceneData.bar;
 
         // If new scene has character data, and it is different from current, update data and leave scene
         if (currentSceneData.otherCharacter)

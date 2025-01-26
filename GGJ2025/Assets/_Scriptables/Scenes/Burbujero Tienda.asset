@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Scene 1
   background: {fileID: -8855690875876968426, guid: 006eaed5329f1074ca4df44a57a3e56b, type: 3}
+  bar: {fileID: -1996143963174486192, guid: 33a85c84db9660047ab8ceee4c8f7e62, type: 3}
   otherCharacter: {fileID: 11400000, guid: 8ebf8c49c2f4976479e658336f4bee31, type: 2}
-  music: {fileID: 8300000, guid: 7052737c6c473ed4fb1cd163edb36e78, type: 3}
+  music: {fileID: 8300000, guid: 5d12f0d64a906384bb707db97d05968f, type: 3}

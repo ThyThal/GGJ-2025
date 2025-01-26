@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Scene Burbujero
   background: {fileID: 21300000, guid: 152266b694e9b944cad57f628972ecaf, type: 3}
+  bar: {fileID: 7471365413090732495, guid: a2566648bec912f4a923864be12e7a28, type: 3}
   otherCharacter: {fileID: 11400000, guid: 8ebf8c49c2f4976479e658336f4bee31, type: 2}
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 51c3d3db6ee741943a4ec956284d5eef, type: 3}
