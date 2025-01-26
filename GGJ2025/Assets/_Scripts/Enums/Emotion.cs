@@ -5,5 +5,6 @@ public enum Emotion
     Scream,
     Serious,
     Thinking,
-    Whisper
+    Whisper,
+    Sarcasm
 }

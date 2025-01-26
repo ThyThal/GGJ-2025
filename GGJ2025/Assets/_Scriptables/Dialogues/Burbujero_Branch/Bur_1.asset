@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Bur_1
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: 2883b18d187203a4ebbc246f34cfbf9e, type: 2}
+  - emotion: 5
+    dialogueNode: {fileID: 11400000, guid: 135f8ef8aaf618f4eb48960f0660f33d, type: 2}
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "\xBFQu\xE9 hace ac\xE1 detective? \xA1No pierda el tiempo y encuentre
+      a mi esposa por favor!"
+    isDecisionLine: 0
+    emotion: 2
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Usted me pidi\xF3 que investigue a todos los sospechosos. Eso hago."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.045
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xBFUsted me est\xE1 queriendo decir que\u2026?, qu\xE9 rid\xEDculo..."
+    isDecisionLine: 0
+    emotion: 2
+    typeSpeed: 0.055
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: No lo estoy acusando, solo quiero esclarecer este misterio.
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.04
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\u2026Bien, \xBFqu\xE9 quiere saber?"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFHay alguien en esta f\xE1brica que odie o quiera hacerle da\xF1o
+      a la Sra burbuja?"
+    isDecisionLine: 1
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 5
+    branches:
+    - emotion: 1
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: "\xA1Claro que no!, todos aman a mi esposa, es muy callada y
+          amable, nadie podr\xEDa odiarla."
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "Aunque ultimamente se junta mucho con el Conserje y eso me pone
+          muy nervioso, \xBFle viste el tama\xF1o de sus espinas?"
+        isDecisionLine: 0
+        emotion: 5
+        typeSpeed: 0.04
+        dialogueTime: 1.5
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 1
+        dialogueID: "\xBFY qu\xE9 asuntos tiene su esposa con el conserje para pasar
+          tanto tiempo con \xE9l?"
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "No lo s\xE9, cada vez que le pregunto me ignora. \xBFPero qu\xE9
+          tiene que ver esto con su desaparici\xF3n?"
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+    - emotion: 5
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: "A m\xED s\xED, pero a mi esposa nadie. Aunque\u2026"
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.04
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "Ultimamente mi esposa estaba algo celosa de la Lic. Arrozal\xEDa.
+          Es la ingeniera de la f\xE1brica y suele pasar mucho tiempo conmigo."
+        isDecisionLine: 0
+        emotion: 5
+        typeSpeed: 0.04
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "Adem\xE1s, su car\xE1cter amigable varias veces despert\xF3
+          las sospechas de los empleados sobre un posible romance"
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.045
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "\xA1Pero no es cierto!, yo jam\xE1s enga\xF1ar\xEDa a mi Burbu."
+        isDecisionLine: 0
+        emotion: 2
+        typeSpeed: 0.04
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "De todos modos, cada vez que ve a mi esposa o le hablo de ella,
+          la Srita. Arrozal\xEDa pierde su alegr\xEDa y se pone algo fr\xEDa\u2026"
+        isDecisionLine: 0
+        emotion: 5
+        typeSpeed: 0.04
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+  initialPlayerEmotion: 3
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: 34bfe73a08255654fb15327e9f78918d, type: 2}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

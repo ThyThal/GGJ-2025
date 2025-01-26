@@ -21,3 +21,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 547700e0d35f75a409cf44c65573ac3e, type: 3}
   - emotion: 3
     sprite: {fileID: 21300000, guid: 6fcac5ff5a87b244aa11d7d2d874d497, type: 3}
+  - emotion: 5
+    sprite: {fileID: 21300000, guid: dc621dcf8315e614fa7353f91f77c23c, type: 3}
+  - emotion: 6
+    sprite: {fileID: 21300000, guid: e3c060f43eb0d174ea3896d00d53c45b, type: 3}
