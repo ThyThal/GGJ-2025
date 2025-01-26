@@ -19,32 +19,9 @@ MonoBehaviour:
     dialogueNode: {fileID: 0}
   dialogueLines:
   - isPlayerLine: 0
-    dialogueID: "\xBFQu\xE9 onda...?"
+    dialogueID: Lo que me faltaba. Encima de mi laburo de mierda me tengo que bancar
+      a este payaso sorete...
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
-    decisionTime: 0
-    branches: []
-  - isPlayerLine: 1
-    dialogueID: "\xA1Qu\xE9 car\xE1cter!"
-    isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
-    decisionTime: 0
-    branches: []
-  - isPlayerLine: 0
-    dialogueID: No me pagan para hacer sociales.
-    isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
-    decisionTime: 0
-    branches: []
-  - isPlayerLine: 1
-    dialogueID: Por tu actitud, veo que muy bien no te pagan de todas formas.
-    isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.03
     dialogueTime: 0
