@@ -9,6 +9,14 @@ public class DecisionsUIManager : MonoBehaviour
     [SerializeField] private DecisionUI[] decisionButtons;
     [SerializeField] private EmotionSpriteDataSO decisionSprites;
 
+    private void Awake()
+    {
+        foreach (var button in decisionButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
+    }
+
     public event Action<Emotion> OnPlayerClickedDecision;
 
     public void Show()
@@ -18,14 +26,21 @@ public class DecisionsUIManager : MonoBehaviour
 
     public void Hide()
     {
+        foreach (var button in decisionButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
+        
         gameObject.SetActive(false);
     }
     
     public void Setup(Emotion[] emotions)
     {
-        for (int i = 0; i < decisionButtons.Length; i++)
+        Debug.Log(emotions);
+        for (int i = 0; i < emotions.Length; i++)
         {
-            //ebug.LogWarning("Setting up " + decisionButtons[i].name + " with emotion " + emotions[i]);
+            //Debug.LogWarning("Setting up " + decisionButtons[i].name + " with emotion " + emotions[i]);
+            decisionButtons[i].gameObject.SetActive(true);
             decisionButtons[i].Setup(decisionSprites.GetSpriteFromEmotion(emotions[i]), emotions[i]);
         }
     }
