@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8043d3c1381e6b24fa4997d0e7d6445f, type: 3}
+  m_Name: Employee
+  m_EditorClassIdentifier: 
+  characterName: Empleada
+  bodySprite: {fileID: 21300000, guid: 09d14e719d7457645ac81c5f3c2ec7da, type: 3}
+  emotionBodySprites:
+  - emotion: 0
+    sprite: {fileID: 21300000, guid: 09d14e719d7457645ac81c5f3c2ec7da, type: 3}
+  - emotion: 1
+    sprite: {fileID: 21300000, guid: 29e02c469f21f0d40b4d1bbbc7f87060, type: 3}
+  - emotion: 2
+    sprite: {fileID: 21300000, guid: 4c2c186b6c8a27e42adf91c9232b42f4, type: 3}
+  - emotion: 3
+    sprite: {fileID: 21300000, guid: 09d14e719d7457645ac81c5f3c2ec7da, type: 3}
+  - emotion: 5
+    sprite: {fileID: 21300000, guid: 29e02c469f21f0d40b4d1bbbc7f87060, type: 3}
+  emotionAudioList: []

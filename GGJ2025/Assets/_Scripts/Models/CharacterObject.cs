@@ -27,7 +27,6 @@ public class CharacterObject : MonoBehaviour
         
         bodySpriteRenderer.sprite = data.bodySprite;
         ChangeBody(initialType);
-        //ChangeFace(initialType);
         //ChangeVoice(initialType);
     }
 
@@ -40,14 +39,8 @@ public class CharacterObject : MonoBehaviour
     {
         ChangeBody(type);
         //ChangeVoice(type);
-        //ChangeFace(type);
     }
     
-    public void ChangeFace(Emotion type = Emotion.Normal)
-    {
-        faceSpriteRenderer.sprite = data.GetFace(type);
-    }
-
     public void EnterScene()
     {
         //transform.parent.position = leavePosition.position;

@@ -13,30 +13,16 @@ MonoBehaviour:
   m_Name: Burbujero
   m_EditorClassIdentifier: 
   characterName: Burbujero
-  bodySprite: {fileID: 21300000, guid: 5c7db1d5f8cdeca40b74f97d0671dd22, type: 3}
-  bodyScared: {fileID: 0}
+  bodySprite: {fileID: 21300000, guid: 7317f2335aff44f4aa32d6cbe21ccb34, type: 3}
   emotionBodySprites:
   - emotion: 0
-    sprite: {fileID: 21300000, guid: 5c7db1d5f8cdeca40b74f97d0671dd22, type: 3}
-  normalFaceSprite: {fileID: 21300000, guid: 5c7db1d5f8cdeca40b74f97d0671dd22, type: 3}
-  angryFaceSprite: {fileID: 8526343892206179572, guid: bb3e2b4205cd93f469f94e7b80a1b168, type: 3}
-  thinkingFaceSprite: {fileID: -4137265307173148636, guid: 23ec584e4a864994a98e4bb66d490bb8, type: 3}
-  emotionAudioList:
-  - emotion: 0
-    audioClips:
-    - {fileID: 8300000, guid: 7052737c6c473ed4fb1cd163edb36e78, type: 3}
+    sprite: {fileID: 21300000, guid: 7317f2335aff44f4aa32d6cbe21ccb34, type: 3}
   - emotion: 1
-    audioClips:
-    - {fileID: 8300000, guid: 7052737c6c473ed4fb1cd163edb36e78, type: 3}
+    sprite: {fileID: 21300000, guid: 7317f2335aff44f4aa32d6cbe21ccb34, type: 3}
   - emotion: 2
-    audioClips:
-    - {fileID: 8300000, guid: 7052737c6c473ed4fb1cd163edb36e78, type: 3}
+    sprite: {fileID: 21300000, guid: 516fc1a3f378a3c419fdcd482f80863c, type: 3}
   - emotion: 3
-    audioClips:
-    - {fileID: 8300000, guid: 7052737c6c473ed4fb1cd163edb36e78, type: 3}
-  - emotion: 4
-    audioClips:
-    - {fileID: 8300000, guid: 7052737c6c473ed4fb1cd163edb36e78, type: 3}
+    sprite: {fileID: 21300000, guid: 516fc1a3f378a3c419fdcd482f80863c, type: 3}
   - emotion: 5
-    audioClips:
-    - {fileID: 8300000, guid: 7052737c6c473ed4fb1cd163edb36e78, type: 3}
+    sprite: {fileID: 21300000, guid: c3f90a2de0044ec45ba2eb8b15cf63dd, type: 3}
+  emotionAudioList: []

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9b652a774b25b0248bc846930bd68c0a
+guid: 7317f2335aff44f4aa32d6cbe21ccb34
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1090217281897295437
-    second: char1_0
+      213: 3270323177649974100
+    second: Asset_Personaje_Burbujero_Normal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 634
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.49}
+  spritePixelsToUnits: 660
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,43 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: char1_0
+      name: Asset_Personaje_Burbujero_Normal_0
       rect:
         serializedVersion: 2
-        x: 55
+        x: 25
         y: 0
-        width: 691
-        height: 637
+        width: 392
+        height: 662
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4eea7777da312f00800000000000000
-      internalID: 1090217281897295437
+      spriteID: 45bad886a95826d20800000000000000
+      internalID: 3270323177649974100
       vertices: []
       indices: 
       edges: []
@@ -149,7 +123,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -157,7 +131,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      char1_0: 1090217281897295437
+      Asset_Personaje_Burbujero_Normal_0: 3270323177649974100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
