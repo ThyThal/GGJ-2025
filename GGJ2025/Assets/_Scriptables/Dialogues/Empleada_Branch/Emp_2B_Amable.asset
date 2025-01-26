@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Emp_2B_Amable
   m_EditorClassIdentifier: 
   nextDialogues:
-  - emotion: 2
-    dialogueNode: {fileID: 11400000, guid: f68901b477058034aa451389e83e603f, type: 2}
   - emotion: 6
     dialogueNode: {fileID: 11400000, guid: d2a3cd5029b3f7741b060d6c53bc54b9, type: 2}
   - emotion: 1
@@ -24,16 +22,16 @@ MonoBehaviour:
     dialogueID: "Si bueno, podr\xEDa ser peor... Tampoco me voy a jubilar ac\xE1."
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: Bueno, por lo menos el Sr. Burbujero te deja comer chicle en el trabajo.
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 6
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
@@ -41,26 +39,26 @@ MonoBehaviour:
       de la m\xE1quina?"
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: '"El Sr. Burbujero tiene muchas cosas de las que preocuparse hoy,
-      el chicle es lo de menos".'
+    dialogueID: El Sr. Burbujero tiene muchas cosas de las que preocuparse hoy, el
+      chicle es lo de menos.
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 2
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: "Entonces el accidente podr\xEDa decirse que te benefici\xF3."
     isDecisionLine: 1
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
-    decisionTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
     branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0

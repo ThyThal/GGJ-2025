@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Old_1
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 2
+    dialogueNode: {fileID: 11400000, guid: ec7d00df3f0cb664b8c94b1dc7bd113e, type: 2}
+  - emotion: 1
+    dialogueNode: {fileID: 0}
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: " \xA1Oh, un nuevo cliente!, \xA1pase, pase! \xBFQu\xE9 lo trae por
+      ac\xE1?, \xBFbusca alg\xFAn jab\xF3n, perfume para la ropa, detergente? Tambi\xE9n
+      vendo galletitas."
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.07
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Muy amable se\xF1ora, pero no vengo a comprar nada. Estoy investigando
+      un incidente que sucedi\xF3 hoy en la f\xE1brica de al lado."
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.045
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xBFF\xE1brica de helados? No, no, lo \xFAnico que hay al lado es
+      una f\xE1brica de burbujas. Si quiere un helado puede ir a\u2026"
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.07
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "No me escuch\xF3 bien, el Sr. Burbujero me contact\xF3 para encontrar
+      a su esposa, est\xE1 muy dolido."
+    isDecisionLine: 1
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches:
+    - emotion: 2
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: "\xA1Oh!, entiendo\u2026 Pero yo se lo advert\xED al Sr. Burbujero.
+          En realidad, el Sr. Burbujero siempre me compraba a m\xED los jabones que
+          utilizaba para su f\xE1brica."
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "Jabones naturales y f\xE1ciles de diluir, pero el Sr. Burbujero
+          decidi\xF3 probar unos jabones industriales que eran \"mejores y baratos\",
+          ja\u2026"
+        isDecisionLine: 0
+        emotion: 6
+        typeSpeed: 0.05
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+    - emotion: 1
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: "\xBFQue el Sr. Burbujero le contagi\xF3 un sarpullido? Bah,
+          era de esperarse."
+        isDecisionLine: 0
+        emotion: 6
+        typeSpeed: 0.06
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "Con los jabones que usa ultimamente para hacer las burbujas
+          en su f\xE1brica no me extra\xF1a que est\xE9 sufriendo irritaciones en
+          la piel. Esos productos no son nada naturales, solo qu\xEDmicos baratos."
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.045
+        dialogueTime: 2
+        decisionTime: 0
+        branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 0}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

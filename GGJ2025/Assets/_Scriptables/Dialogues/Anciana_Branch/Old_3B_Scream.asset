@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Old_3B_Scream
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: 24f143b3fdf0bd04094d96533f8d4e4e, type: 2}
+  - emotion: 2
+    dialogueNode: {fileID: 11400000, guid: ad9c7c026bc35764a97f86711769c122, type: 2}
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "Bueno\u2026 No lo conozco mucho pero puedo ver que usted es una
+      persona discreta detective, \xBFPuede guardar un secretito?"
+    isDecisionLine: 0
+    emotion: 5
+    typeSpeed: 0.045
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Ehm\u2026 s\xED, claro."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.06
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Ver\xE1, a este ritmo, la f\xE1brica del Sr. Burbujero se ir\xEDa
+      a la quiebra de todas formas. El accidente solo aceler\xF3 un poquitito el
+      proceso. Puede que... tal vez yo le haya dado un espesante para l\xEDquidos
+      a mi nieta por la ma\xF1ana y, pobrecita, a la torpe se le haya ca\xEDdo en
+      la mezcla."
+    isDecisionLine: 0
+    emotion: 6
+    typeSpeed: 0.06
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFMe est\xE1 diciendo que ustedes sabotearon la f\xE1brica del
+      Sr. Burbujero?"
+    isDecisionLine: 1
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 5
+  initialOtherEmotion: 5
+  sceneData: {fileID: 0}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

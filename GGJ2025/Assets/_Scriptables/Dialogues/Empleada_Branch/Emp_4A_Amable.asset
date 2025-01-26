@@ -12,19 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
   m_Name: Emp_4A_Amable
   m_EditorClassIdentifier: 
-  nextDialogues:
-  - emotion: 3
-    dialogueNode: {fileID: 0}
-  - emotion: 1
-    dialogueNode: {fileID: 0}
+  nextDialogues: []
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "Bueno, no te voy a mentir, el Sr. Burbujero no es el jefe m\xE1s
       atento. Ni siquiera nos da caja navide\xF1a\u2026"
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.045
+    dialogueTime: 2
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
@@ -32,8 +28,8 @@ MonoBehaviour:
       pero un cambio de administraci\xF3n no estar\xEDa mal\u2026"
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
@@ -41,21 +37,21 @@ MonoBehaviour:
       la f\xE1brica?"
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
     dialogueID: "No, qu\xE9 se yo, era una idea nada m\xE1s\u2026"
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 6
+    typeSpeed: 0.04
+    dialogueTime: 2
     decisionTime: 0
     branches: []
   initialPlayerEmotion: 0
-  initialOtherEmotion: 0
+  initialOtherEmotion: 3
   sceneData: {fileID: 11400000, guid: bcf496ae8462f10428b3674c956efba8, type: 2}
-  isInteractionEnd: 0
+  isInteractionEnd: 1
   characterToUnlock: {fileID: 0}
-  characterToBlock: {fileID: 0}
+  characterToBlock: {fileID: 11400000, guid: 0eabbfe3af6e67f44a8b7a733fc8790b, type: 2}

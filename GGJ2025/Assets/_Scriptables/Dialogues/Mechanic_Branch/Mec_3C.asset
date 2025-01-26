@@ -15,7 +15,7 @@ MonoBehaviour:
   nextDialogues:
   - emotion: 2
     dialogueNode: {fileID: 11400000, guid: 530bc18a610e55442bf3799a2359a7d4, type: 2}
-  - emotion: 1
+  - emotion: 5
     dialogueNode: {fileID: 11400000, guid: e673ae5062a80d547a3dd883340e5431, type: 2}
   dialogueLines:
   - isPlayerLine: 0
@@ -35,7 +35,7 @@ MonoBehaviour:
     decisionTime: 5
     branches: []
   initialPlayerEmotion: 0
-  initialOtherEmotion: 0
+  initialOtherEmotion: 2
   sceneData: {fileID: 11400000, guid: 0e69d32ac8e4e1d44aadd7d459ab9446, type: 2}
   isInteractionEnd: 0
   characterToUnlock: {fileID: 0}

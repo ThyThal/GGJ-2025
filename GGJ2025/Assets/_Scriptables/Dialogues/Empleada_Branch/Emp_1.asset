@@ -21,33 +21,33 @@ MonoBehaviour:
   - isPlayerLine: 0
     dialogueID: "\xBFQu\xE9 onda...?"
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.06
+    dialogueTime: 1
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: "\xA1Qu\xE9 car\xE1cter!"
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 2
+    typeSpeed: 0.05
+    dialogueTime: 1
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
     dialogueID: No me pagan para hacer sociales.
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: Por tu actitud, veo que muy bien no te pagan de todas formas.
     isDecisionLine: 1
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
     decisionTime: 0
     branches: []
   initialPlayerEmotion: 0

@@ -12,24 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
   m_Name: Emp_3A_Grito
   m_EditorClassIdentifier: 
-  nextDialogues:
-  - emotion: 3
-    dialogueNode: {fileID: 0}
-  - emotion: 1
-    dialogueNode: {fileID: 0}
+  nextDialogues: []
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: Lo que me faltaba. Encima de mi laburo de mierda me tengo que bancar
       a este payaso sorete...
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 2
     decisionTime: 0
     branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0
   sceneData: {fileID: 11400000, guid: bcf496ae8462f10428b3674c956efba8, type: 2}
-  isInteractionEnd: 0
+  isInteractionEnd: 1
   characterToUnlock: {fileID: 0}
-  characterToBlock: {fileID: 0}
+  characterToBlock: {fileID: 11400000, guid: 0eabbfe3af6e67f44a8b7a733fc8790b, type: 2}

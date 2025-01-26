@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Old_4B_Scream_EndAlt1
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "Sabotear es una palabra muy fuerte. M\xE1s bien dir\xEDa que\u2026
+      intentamos convencer al Sr. Burbujero de que ponga en venta su terreno."
+    isDecisionLine: 0
+    emotion: 6
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Mi nieta no tiene futuro dentro de esa f\xE1brica. Si pudi\xE9ramos
+      comprarla nosotros, ella podr\xEDa seguir mis pasos y alg\xFAn d\xEDa tomar
+      las riendas del negocio familiar."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Lo que usted me est\xE1 diciendo es un delito, no me deja alternativa
+      m\xE1s que denunciarla con la polic\xEDa se\xF1ora."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xA1\xBFC\xF3mo?! \xA1Pero usted me enga\xF1\xF3! Como me susurr\xF3
+      todo este tiempo cre\xED que ayudar\xEDa a una pobre anciana a lograr expandir
+      el negocio que mantuvo toda su vida."
+    isDecisionLine: 0
+    emotion: 2
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Se\xF1ora, estuve gritando literalmente durante m\xE1s de la mitad 
+      de nuestra conversaci\xF3n. Hasta me duele la garganta."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Tch\u2026"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.06
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 0}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

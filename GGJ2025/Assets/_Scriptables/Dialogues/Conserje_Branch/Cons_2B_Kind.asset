@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Cons_2B_Kind
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 3
+    dialogueNode: {fileID: 11400000, guid: 0ab5734e98973e645b640ecf58be205a, type: 2}
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: 2757add9d051cd04c83000d5c96278fc, type: 2}
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "No s\xE9 qu\xE9 le dijo ese tarado, pero el paradero de la Sra.
+      Burbuja no es de mi incumbencia."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Adem\xE1s, todo el mundo dice que desapareci\xF3, pero yo no lo
+      creo\u2026"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.045
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Yo no tardar\xEDa ni 5 minutos en pensar en escapar si mi marido
+      fuera ese tipo."
+    isDecisionLine: 0
+    emotion: 2
+    typeSpeed: 0.05
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "La tiene escondida en el piso de arriba, \xBFverdad?"
+    isDecisionLine: 1
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 10
+    branches:
+    - emotion: 3
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: "Ngh\u2026 Ese pedazo de lata ya le cont\xF3 todo\u2026"
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.04
+        dialogueTime: 1.5
+        decisionTime: 0
+        branches: []
+    - emotion: 1
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: "Para nada, vaya a revisar si quiere, no tengo motivos para mentirle.
+          Ya le dije lo que le ten\xEDa que decir."
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1.5
+        decisionTime: 0
+        branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 0}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

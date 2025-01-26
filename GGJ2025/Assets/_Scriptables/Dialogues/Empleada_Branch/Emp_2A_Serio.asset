@@ -17,62 +17,60 @@ MonoBehaviour:
     dialogueNode: {fileID: 11400000, guid: f68901b477058034aa451389e83e603f, type: 2}
   - emotion: 6
     dialogueNode: {fileID: 11400000, guid: d2a3cd5029b3f7741b060d6c53bc54b9, type: 2}
-  - emotion: 1
-    dialogueNode: {fileID: 11400000, guid: 3f11ba9887eef874db4c88158f9af46c, type: 2}
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "\xBFY a usted qu\xE9 le importa?, \xBFNo tendr\xEDa que estar buscando
       a la Sra. Burbuja?"
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: Eso hago, estoy investigando a todos los sospechosos.
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.06
+    dialogueTime: 1
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
     dialogueID: "Est\xE1 perdiendo el tiempo. Piense lo que quiera, yo solo estoy
       esperando que termine mi jornada laboral."
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: "D\xEDa duro, \xBFno?, la f\xE1brica es un despelote."
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
     dialogueID: " Jaja, d\xEDa duro para el conserje tal vez, yo estuve pasando el
       rato desde la ma\xF1ana. Si no funciona la m\xE1quina, yo no trabajo."
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 6
+    typeSpeed: 0.05
+    dialogueTime: 2
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: "Entonces el accidente podr\xEDa decirse que te benefici\xF3."
     isDecisionLine: 1
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
-    decisionTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
     branches: []
   initialPlayerEmotion: 0
-  initialOtherEmotion: 0
+  initialOtherEmotion: 3
   sceneData: {fileID: 11400000, guid: bcf496ae8462f10428b3674c956efba8, type: 2}
   isInteractionEnd: 0
   characterToUnlock: {fileID: 0}

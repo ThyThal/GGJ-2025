@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Asset_UI_LineaBase_Oficina_0: 7471365413090732495
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

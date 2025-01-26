@@ -10,29 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
-  m_Name: Emp_3_Sarcasmo
+  m_Name: Emp_3B_Sarcasmo
   m_EditorClassIdentifier: 
-  nextDialogues:
-  - emotion: 3
-    dialogueNode: {fileID: 0}
-  - emotion: 1
-    dialogueNode: {fileID: 0}
+  nextDialogues: []
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "Y... si a vos el mismo producto para hacer burbujas te funciona
       bien por tantos a\xF1os, \xBFlo cambiar\xEDas?"
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 6
+    typeSpeed: 0.05
+    dialogueTime: 2
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: "\xBFY por qu\xE9 lo cambi\xF3 entonces?"
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.04
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
@@ -40,25 +36,25 @@ MonoBehaviour:
       toda la vida los jabones en el almac\xE9n de al lado y nunca tuvo un problema."
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 2
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
     dialogueID: "Los productos de mi abuela siempre fueron los mejores, pero bueno...
       ella siempre me dijo que el Sr. Burbuja es un taca\xF1o."
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 6
+    typeSpeed: 0.045
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: "\xBFTu abuela?, \xBFElla es la due\xF1a del almac\xE9n?"
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
@@ -66,8 +62,8 @@ MonoBehaviour:
       No le vendr\xEDa mal buscar expandirse..."
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.045
+    dialogueTime: 2
     decisionTime: 0
     branches: []
   initialPlayerEmotion: 0
@@ -75,4 +71,4 @@ MonoBehaviour:
   sceneData: {fileID: 11400000, guid: bcf496ae8462f10428b3674c956efba8, type: 2}
   isInteractionEnd: 1
   characterToUnlock: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}
-  characterToBlock: {fileID: 0}
+  characterToBlock: {fileID: 11400000, guid: 0eabbfe3af6e67f44a8b7a733fc8790b, type: 2}

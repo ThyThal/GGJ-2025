@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Arroz_2B_Whisper
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 2
+    dialogueNode: {fileID: 0}
+  - emotion: 5
+    dialogueNode: {fileID: 0}
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "\xBFC\xF3mooo? Por favor nene, si yo me llevo bien con todo el mundo."
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: El Sr. Burbujero teme que la Sra. Burbuja lo haya abandonado por
+      miedo a los rumores de un romance entre ustedes dos.
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xBFYo y el Sr. Burbujero?, ya quisiera\u2026"
+    isDecisionLine: 0
+    emotion: 6
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "El Sr. Burbujero est\xE1 muy preocupado por su esposa. \xBFUsted
+      tiene algo que ver en todo esto?"
+    isDecisionLine: 1
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 1
+  sceneData: {fileID: 0}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

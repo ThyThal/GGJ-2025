@@ -23,26 +23,26 @@ MonoBehaviour:
       eso seguro\u2026"
     isDecisionLine: 0
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    typeSpeed: 0.045
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
     dialogueID: "Pero yo no tengo nada que ver, eh\u2026 No me interesa perjudicar
       a la Sra. Burbuja."
     isDecisionLine: 0
-    emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
     dialogueID: "\xBFY Al Sr. Burbujero?"
     isDecisionLine: 1
     emotion: 0
-    typeSpeed: 0.03
-    dialogueTime: 0
-    decisionTime: 0
+    typeSpeed: 0.06
+    dialogueTime: 1.5
+    decisionTime: 10
     branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0
