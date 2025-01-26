@@ -22,8 +22,8 @@ public class LevelLoader : MonoBehaviour
     private IEnumerator LoadLevel(string sceneName)
     {
         // Play Animation
-        _animator.SetTrigger("Start");
-        yield return new WaitForSeconds(_transitionTime);
+        //_animator.SetTrigger("Start");
+        yield return new WaitForSeconds(FadeController.Instance.FadeOut());
         SceneManager.LoadScene(sceneName);
     }
 }
