@@ -47,7 +47,7 @@ public class PauseMenuController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.IsPaused())
+        if (Input.GetKeyDown(KeyCode.Escape) && GameManager.Instance.IsPaused() && SceneManager.GetActiveScene().name != "Menu Scene")
         {
             if (pauseMenuActive)
             {
