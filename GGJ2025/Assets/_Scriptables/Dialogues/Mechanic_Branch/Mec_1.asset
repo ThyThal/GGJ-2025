@@ -27,7 +27,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "\xBFBuenos?, hay una persona desaparecida\u2026"
+    dialogueID: "\xBFBuenos? Hay una persona desaparecida\u2026"
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.05
