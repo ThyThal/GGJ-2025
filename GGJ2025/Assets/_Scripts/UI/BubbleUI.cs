@@ -76,13 +76,13 @@ public class BubbleUI : MonoBehaviour
             currentBubbleComponents = GetCurrentBubbleComponents();
         }
 
+        currentPrefab.SetActive(true);
 
         if (forceText != null)
         {
             Debug.LogWarning("Pre setting text: " + forceText);
             currentBubbleComponents.textComponent.text = forceText;
         }
-        currentPrefab.SetActive(true);
         //gameObject.SetActive(true);
         isShowing = true;
         LeanTween.scale(currentPrefab, Vector3.one, showTime).setEaseOutElastic();
