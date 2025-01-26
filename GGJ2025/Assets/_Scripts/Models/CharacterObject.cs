@@ -18,7 +18,7 @@ public class CharacterObject : MonoBehaviour
     private void Awake()
     {
         if (personAudio == null ) personAudio = GetComponentInChildren<PersonAudio>();
-        if (personAudio != null) personAudio.SetCharacterData(data);
+        //if (personAudio != null) personAudio.SetCharacterData(data);
     }
 
     public void SetData(CharacterDataSO data, Emotion initialType = Emotion.Normal)
@@ -26,6 +26,7 @@ public class CharacterObject : MonoBehaviour
         this.data = data;
         
         bodySpriteRenderer.sprite = data.bodySprite;
+        personAudio.SetCharacterData(data);
         ChangeBody(initialType);
         //ChangeVoice(initialType);
     }

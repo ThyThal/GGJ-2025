@@ -15,7 +15,7 @@ public class BubblesUIManager : MonoBehaviour
         return isPlayer ? playerBubble : otherCharacterBubble;
     }
     
-    public IEnumerator AnimateBubble(BubbleUI target, Emotion emotion)
+    public IEnumerator AnimateBubble(BubbleUI target, Emotion emotion, string forceLine = null)
     {
         // Don't animate if prefab is already set
         if (target.GetEmotion() == emotion && target.IsShowing) yield break;
@@ -27,7 +27,7 @@ public class BubblesUIManager : MonoBehaviour
         }
         
         target.SetEmotion(emotion);
-        target.Show();
+        target.Show(forceLine);
         yield return new WaitForSeconds(target.ShowTime);
     }
 

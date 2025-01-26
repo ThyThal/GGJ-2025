@@ -249,8 +249,9 @@ public class SceneController : MonoBehaviour
         // TODO: Maybe do Coroutine as well, and animate Undefined bubble
         // To write line that needs a decision, before deciding and rewriting it with animation and audio
         var targetBubble = bubblesUIManager.GetTargetBubble(newLine.isPlayerLine);
-        yield return bubblesUIManager.AnimateBubble(targetBubble, Emotion.Thinking);
-        targetBubble.GetCurrentBubbleComponents().textComponent.text = newLine.dialogueID;
+        // Send Line as a parameter to force writing before bubble animation
+        yield return bubblesUIManager.AnimateBubble(targetBubble, Emotion.Thinking, newLine.dialogueID);
+        //targetBubble.GetCurrentBubbleComponents().textComponent.text = newLine.dialogueID;
     }
     
     private IEnumerator WriteDialogueLineRoutine(DialogueLine newLine, bool isDecisionLine = false)

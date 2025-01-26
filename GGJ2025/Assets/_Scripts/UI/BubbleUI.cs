@@ -57,7 +57,7 @@ public class BubbleUI : MonoBehaviour
         return currentBubbleComponents;
     }
 
-    public void Show()
+    public void Show(string forceText = null)
     {
         // Find the prefab corresponding to the current emotion
         var emotionPrefab = emotionPrefabs.Find(ep => ep.emotion == CurrentEmotion);
@@ -76,6 +76,12 @@ public class BubbleUI : MonoBehaviour
             currentBubbleComponents = GetCurrentBubbleComponents();
         }
 
+
+        if (forceText != null)
+        {
+            Debug.LogWarning("Pre setting text: " + forceText);
+            currentBubbleComponents.textComponent.text = forceText;
+        }
         currentPrefab.SetActive(true);
         //gameObject.SetActive(true);
         isShowing = true;

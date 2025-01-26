@@ -9,6 +9,6 @@ public class Person : MonoBehaviour
 
     private void Awake()
     {
-        GetComponentInChildren<CharacterObject>()?.SetData(characterDataSO);
+        //GetComponentInChildren<CharacterObject>()?.SetData(characterDataSO);
     }
 }

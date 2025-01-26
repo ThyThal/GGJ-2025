@@ -25,7 +25,7 @@ public class DecisionsUIManager : MonoBehaviour
     {
         for (int i = 0; i < decisionButtons.Length; i++)
         {
-            Debug.LogWarning("Setting up " + decisionButtons[i].name + " with emotion " + emotions[i]);
+            //ebug.LogWarning("Setting up " + decisionButtons[i].name + " with emotion " + emotions[i]);
             decisionButtons[i].Setup(decisionSprites.GetSpriteFromEmotion(emotions[i]), emotions[i]);
         }
     }
