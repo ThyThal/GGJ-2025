@@ -29,6 +29,7 @@ public class MenuController : MonoBehaviour
         PlaySound(soundIn);
         GameManager.Instance.isIngame = true; 
         GameManager.Instance.SetPause(false);
+        GameProgression.Instance.ResetProgress();
         _levelLoader.LoadScene(GameManager.Instance.gameScene);
         
     }

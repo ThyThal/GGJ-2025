@@ -49,5 +49,5 @@ public class GameEventEntry
 public class SpriteDisplay
 {
     [HideLabel] public Sprite sprite;
-    [Range(2f, 10f)] public float displayTime = 2f;
+    [Range(0.1f, 10f)] public float displayTime = 2f;
 }

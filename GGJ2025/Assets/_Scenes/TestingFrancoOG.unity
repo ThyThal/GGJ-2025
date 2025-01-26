@@ -156,6 +156,12 @@ MonoBehaviour:
     initialNode: {fileID: 11400000, guid: 2d52027ce97abdc4e946f3cda1f295c1, type: 2}
   - characterData: {fileID: 11400000, guid: 0eabbfe3af6e67f44a8b7a733fc8790b, type: 2}
     initialNode: {fileID: 11400000, guid: 6669671b797514f4ea2058adca2cd682, type: 2}
+  - characterData: {fileID: 11400000, guid: 3743f98aa509e98489bd814a1bcfa26a, type: 2}
+    initialNode: {fileID: 11400000, guid: 89e50770d506ddf4cb2faf731218961c, type: 2}
+  - characterData: {fileID: 11400000, guid: b750d0d5026653d47bb06570f8eae3c9, type: 2}
+    initialNode: {fileID: 11400000, guid: 36d74d220810e73498079d5c6562b256, type: 2}
+  - characterData: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}
+    initialNode: {fileID: 11400000, guid: 81bc17017255c60448edb28c66f6ea23, type: 2}
   dialogueController: {fileID: 647312677}
   specialEvents: {fileID: 6982485}
 --- !u!4 &6982484
@@ -167,7 +173,7 @@ Transform:
   m_GameObject: {fileID: 6982482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2740172, y: -0.0888994, z: -9.2835245}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -190,7 +196,7 @@ MonoBehaviour:
   - eventType: 0
     spriteDisplays:
     - sprite: {fileID: -2256061481055164158, guid: 151f5b8b416b9ab418cb44e36e4bc84f, type: 3}
-      displayTime: 2
+      displayTime: 0.1
     - sprite: {fileID: 21300000, guid: 906d75c70487c454a86d756d087435b7, type: 3}
       displayTime: 2
     - sprite: {fileID: 21300000, guid: 4f9407f52e0851b48b6c0ecbe1b41001, type: 3}
@@ -199,7 +205,51 @@ MonoBehaviour:
       displayTime: 2
   - eventType: 1
     spriteDisplays:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 21300000, guid: cef2b6a7b60073046a18c9902151c82d, type: 3}
+      displayTime: 0.1
+    - sprite: {fileID: -7869857643730520092, guid: bf9c9998bad69ab4d8032203cf3250a2, type: 3}
+      displayTime: 2
+  - eventType: 2
+    spriteDisplays:
+    - sprite: {fileID: 21300000, guid: f9595acbc3560e84c8acb4a5d7bbadc9, type: 3}
+      displayTime: 0.1
+    - sprite: {fileID: 21300000, guid: 1d4bea7bc3c211a41b132fd681f377a2, type: 3}
+      displayTime: 2
+    - sprite: {fileID: 21300000, guid: b5c3f61e2214d10479248a035adb614e, type: 3}
+      displayTime: 2
+    - sprite: {fileID: 21300000, guid: 46e3799ab44090645a9b0d0a5e3a8390, type: 3}
+      displayTime: 2
+    - sprite: {fileID: 21300000, guid: 7d058facbb32f634f816c32cbce28c0c, type: 3}
+      displayTime: 2
+  - eventType: 3
+    spriteDisplays:
+    - sprite: {fileID: 21300000, guid: 9cdb93838cc6446488d62f682b978024, type: 3}
+      displayTime: 0.1
+    - sprite: {fileID: 21300000, guid: 9fdc30c6f2c75374384260a3d9f17d41, type: 3}
+      displayTime: 2
+  - eventType: 4
+    spriteDisplays:
+    - sprite: {fileID: 21300000, guid: 9cdb93838cc6446488d62f682b978024, type: 3}
+      displayTime: 0.1
+    - sprite: {fileID: 21300000, guid: ff950ac3f7e93ce42a39b998dd3ae33a, type: 3}
+      displayTime: 2
+  - eventType: 5
+    spriteDisplays:
+    - sprite: {fileID: 21300000, guid: 78a9c013847787c4d8e83e56bad6b75b, type: 3}
+      displayTime: 0.1
+    - sprite: {fileID: 21300000, guid: a4ce7a2c9dcde8246a91b549b67ca4b1, type: 3}
+      displayTime: 2
+  - eventType: 6
+    spriteDisplays:
+    - sprite: {fileID: 21300000, guid: 78a9c013847787c4d8e83e56bad6b75b, type: 3}
+      displayTime: 0.1
+    - sprite: {fileID: 21300000, guid: 944e783995eecdd4da3e3c358d968e4f, type: 3}
+      displayTime: 2
+  - eventType: 7
+    spriteDisplays:
+    - sprite: {fileID: 21300000, guid: b6591a9d04b8d454eabdc45cdd9dd770, type: 3}
+      displayTime: 0.1
+    - sprite: {fileID: 21300000, guid: ce3591b40bc7b6248b2b9e2941751fb4, type: 3}
       displayTime: 2
 --- !u!1 &51123119
 GameObject:
