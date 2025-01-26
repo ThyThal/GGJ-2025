@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BranchLoader : MonoBehaviour
 {
     [SerializeField] CharacterBranch[] branches;
     [SerializeField] DialogueController dialogueController;
+    [SerializeField] SpecialEvents specialEvents;
+    
     void Start()
     {
         if (!GameProgression.Instance || !GameProgression.Instance.SelectedCharacter) return;
