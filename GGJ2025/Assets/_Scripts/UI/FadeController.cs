@@ -29,7 +29,7 @@ public class FadeController : MonoBehaviour
     public float FadeIn()
     {
         canvasGroup.alpha = 1;
-        LeanTween.alphaCanvas(canvasGroup, 0, fadeSpeed);
+        LeanTween.alphaCanvas(canvasGroup, 0, fadeSpeed).setEaseInCubic();
         return fadeSpeed;
     }
     
@@ -38,7 +38,7 @@ public class FadeController : MonoBehaviour
         if (IsFaded)
         {
             Debug.Log("Fade in");
-            LeanTween.alphaCanvas(canvasGroup, 0, fadeSpeed);
+            LeanTween.alphaCanvas(canvasGroup, 0, fadeSpeed).setEaseInCubic();
             return fadeSpeed;
         }
         else return 0;
@@ -47,7 +47,7 @@ public class FadeController : MonoBehaviour
     public float FadeOut()
     {
         canvasGroup.alpha = 0;
-        LeanTween.alphaCanvas(canvasGroup, 1, fadeSpeed);
+        LeanTween.alphaCanvas(canvasGroup, 1, fadeSpeed).setEaseOutCubic();
         return fadeSpeed;
     }
 

@@ -16,7 +16,7 @@ public class MenuController : MonoBehaviour
 
     private void Start()
     {
-
+        FadeController.Instance.TryFadeIn();
     }
 
     void Update()
