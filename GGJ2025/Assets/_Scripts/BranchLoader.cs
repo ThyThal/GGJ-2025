@@ -2,8 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using _Scripts.Enums;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BranchLoader : MonoBehaviour
 {
@@ -11,8 +13,31 @@ public class BranchLoader : MonoBehaviour
     [SerializeField] DialogueController dialogueController;
     [SerializeField] SpecialEvents specialEvents;
     
+    public static bool didIntro = false;
+
+    private void OnEnable()
+    {
+        specialEvents.OnEventEnded += HandleEventEnded;
+    }
+
+    private void HandleEventEnded(GameEvents obj)
+    {
+        if (obj == GameEvents.Intro)
+        {
+            // FINISHED INTRO, load character selection
+            SceneManager.LoadScene(1);
+        }
+    }
+
     void Start()
     {
+        if (!didIntro)
+        {
+            specialEvents.PlayEvent(GameEvents.Intro);
+            didIntro = true;
+            return;
+        }
+        
         if (!GameProgression.Instance || !GameProgression.Instance.SelectedCharacter) return;
         LoadBranch(GameProgression.Instance.SelectedCharacter);
     }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameProgression : MonoBehaviour
 {
     [SerializeField] List <CharacterDataSO> unlockedCharacters = new List<CharacterDataSO>();
+    [SerializeField] List <CharacterDataSO> initialCharacters = new List<CharacterDataSO>();
     
     public CharacterDataSO SelectedCharacter {get; private set;}
     public static GameProgression Instance {get; private set;}
@@ -58,5 +59,10 @@ public class GameProgression : MonoBehaviour
 
         SelectedCharacter = character;
         return true;
+    }
+
+    public void ResetProgress()
+    {
+        unlockedCharacters = initialCharacters;
     }
 }

@@ -8,9 +8,23 @@ public class SpecialEvents : MonoBehaviour
 {
     [SerializeField] private CutsceneController cutsceneController;
     [TableList] public List<GameEventEntry> specialEvents = new();
-    
+    GameEvents currentGameEvent;
+
+    public event Action<GameEvents> OnEventEnded;
+
+    private void OnEnable()
+    {
+        cutsceneController.OnCutsceneFinished += CutsceneFinishedHandler;
+    }
+
+    private void CutsceneFinishedHandler()
+    {
+        OnEventEnded?.Invoke(currentGameEvent);
+    }
+
     public void PlayEvent(GameEvents eventType)
     {
+        currentGameEvent = eventType;
         GameEventEntry eventEntry = specialEvents.Find(e => e.eventType == eventType);
         if (eventEntry == null)
         {

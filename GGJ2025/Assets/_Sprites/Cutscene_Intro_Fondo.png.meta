@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cutscene_Intro_Fondo_0: -2256061481055164158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
