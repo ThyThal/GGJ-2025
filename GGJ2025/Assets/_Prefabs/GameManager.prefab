@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1565738085323891509}
   - component: {fileID: 1880764452186428394}
   - component: {fileID: 2102440935808436974}
+  - component: {fileID: 3193451690089950755}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -147,8 +148,24 @@ MonoBehaviour:
   gameScene: TestingFrancoOG
   levelLoader: {fileID: 0}
   pauseMenu: {fileID: 0}
+  _audioManager: {fileID: 3193451690089950755}
   hasWon: 0
   isIngame: 0
+--- !u!114 &3193451690089950755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3705209229524086073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfee9fe6e6434749b6f6af2ef153a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1880764452186428394}
+  lockSound: {fileID: 8300000, guid: 967881c4bff825e4da5f4897651c4fc6, type: 3}
+  unlockSound: {fileID: 8300000, guid: 2012ad77f16bec242af5f87e8b6af5f9, type: 3}
 --- !u!1 &4614533524472447785
 GameObject:
   m_ObjectHideFlags: 0

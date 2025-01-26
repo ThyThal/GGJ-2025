@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] public string gameScene = "Main Game";
     [SerializeField] public LevelLoader levelLoader;
     [SerializeField] public PauseMenuController pauseMenu;
+    [SerializeField] private AudioManager _audioManager;
+    public AudioManager audioManager => _audioManager;
 
     private AudioSource audioSrc;
 

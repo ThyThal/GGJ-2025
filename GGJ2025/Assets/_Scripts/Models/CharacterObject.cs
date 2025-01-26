@@ -36,9 +36,10 @@ public class CharacterObject : MonoBehaviour
         bodySpriteRenderer.sprite = data.GetBody(initialType);
     }
 
-    public void UpdateEmotion(Emotion type)
+    public void UpdateEmotion(Emotion type, bool animate = false)
     {
         ChangeBody(type);
+        if(animate) Shake();
         //ChangeVoice(type);
     }
     
@@ -48,6 +49,11 @@ public class CharacterObject : MonoBehaviour
         Debug.Log(data.characterName + " entered scene");
         transform.parent.gameObject.SetActive(true);
         LeanTween.move(transform.parent.gameObject, dialoguePosition.position, 1.5f).setEaseOutElastic();
+    }
+
+    void Shake()
+    {
+        LeanTween.scale(gameObject, Vector3.one * 1.05f, 0.25f).setEaseInBack().setLoopPingPong(1);
     }
     
     public void LeaveScene()

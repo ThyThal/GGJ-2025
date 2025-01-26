@@ -87,8 +87,18 @@ public class SceneController : MonoBehaviour
         // Activate Next/Skip button, fade and load next dialogue
         if (dialogue.isInteractionEnd || dialogue.GetNextDialogue(playerDecision) == null) // Ended interaction, lock/unlock character, go back to selection
         {
-            if(dialogue.characterToBlock) GameProgression.Instance.TryLockCharacter(dialogue.characterToBlock);
-            if(dialogue.characterToUnlock) GameProgression.Instance.TryUnlockCharacter(dialogue.characterToUnlock);
+            if(dialogue.characterToBlock) 
+            {
+                GameProgression.Instance.TryLockCharacter(dialogue.characterToBlock);
+                // Avoid making both sounds at once
+                if(!dialogue.characterToUnlock) GameManager.Instance.audioManager.PlayLockCharacter();
+            }
+            if (dialogue.characterToUnlock)
+            {
+                GameProgression.Instance.TryUnlockCharacter(dialogue.characterToUnlock);
+                GameManager.Instance.audioManager.PlayUnlockCharacter();
+            }
+            
             gameUIManager.ShowBackButton(true);
         }
         else
@@ -106,7 +116,7 @@ public class SceneController : MonoBehaviour
         if (!newLine.isDecisionLine)
         {
             // Update target character's face and voice according to emotion
-            target.UpdateEmotion(newLine.emotion);
+            target.UpdateEmotion(newLine.emotion, true);
             StartCoroutine(WriteDialogueLineRoutine(newLine));
         }
         else // Start decision process
@@ -257,7 +267,7 @@ public class SceneController : MonoBehaviour
         playerChose = true;
         playerDecision = decision;
 
-        playerCharacter.UpdateEmotion(decision);
+        playerCharacter.UpdateEmotion(decision, true);
         decisionsUIManager.Hide();
         StartCoroutine(WriteDialogueLineRoutine(dialogueController.CurrentLine, true));
         
