@@ -144,13 +144,7 @@ public class SceneController : MonoBehaviour
     private void UpdateScene(SceneDataSO newDialogueSceneData)
     {
         currentSceneData = newDialogueSceneData;
-
-        if (newDialogueSceneData.music)
-        {
-            audioSource.clip = newDialogueSceneData.music;
-            audioSource.Play();
-        } 
-        
+        PlaySceneSong(newDialogueSceneData);
         
         backgroundRenderer.sprite = currentSceneData.background;
 
@@ -194,6 +188,18 @@ public class SceneController : MonoBehaviour
 
     }
 
+    private void PlaySceneSong(SceneDataSO sceneData)
+    {
+        if (audioSource.clip == sceneData.music || audioSource.isPlaying) return;
+        audioSource.clip = sceneData.music;
+        audioSource.Play();
+    }
+
+    private void StopSceneSong()
+    {
+        audioSource.Stop();
+    }
+
     private void ResetDecision()
     {
         decisionTimer = 0;
@@ -203,6 +209,7 @@ public class SceneController : MonoBehaviour
     //TODO: Capaz mover a un SceneController o algo? ya tiene muchas funciones esta clase
     public void BackToCharacterSelection()
     {
+        StopSceneSong();
         SceneManager.LoadScene(1);
     }
 
