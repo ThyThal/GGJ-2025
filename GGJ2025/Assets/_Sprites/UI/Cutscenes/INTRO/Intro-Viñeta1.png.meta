@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Intro-Vi\xF1eta1_0": 2028861520169480332
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

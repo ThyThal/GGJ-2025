@@ -23,8 +23,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "S\xED\u2026 auch, p*to c\xE1ctus\u2026 Sr. Burbujero, creo que ya
-      s\xE9 d\xF3nde est\xE1 su esposa."
+    dialogueID: "S\xED\u2026 p*to c\xE1ctus\u2026 Sr. Burbujero, creo que ya s\xE9
+      d\xF3nde est\xE1 su esposa."
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.045
@@ -46,3 +46,4 @@ MonoBehaviour:
   isInteractionEnd: 1
   characterToUnlock: {fileID: 0}
   characterToBlock: {fileID: 0}
+  ending: 1

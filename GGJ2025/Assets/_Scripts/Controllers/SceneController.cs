@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Scripts.Enums;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using TMPro;
@@ -21,6 +22,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private BubblesUIManager bubblesUIManager;
     [SerializeField] private DecisionsUIManager decisionsUIManager;
     [SerializeField] private GameUIManager gameUIManager;
+    [SerializeField] SpecialEvents specialEvents;
     [SerializeField] private SpriteRenderer backgroundRenderer;
     [SerializeField] private Image barRenderer;
     [SerializeField] private CharacterObject playerCharacter;
@@ -77,6 +79,11 @@ public class SceneController : MonoBehaviour
 
     private void DialogueFinishedHandler(DialogueNodeSO dialogue)
     {
+        if (dialogue.isInteractionEnd && dialogue.ending != GameEvents.Intro && dialogue.ending != GameEvents.None)
+        {
+            specialEvents.PlayEvent(dialogue.ending);
+            return;
+        }
         // Activate Next/Skip button, fade and load next dialogue
         if (dialogue.isInteractionEnd || dialogue.GetNextDialogue(playerDecision) == null) // Ended interaction, lock/unlock character, go back to selection
         {
@@ -213,6 +220,12 @@ public class SceneController : MonoBehaviour
     {
         StopSceneSong();
         SceneManager.LoadScene(1);
+    }
+
+    public void BackToMenu()
+    {
+        StopSceneSong();
+        SceneManager.LoadScene(0);
     }
 
     public void OnClickNextButton()

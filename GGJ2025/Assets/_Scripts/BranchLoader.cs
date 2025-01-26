@@ -33,6 +33,7 @@ public class BranchLoader : MonoBehaviour
     {
         if (!didIntro)
         {
+            FadeController.Instance.TryFadeIn();
             specialEvents.PlayEvent(GameEvents.Intro);
             didIntro = true;
             return;

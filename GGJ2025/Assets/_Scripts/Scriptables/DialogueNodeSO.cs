@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using _Scripts.Enums;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -26,6 +27,7 @@ public class DialogueNodeSO : ScriptableObject
     public bool isInteractionEnd;
     public CharacterDataSO characterToUnlock;
     public CharacterDataSO characterToBlock;
+    public GameEvents ending;
     
     // Normal decision passed as default parameter, to use with normal dialogues that don't require a player decision
     public DialogueNodeSO GetNextDialogue(Emotion decision = Emotion.Normal) => nextDialogues.FirstOrDefault(d => d.emotion == decision).dialogueNode;

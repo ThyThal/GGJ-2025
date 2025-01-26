@@ -63,3 +63,4 @@ MonoBehaviour:
   isInteractionEnd: 0
   characterToUnlock: {fileID: 0}
   characterToBlock: {fileID: 0}
+  ending: 8

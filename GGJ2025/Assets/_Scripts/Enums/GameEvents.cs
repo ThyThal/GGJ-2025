@@ -10,5 +10,6 @@ namespace _Scripts.Enums
         FinalAbuelaPresa,
         FinalAbuelaFeliz,
         FinalBurbujaExplota,
+        None
     }
 }

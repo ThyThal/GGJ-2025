@@ -28,3 +28,4 @@ MonoBehaviour:
   isInteractionEnd: 1
   characterToUnlock: {fileID: 0}
   characterToBlock: {fileID: 11400000, guid: 8ebf8c49c2f4976479e658336f4bee31, type: 2}
+  ending: 8

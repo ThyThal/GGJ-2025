@@ -23,6 +23,7 @@ public class CutsceneController : MonoBehaviour
         {
             cutsceneImages[i].sprite = cutsceneSprites[i].sprite;
             cutsceneImages[i].gameObject.SetActive(true);
+            LeanTween.color((RectTransform) cutsceneImages[i].transform, Color.white, cutsceneSprites[i].displayTime / 4f);
             yield return new WaitForSeconds(cutsceneSprites[i].displayTime);
         }
         
