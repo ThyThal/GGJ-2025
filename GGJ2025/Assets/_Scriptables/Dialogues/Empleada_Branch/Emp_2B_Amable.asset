@@ -27,7 +27,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: Bueno, por lo menos el Sr. Burbujero te deja comer chicle en el trabajo.
+    dialogueID: "Bueno, por lo menos el Se\xF1or Burbujero te deja comer chicle en
+      el trabajo."
     isDecisionLine: 0
     emotion: 6
     typeSpeed: 0.05
@@ -44,8 +45,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: El Sr. Burbujero tiene muchas cosas de las que preocuparse hoy, el
-      chicle es lo de menos.
+    dialogueID: "El Se\xF1or Burbujero tiene muchas cosas de las que preocuparse
+      hoy, el chicle es lo de menos."
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.05

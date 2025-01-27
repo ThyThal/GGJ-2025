@@ -20,7 +20,7 @@ MonoBehaviour:
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "\xBFY a usted qu\xE9 le importa?, \xBFNo tendr\xEDa que estar buscando
-      a la Sra. Burbuja?"
+      a la Se\xF1ora Burbuja?"
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.05

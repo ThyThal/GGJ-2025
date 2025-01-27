@@ -15,7 +15,7 @@ MonoBehaviour:
   nextDialogues: []
   dialogueLines:
   - isPlayerLine: 0
-    dialogueID: "Bueno, no te voy a mentir, el Sr. Burbujero no es el jefe m\xE1s
+    dialogueID: "Bueno, no te voy a mentir, el Se\xF1or Burbujero no es el jefe m\xE1s
       atento. Ni siquiera nos da caja navide\xF1a\u2026"
     isDecisionLine: 0
     emotion: 3
@@ -33,7 +33,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "\xBFCambio de administraci\xF3n?, \xBFqui\xE9n podr\xEDa comprar
+    dialogueID: "\xBFCambio de administraci\xF3n? \xBFQui\xE9n podr\xEDa comprar
       la f\xE1brica?"
     isDecisionLine: 0
     emotion: 0

@@ -15,7 +15,8 @@ MonoBehaviour:
   nextDialogues: []
   dialogueLines:
   - isPlayerLine: 0
-    dialogueID: "\xA1Le juro que yo no s\xE9 nada, por favor detective ya no me grite!"
+    dialogueID: "\xA1Le juro que yo no s\xE9 nada! \xA1Por favor detective, ya no
+      me grite!"
     isDecisionLine: 0
     emotion: 2
     typeSpeed: 0.05
