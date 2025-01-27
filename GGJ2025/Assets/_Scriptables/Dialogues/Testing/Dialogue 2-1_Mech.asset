@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Dialogue 2-1_Mech
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: e85990e0f63ba6a42aa697ec0accfaf9, type: 2}
+  - emotion: 0
+    dialogueNode: {fileID: 11400000, guid: b7ea65dc817e25f49bc065ae3f65f330, type: 2}
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: AAAAAAAAAAAA
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.05
+    dialogueTime: 1
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: que te pasa flaco
+    isDecisionLine: 1
+    emotion: 2
+    typeSpeed: 0.05
+    dialogueTime: 1
+    branches:
+    - emotion: 1
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: AAAAAAASKLFNASLKF NOMEGRITES
+        isDecisionLine: 0
+        emotion: 1
+        typeSpeed: 0.03
+        dialogueTime: 1
+        branches: []
+    - emotion: 0
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: A weno perdon
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: No pasa nada tonces
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.0494
+        dialogueTime: 1
+        branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 1
+  sceneData: {fileID: 11400000, guid: 868dcc35927c484469dd220170cca746, type: 2}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}

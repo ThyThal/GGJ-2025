@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Arroz_1
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 3
+    dialogueNode: {fileID: 11400000, guid: bcfaa37a02d149343a8bcc6d74e69a38, type: 2}
+  - emotion: 5
+    dialogueNode: {fileID: 11400000, guid: 48041c332f0f25e44a1cd8ee06a9c481, type: 2}
+  dialogueLines:
+  - isPlayerLine: 1
+    dialogueID: "\xBFSe\xF1orita Arrozal\xEDa?"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "S\xED, s\xED querido, pas\xE1, pas\xE1. Oh, detective, \xBFQu\xE9
+      se le ofrece?"
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.045
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFEsperaba a alguien m\xE1s?"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.055
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xA1No, no, para nada!, pens\xE9 que eras el Se\xF1or Bur."
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.045
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Pero imagino que todav\xEDa debe estar ocupado buscando a su esposa\u2026"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "De eso ven\xEDa a hablarle justamente. Seg\xFAn entiendo usted y
+      la Se\xF1orita Burbuja no se llevan del todo bien."
+    isDecisionLine: 1
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: 87ae6c94cb7598d41b7ac28d11392ed4, type: 2}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}
+  ending: 8

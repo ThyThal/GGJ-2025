@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Arroz_3A_Serious_End
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "No me gusta su actitud detective. Con ese aspecto cre\xED que ser\xEDa
+      un poco m\xE1s\u2026 alegre."
+    isDecisionLine: 0
+    emotion: 6
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Ser\xEDa sospechoso que alguien est\xE9 tan alegre en una situaci\xF3n
+      como esta, \xBFno le parece?"
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xBFEst\xE1 diciendo que yo tengo algo que ver en todo esto? Por
+      favor, tengo cosas m\xE1s importantes que hacer."
+    isDecisionLine: 0
+    emotion: 2
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "No tengo nada que ver en todo esto, detective. Lamento haberle hecho
+      perder el tiempo. Adi\xF3s."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: 87ae6c94cb7598d41b7ac28d11392ed4, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 11400000, guid: 3743f98aa509e98489bd814a1bcfa26a, type: 2}
+  ending: 8

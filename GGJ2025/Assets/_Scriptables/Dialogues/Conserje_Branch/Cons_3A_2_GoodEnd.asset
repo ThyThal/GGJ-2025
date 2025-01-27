@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Cons_3A_2_GoodEnd
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 0
+    dialogueNode: {fileID: 11400000, guid: 2934fdff7afa59c44ba5ab5a47abbdc1, type: 2}
+  dialogueLines:
+  - isPlayerLine: 1
+    dialogueID: "Mierda, se escap\xF3\u2026"
+    isDecisionLine: 0
+    emotion: 5
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: d09503464da6b7741a14269ef4129eca, type: 2}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}
+  ending: 8

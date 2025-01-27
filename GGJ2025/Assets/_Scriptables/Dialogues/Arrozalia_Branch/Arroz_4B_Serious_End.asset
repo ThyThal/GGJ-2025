@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Arroz_4B_Serious_End
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "Es lo m\xE1s probable. Y si me pregunta a m\xED, yo no intervendr\xEDa.
+      Si la Se\xF1orita Burbuja se quiere fugar con su amante, bien por ella, todos
+      ganamos."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Todos menos el Se\xF1or Burbujero."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "El tiempo cura todas las heridas nene. El tiempo y buena compa\xF1\xEDa\u2026"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.055
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "El Se\xF1or Burbujero me llam\xF3 para ayudarlo, y eso pienso hacer."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Ugh\u2026"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.065
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: 87ae6c94cb7598d41b7ac28d11392ed4, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 11400000, guid: 3743f98aa509e98489bd814a1bcfa26a, type: 2}
+  ending: 8

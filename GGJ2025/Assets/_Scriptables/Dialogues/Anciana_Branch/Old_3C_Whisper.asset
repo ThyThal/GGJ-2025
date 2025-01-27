@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Old_3C_Whisper
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 2
+    dialogueNode: {fileID: 11400000, guid: ad9c7c026bc35764a97f86711769c122, type: 2}
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: d9ecc8083f1dae64599598a5036e54e6, type: 2}
+  dialogueLines:
+  - isPlayerLine: 1
+    dialogueID: "Algo me dice que m\xE1s que un accidente, esto pudo ser algo premeditado."
+    isDecisionLine: 1
+    emotion: 5
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 10
+    branches:
+    - emotion: 2
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: "\xBFChisme?! Cuente, cuente, jejeje."
+        isDecisionLine: 0
+        emotion: 6
+        typeSpeed: 0.06
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 1
+        dialogueID: "Alguien sabote\xF3 la f\xE1brica del Burbujero y esperaba que
+          usted sepa algo que me ayude a resolver el caso. Al parecer su esposa desapareci\xF3
+          entre las burbujas luego del incidente."
+        isDecisionLine: 0
+        emotion: 3
+        typeSpeed: 0.04
+        dialogueTime: 2
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "\xBFUna ancianita como yo? Disculpe detective pero no creo que
+          pueda ser de mucha ayuda para usted."
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 1
+        dialogueID: "Su nieta dijo que usted podr\xEDa expandir su negocio si tuviera
+          la posibilidad de comprar el terreno de la f\xE1brica. Este incidente la
+          beneficiar\xEDa mucho, \xBFno?"
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.04
+        dialogueTime: 2
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "\xBFMi nieta le dijo eso? Bueno\u2026 si ella convers\xF3 con
+          usted eso quiere decir que puede ser alguien de confiar. Mi nieta no hablar\xEDa
+          con soplones."
+        isDecisionLine: 0
+        emotion: 0
+        typeSpeed: 0.05
+        dialogueTime: 1.5
+        decisionTime: 0
+        branches: []
+      - isPlayerLine: 0
+        dialogueID: "Bueno, lo que le puedo decir es que no s\xE9 nada sobre la Se\xF1orita
+          Burbuja. Pero puede que est\xE9 un poquitito involucrada en los eventos
+          de esta ma\xF1ana."
+        isDecisionLine: 0
+        emotion: 5
+        typeSpeed: 0.05
+        dialogueTime: 1.5
+        decisionTime: 0
+        branches: []
+    - emotion: 1
+      branchLines:
+      - isPlayerLine: 0
+        dialogueID: "\xBFQue se siente algo empachado? Bueno, si lo necesita, a la
+          vuelta de mi local hay un ba\xF1o p\xFAblico."
+        isDecisionLine: 0
+        emotion: 1
+        typeSpeed: 0.05
+        dialogueTime: 1
+        decisionTime: 0
+        branches: []
+  initialPlayerEmotion: 5
+  initialOtherEmotion: 5
+  sceneData: {fileID: 11400000, guid: d38e91024fa74c74b9de1f31694330b0, type: 2}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}
+  ending: 8

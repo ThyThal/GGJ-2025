@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Cons_4A_Kind_BadEnd
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "\xA1Claro que no! Adem\xE1s, El Burbujero no la aprecia. Todo el
+      mundo en la f\xE1brica sabe de su romance con la Se\xF1orita Arrozal\xEDa."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: Ella necesita a alguien que sepa apreciar su belleza, alguien como
+      yo.
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Bueno, si lo pone de esa forma\u2026"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Ah\u2026 Sab\xEDa que lo entender\xEDa. Muchas gracias."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Ya falta poco para que finalice la jornada. Ni bien suene la campana,
+      la Se\xF1orita Burbuja y yo vamos a escapar para empezar una nueva vida."
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.045
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 1
+  initialOtherEmotion: 3
+  sceneData: {fileID: 11400000, guid: f1744bfc39bf1514da3c841a2e8ac88c, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}
+  ending: 2

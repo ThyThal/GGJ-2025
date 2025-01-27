@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Old_4.5_Kind_End
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 1
+    dialogueID: "No, lo que dije fue\u2026"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.06
+    dialogueTime: 0.1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xA1Oh, pero mire qu\xE9 hora es!, el tiempo pasa volando. Disculpe
+      detective, pero es hora de la siesta y tengo que cerrar el local."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.04
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "De todas formas le agradezco mucho por su visita. \xA1Qu\xE9 tenga
+      buenos d\xEDas!"
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: d38e91024fa74c74b9de1f31694330b0, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}
+  ending: 8

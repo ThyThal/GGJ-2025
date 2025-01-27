@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Cons_3A_3_GoodEnd 1
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "\xA1Detective!, \xA1\xBFse encuentra bien?!"
+    isDecisionLine: 0
+    emotion: 2
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "S\xED\u2026 p*to c\xE1ctus\u2026 Sr. Burbujero, creo que ya s\xE9
+      d\xF3nde est\xE1 su esposa."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.045
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xBFOh por dios, en serio?!, \xA1Vamos entonces, no hay tiempo que
+      perder!"
+    isDecisionLine: 0
+    emotion: 2
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 3
+  initialOtherEmotion: 2
+  sceneData: {fileID: 11400000, guid: 54edea6d03dcb454daf78ace557f0d92, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}
+  ending: 1

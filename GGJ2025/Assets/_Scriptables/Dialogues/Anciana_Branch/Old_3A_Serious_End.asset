@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Old_3A_Serious_End
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 1
+    dialogueID: "Tal vez si la f\xE1brica del Se\xF1or Burbujero fuese a la quiebra,
+      \xE9l tendr\xEDa que venderla y su nieta conseguir\xEDa un jefe m\xE1s agradable."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Todos podemos hacer cosas\u2026 cuestionables, cuando queremos ayudar
+      a un ser querido."
+    isDecisionLine: 0
+    emotion: 5
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Ja, mi nieta no necesita mi ayuda, ella es fuerte e independiente.
+      Ahora, si no va a comprar nada, por favor ret\xEDrese. Es hora de la siesta
+      y tengo que cerrar el local."
+    isDecisionLine: 0
+    emotion: 5
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: d38e91024fa74c74b9de1f31694330b0, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}
+  ending: 8

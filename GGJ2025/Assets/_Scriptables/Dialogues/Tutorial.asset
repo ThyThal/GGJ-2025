@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "\xA1Detective!, gracias por venir con tan poca antelaci\xF3n."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Como puede ver, hoy hubo un incidente en la f\xE1brica y todo se
+      llen\xF3 de burbujas."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Pero eso no me interesa. Lo que necesito es que encuentre a mi esposa,
+      la se\xF1ora burbuja, que se perdi\xF3 entre las burbujas de la explosi\xF3n."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "No s\xE9 qui\xE9n est\xE1 detr\xE1s de todo esto, pero quien secuestr\xF3
+      a mi Burbu tiene que pagar."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Necesito que interrogue a todo el personal de esta f\xE1brica y
+      encuentre a mi esposa."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Para las entrevistas cuide su tono, no todos los sospechosos reaccionar\xE1n
+      de la misma forma ante ciertos tratos."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Aproveche el tiempo de forma valiosa. Debe apresurarse, pero elija
+      con cuidado. Cuento con usted\u2026"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: 34bfe73a08255654fb15327e9f78918d, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}
+  ending: 0

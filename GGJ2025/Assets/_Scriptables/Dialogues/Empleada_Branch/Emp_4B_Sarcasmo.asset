@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Emp_4B_Sarcasmo
+  m_EditorClassIdentifier: 
+  nextDialogues: []
+  dialogueLines:
+  - isPlayerLine: 0
+    dialogueID: "\xBFPara qu\xE9 quiero perjudicarlo a \xE9l si total \xE9l se perjudica
+      solo?"
+    isDecisionLine: 0
+    emotion: 6
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFSe perjudica solo?"
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "La m\xE1quina se descompuso porque el Se\xF1or Burbujero decidi\xF3
+      de repente cambiar el jab\xF3n para hacer las burbujas."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Un jab\xF3n denso y pegajoso, era obvio que las h\xE9lices de la
+      m\xE1quina se trabar\xEDan\u2026"
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.045
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFY por qu\xE9 lo cambi\xF3 entonces?"
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "\xBFPor qu\xE9 te parece?, m\xE1s barato. El Se\xF1or Burbujero
+      compr\xF3 toda la vida los jabones en el almac\xE9n de al lado y nunca tuvo
+      un problema."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Los productos de mi abuela siempre fueron los mejores, pero bueno...
+      ella siempre me dijo que el Se\xF1or Burbujero es un taca\xF1o."
+    isDecisionLine: 0
+    emotion: 6
+    typeSpeed: 0.045
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFTu abuela? \xBFElla es la due\xF1a del almac\xE9n?"
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "S\xED, toda su vida trabaj\xF3 ah\xED y el local ya le queda chico.
+      No le vendr\xEDa mal buscar expandirse..."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.045
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 6
+  sceneData: {fileID: 11400000, guid: bcf496ae8462f10428b3674c956efba8, type: 2}
+  isInteractionEnd: 1
+  characterToUnlock: {fileID: 11400000, guid: 97516149b86156e479520591abbe2d8a, type: 2}
+  characterToBlock: {fileID: 11400000, guid: 0eabbfe3af6e67f44a8b7a733fc8790b, type: 2}
+  ending: 8

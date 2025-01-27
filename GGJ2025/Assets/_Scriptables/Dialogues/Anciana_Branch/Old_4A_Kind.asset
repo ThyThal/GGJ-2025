@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 855fea303cb6d9548b5aeab18601aa80, type: 3}
+  m_Name: Old_4A_Kind
+  m_EditorClassIdentifier: 
+  nextDialogues:
+  - emotion: 1
+    dialogueNode: {fileID: 11400000, guid: 2867b1d2c8ced5448972e8d72f34726b, type: 2}
+  - emotion: 6
+    dialogueNode: {fileID: 11400000, guid: e207eb6601c11104e9db24ba40dc50dd, type: 2}
+  dialogueLines:
+  - isPlayerLine: 1
+    dialogueID: "\xBFQu\xE9? No, le estoy diciendo que nosotras saboteamos la mezcladora."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.06
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Mi pobre nieta siempre se queja de su jefe, y yo no voy a permitir
+      que siga siendo infeliz ah\xED dentro."
+    isDecisionLine: 0
+    emotion: 3
+    typeSpeed: 0.05
+    dialogueTime: 1
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "\xBFMe acaba de confesar un crimen?"
+    isDecisionLine: 0
+    emotion: 2
+    typeSpeed: 0.04
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Confio en que podr\xE1 guardar el secreto. Al final, esto nos beneficiar\xEDa
+      a todos. El Burbujero es terco, pero su f\xE1brica no le deja ganancia hace
+      tiempo, y el valor de la propiedad baja de precio cada d\xEDa."
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.045
+    dialogueTime: 2
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Si pone en venta su terreno ahora, conseguir\xEDa un precio m\xE1s
+      alto de lo que realmente vale su terreno. Y, al mismo tiempo, yo podr\xEDa
+      expandir mi local y trabajar con mi nieta en el negocio familiar."
+    isDecisionLine: 0
+    emotion: 1
+    typeSpeed: 0.05
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 1
+    dialogueID: "Claro, todos ganan\u2026"
+    isDecisionLine: 1
+    emotion: 0
+    typeSpeed: 0.06
+    dialogueTime: 1
+    decisionTime: 10
+    branches: []
+  initialPlayerEmotion: 0
+  initialOtherEmotion: 0
+  sceneData: {fileID: 11400000, guid: d38e91024fa74c74b9de1f31694330b0, type: 2}
+  isInteractionEnd: 0
+  characterToUnlock: {fileID: 0}
+  characterToBlock: {fileID: 0}
+  ending: 8
