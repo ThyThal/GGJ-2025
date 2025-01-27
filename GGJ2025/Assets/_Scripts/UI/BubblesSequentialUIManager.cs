@@ -13,7 +13,7 @@ public class BubblesSequentialUIManager : MonoBehaviour
     [SerializeField] private BubbleUI[] playerBubbles;
     [SerializeField] private BubbleUI[] otherCharacterBubbles;
 
-    [FormerlySerializedAs("bubbleSprites")] [SerializeField] private EmotionSpriteDataSO spriteSprites;
+    [FormerlySerializedAs("spriteSprites")] [FormerlySerializedAs("bubbleSprites")] [SerializeField] private EmotionSpriteSoundDataSO spriteSoundSpritesSound;
     
     public TextMeshProUGUI GetBubbleTarget(bool isPlayer, int index, Emotion emotion)
     {

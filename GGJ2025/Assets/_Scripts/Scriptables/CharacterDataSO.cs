@@ -15,7 +15,7 @@ public class CharacterDataSO : ScriptableObject
         
     [Header("Body")]
     public Sprite bodySprite;
-    public EmotionSprite[] emotionBodySprites;
+    public EmotionSpriteSound[] emotionBodySprites;
     
     [Header("Audio")]
     [ShowInInspector]
