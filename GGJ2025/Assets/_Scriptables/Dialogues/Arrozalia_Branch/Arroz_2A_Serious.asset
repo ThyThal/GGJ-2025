@@ -16,7 +16,7 @@ MonoBehaviour:
   - emotion: 3
     dialogueNode: {fileID: 11400000, guid: 6ebbc8122cf39af45a614e08166c9b79, type: 2}
   - emotion: 2
-    dialogueNode: {fileID: 0}
+    dialogueNode: {fileID: 11400000, guid: bc7484d119733b0449bac5a88603fac4, type: 2}
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "\xBFPor qu\xE9 lo dice, la encontr\xF3? \xBFYa le dijo algo de m\xED?,
