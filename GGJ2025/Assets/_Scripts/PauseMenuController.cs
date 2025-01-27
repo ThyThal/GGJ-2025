@@ -28,12 +28,18 @@ public class PauseMenuController : MonoBehaviour
 
     private void Awake()
     {
-        GameManager.Instance.pauseMenu = this;        
+        if (GameManager.Instance.pauseMenu == null)
+        {
+            GameManager.Instance.pauseMenu = this;
+        }
     }
 
     void Start()
     {
-        GameManager.Instance.pauseMenu = this;
+        if (GameManager.Instance.pauseMenu == null)
+        {
+            GameManager.Instance.pauseMenu = this;
+        }
         buttonResume.onClick.AddListener(OnClickResume);
         buttonHelp.onClick.AddListener(OnClickHelp);
         buttonQuit.onClick.AddListener(OnClickQuit);
@@ -80,7 +86,6 @@ public class PauseMenuController : MonoBehaviour
     {
         Time.timeScale = 1;
         GameManager.Instance.levelLoader.LoadScene("Menu Scene");
-        //SceneManager.LoadScene("Menu Scene");
     }
 
     public void OnClickGoBack() 
