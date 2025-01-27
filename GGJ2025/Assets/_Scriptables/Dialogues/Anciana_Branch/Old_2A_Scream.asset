@@ -35,7 +35,7 @@ MonoBehaviour:
     emotion: 0
     typeSpeed: 0.05
     dialogueTime: 1.5
-    decisionTime: 0
+    decisionTime: 10
     branches:
     - emotion: 3
       branchLines:
