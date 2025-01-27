@@ -23,7 +23,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: "Puede que tenga raz\xF3n\u2026 La Sra. Burbuja es todo para m\xED"
+    dialogueID: "Puede que tenga raz\xF3n\u2026 La Se\xF1orita Burbuja es todo para
+      m\xED"
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.05

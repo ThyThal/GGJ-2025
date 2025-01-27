@@ -52,8 +52,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: No me interesa el incidente, me interesa la persona desaparecida,
-      la Sra. Burbuja.
+    dialogueID: "No me interesa el incidente, me interesa la persona desaparecida,
+      la Se\xF1orita Burbuja."
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.04

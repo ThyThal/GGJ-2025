@@ -37,7 +37,7 @@ MonoBehaviour:
     branches: []
   - isPlayerLine: 1
     dialogueID: "\xBFNo crees que para la se\xF1ora burbuja estar a tu lado es m\xE1s
-      peligroso? Tal vez lo mejor es devolverla al Sr. Burbujero."
+      peligroso? Tal vez lo mejor es devolverla al Burbujero."
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.05

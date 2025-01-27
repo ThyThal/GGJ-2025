@@ -15,8 +15,8 @@ MonoBehaviour:
   nextDialogues: []
   dialogueLines:
   - isPlayerLine: 0
-    dialogueID: "\xA1Claro que no! Adem\xE1s, El Sr. Burbujero no la aprecia. Todo
-      el mundo en la f\xE1brica sabe de su romance con la Srita. Arrozal\xEDa."
+    dialogueID: "\xA1Claro que no! Adem\xE1s, El Burbujero no la aprecia. Todo el
+      mundo en la f\xE1brica sabe de su romance con la Se\xF1orita Arrozal\xEDa."
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.05
@@ -49,8 +49,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: Ya falta poco para que finalice la jornada. Ni bien suene la campana,
-      la Sra Burbuja y yo vamos a escapar para empezar una nueva vida.
+    dialogueID: "Ya falta poco para que finalice la jornada. Ni bien suene la campana,
+      la Se\xF1orita Burbuja y yo vamos a escapar para empezar una nueva vida."
     isDecisionLine: 0
     emotion: 1
     typeSpeed: 0.045
