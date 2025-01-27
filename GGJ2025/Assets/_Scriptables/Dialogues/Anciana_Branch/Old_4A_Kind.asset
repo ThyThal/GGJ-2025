@@ -45,7 +45,7 @@ MonoBehaviour:
     branches: []
   - isPlayerLine: 0
     dialogueID: "Confio en que podr\xE1 guardar el secreto. Al final, esto nos beneficiar\xEDa
-      a todos. El Sr. Burbuja es terco, pero su f\xE1brica no le deja ganancia hace
+      a todos. El Burbujero es terco, pero su f\xE1brica no le deja ganancia hace
       tiempo, y el valor de la propiedad baja de precio cada d\xEDa."
     isDecisionLine: 0
     emotion: 0

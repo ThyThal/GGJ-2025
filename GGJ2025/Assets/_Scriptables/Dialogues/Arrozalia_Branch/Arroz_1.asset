@@ -19,7 +19,7 @@ MonoBehaviour:
     dialogueNode: {fileID: 11400000, guid: 48041c332f0f25e44a1cd8ee06a9c481, type: 2}
   dialogueLines:
   - isPlayerLine: 1
-    dialogueID: "\xBFSrita Arrozal\xEDa?"
+    dialogueID: "\xBFSe\xF1orita Arrozal\xEDa?"
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.05
@@ -44,7 +44,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: "\xA1No, no, para nada!, pens\xE9 que eras el Sr. Bur."
+    dialogueID: "\xA1No, no, para nada!, pens\xE9 que eras el Se\xF1or Bur."
     isDecisionLine: 0
     emotion: 1
     typeSpeed: 0.045
@@ -60,8 +60,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "D: De eso ven\xEDa a hablarle justamente. Seg\xFAn entiendo usted
-      y la Sra. Burbuja no se llevan del todo bien."
+    dialogueID: "De eso ven\xEDa a hablarle justamente. Seg\xFAn entiendo usted y
+      la Se\xF1orita Burbuja no se llevan del todo bien."
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.05

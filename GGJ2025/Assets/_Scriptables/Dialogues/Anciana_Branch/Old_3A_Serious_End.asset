@@ -15,8 +15,8 @@ MonoBehaviour:
   nextDialogues: []
   dialogueLines:
   - isPlayerLine: 1
-    dialogueID: "Tal vez si la f\xE1brica del Sr. Burbujero fuese a la quiebra, \xE9l
-      tendr\xEDa que venderla y su nieta conseguir\xEDa un jefe m\xE1s agradable."
+    dialogueID: "Tal vez si la f\xE1brica del Se\xF1or Burbujero fuese a la quiebra,
+      \xE9l tendr\xEDa que venderla y su nieta conseguir\xEDa un jefe m\xE1s agradable."
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.05

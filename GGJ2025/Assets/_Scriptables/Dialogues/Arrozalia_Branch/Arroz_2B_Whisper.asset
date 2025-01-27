@@ -44,8 +44,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "El Sr. Burbujero est\xE1 muy preocupado por su esposa. \xBFUsted
-      tiene algo que ver en todo esto?"
+    dialogueID: "El Burbujero est\xE1 muy preocupado por su esposa. \xBFUsted tiene
+      algo que ver en todo esto?"
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.05

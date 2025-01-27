@@ -40,8 +40,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "Para usted tal vez. El Sr. Burbujero est\xE1 perdiendo no solo su
-      f\xE1brica sino tambi\xE9n a su esposa. Perd\xF3n pero no puedo ser su c\xF3mplice."
+    dialogueID: "Para usted tal vez. El Burbujero est\xE1 perdiendo no solo su f\xE1brica
+      sino tambi\xE9n a su esposa. Perd\xF3n pero no puedo ser su c\xF3mplice."
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.05

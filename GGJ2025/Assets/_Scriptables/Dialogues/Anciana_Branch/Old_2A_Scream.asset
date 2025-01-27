@@ -19,7 +19,7 @@ MonoBehaviour:
     dialogueNode: {fileID: 11400000, guid: 00bbe286ceb1988439d8cf8d892e9171, type: 2}
   dialogueLines:
   - isPlayerLine: 0
-    dialogueID: "Si me lo pregunta a m\xED, dir\xEDa que el Sr. Burbujero fue v\xEDctima
+    dialogueID: "Si me lo pregunta a m\xED, dir\xEDa que el Burbujero fue v\xEDctima
       de su propia codicia. Con lo taca\xF1o que es, dudo que quiera invertir lo
       necesario para reparar su f\xE1brica."
     isDecisionLine: 0

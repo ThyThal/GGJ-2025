@@ -31,8 +31,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: "No mucho, esperar. Cuando el Sr. Burbujero decida poner en venta
-      su f\xE1brica le voy a hacer una oferta generosa que no pueda rechazar."
+    dialogueID: "No mucho, esperar. Cuando el Burbujero decida poner en venta su
+      f\xE1brica le voy a hacer una oferta generosa que no pueda rechazar."
     isDecisionLine: 0
     emotion: 6
     typeSpeed: 0.05
