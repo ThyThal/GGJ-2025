@@ -37,9 +37,9 @@ MonoBehaviour:
         decisionTime: 0
         branches: []
       - isPlayerLine: 1
-        dialogueID: "Alguien sabote\xF3 la f\xE1brica del Sr. Burbujero y esperaba
-          que usted sepa algo que me ayude a resolver el caso. Al parecer su esposa
-          desapareci\xF3 entre las burbujas luego del incidente."
+        dialogueID: "Alguien sabote\xF3 la f\xE1brica del Burbujero y esperaba que
+          usted sepa algo que me ayude a resolver el caso. Al parecer su esposa desapareci\xF3
+          entre las burbujas luego del incidente."
         isDecisionLine: 0
         emotion: 3
         typeSpeed: 0.04
@@ -76,7 +76,7 @@ MonoBehaviour:
         decisionTime: 0
         branches: []
       - isPlayerLine: 0
-        dialogueID: "Bueno, lo que le puedo decir es que no s\xE9 nada sobre la Sra.
+        dialogueID: "Bueno, lo que le puedo decir es que no s\xE9 nada sobre la Se\xF1orita
           Burbuja. Pero puede que est\xE9 un poquitito involucrada en los eventos
           de esta ma\xF1ana."
         isDecisionLine: 0

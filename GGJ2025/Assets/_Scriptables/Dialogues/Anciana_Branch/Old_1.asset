@@ -58,9 +58,9 @@ MonoBehaviour:
     - emotion: 2
       branchLines:
       - isPlayerLine: 0
-        dialogueID: "\xA1Oh!, entiendo\u2026 Pero yo se lo advert\xED al Sr. Burbujero.
-          En realidad, el Sr. Burbujero siempre me compraba a m\xED los jabones que
-          utilizaba para su f\xE1brica."
+        dialogueID: "\xA1Oh!, entiendo\u2026 Pero yo se lo advert\xED al Burbujero.
+          En realidad, el siempre me compraba a m\xED los jabones que utilizaba para
+          su f\xE1brica."
         isDecisionLine: 0
         emotion: 0
         typeSpeed: 0.05
@@ -68,7 +68,7 @@ MonoBehaviour:
         decisionTime: 0
         branches: []
       - isPlayerLine: 0
-        dialogueID: "Jabones naturales y f\xE1ciles de diluir, pero el Sr. Burbujero
+        dialogueID: "Jabones naturales y f\xE1ciles de diluir, pero el Burbujero
           decidi\xF3 probar unos jabones industriales que eran \"mejores y baratos\",
           ja\u2026"
         isDecisionLine: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     - emotion: 1
       branchLines:
       - isPlayerLine: 0
-        dialogueID: "\xBFQue el Sr. Burbujero le contagi\xF3 un sarpullido? Bah,
-          era de esperarse."
+        dialogueID: "\xBFQue el Se\xF1or Burbujero le contagi\xF3 un sarpullido?
+          Bah, era de esperarse."
         isDecisionLine: 0
         emotion: 6
         typeSpeed: 0.06

@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "Sabotear es una palabra muy fuerte. M\xE1s bien dir\xEDa que\u2026
-      intentamos convencer al Sr. Burbujero de que ponga en venta su terreno."
+      intentamos convencer al Burbujero de que ponga en venta su terreno."
     isDecisionLine: 0
     emotion: 6
     typeSpeed: 0.05

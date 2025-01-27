@@ -57,7 +57,7 @@ MonoBehaviour:
     - emotion: 5
       branchLines:
       - isPlayerLine: 0
-        dialogueID: "Sr. Detective, disculpe mi imprudencia, pero tengo 137 a\xF1os,
+        dialogueID: "Detective, disculpe mi imprudencia, pero tengo 137 a\xF1os,
           \xBFpodr\xEDa hablar un poco m\xE1s fuerte? Mis o\xEDdos ya no son tan
           agudos."
         isDecisionLine: 0
