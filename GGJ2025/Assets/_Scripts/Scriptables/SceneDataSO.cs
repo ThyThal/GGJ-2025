@@ -13,6 +13,8 @@ public class SceneDataSO : ScriptableObject
     public CharacterDataSO otherCharacter;
 
     public AudioClip music;
+
+    public Color color;
     //public DialogueNodeSO initialDialogue;
 }
 

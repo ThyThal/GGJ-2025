@@ -11,10 +11,7 @@ public class DecisionsUIManager : MonoBehaviour
 
     private void Awake()
     {
-        foreach (var button in decisionButtons)
-        {
-            button.gameObject.SetActive(false);
-        }
+        Hide();
     }
 
     public event Action<Emotion> OnPlayerClickedDecision;

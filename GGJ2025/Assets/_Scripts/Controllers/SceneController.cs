@@ -25,6 +25,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] SpecialEvents specialEvents;
     [SerializeField] private SpriteRenderer backgroundRenderer;
     [SerializeField] private Image barRenderer;
+    [SerializeField] private Image timerFill;
     [SerializeField] private CharacterObject playerCharacter;
     [SerializeField] private CharacterObject otherCharacter;    
 
@@ -173,6 +174,7 @@ public class SceneController : MonoBehaviour
         
         backgroundRenderer.sprite = currentSceneData.background;
         barRenderer.sprite = currentSceneData.bar;
+        timerFill.color = currentSceneData.color;
 
         // If new scene has character data, and it is different from current, update data and leave scene
         if (currentSceneData.otherCharacter)

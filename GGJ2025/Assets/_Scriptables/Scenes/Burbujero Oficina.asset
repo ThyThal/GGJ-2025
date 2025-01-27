@@ -17,3 +17,4 @@ MonoBehaviour:
   bar: {fileID: 21300000, guid: ee522b4f14dd4564e9f25f9dabac81ce, type: 3}
   otherCharacter: {fileID: 11400000, guid: 8ebf8c49c2f4976479e658336f4bee31, type: 2}
   music: {fileID: 8300000, guid: 51c3d3db6ee741943a4ec956284d5eef, type: 3}
+  color: {r: 0.70980394, g: 0.6431373, b: 0.7411765, a: 1}
