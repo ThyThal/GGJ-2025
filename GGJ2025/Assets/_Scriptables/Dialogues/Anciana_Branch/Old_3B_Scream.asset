@@ -37,13 +37,21 @@ MonoBehaviour:
     branches: []
   - isPlayerLine: 0
     dialogueID: "Ver\xE1, a este ritmo, la f\xE1brica del Burbujero se ir\xEDa a
-      la quiebra de todas formas. El accidente solo aceler\xF3 un poquitito el proceso.
-      Puede que... tal vez yo le haya dado un espesante para l\xEDquidos a mi nieta
-      por la ma\xF1ana y, pobrecita, a la torpe se le haya ca\xEDdo en la mezcla."
+      la quiebra de todas formas. El accidente solo aceler\xF3 un poquitito el proceso. "
+    isDecisionLine: 0
+    emotion: 0
+    typeSpeed: 0.06
+    dialogueTime: 1.5
+    decisionTime: 0
+    branches: []
+  - isPlayerLine: 0
+    dialogueID: "Puede que... tal vez yo le haya dado un espesante para l\xEDquidos
+      a mi nieta por la ma\xF1ana y, pobrecita, a la torpe se le haya ca\xEDdo en
+      la mezcla."
     isDecisionLine: 0
     emotion: 6
-    typeSpeed: 0.06
-    dialogueTime: 2
+    typeSpeed: 0.05
+    dialogueTime: 1.5
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
