@@ -17,6 +17,7 @@ public class MenuController : MonoBehaviour
     private void Start()
     {
         FadeController.Instance.TryFadeIn();
+        GameProgression.Instance.ResetProgress();
     }
 
     void Update()
@@ -29,7 +30,6 @@ public class MenuController : MonoBehaviour
         PlaySound(soundIn);
         GameManager.Instance.isIngame = true; 
         GameManager.Instance.SetPause(false);
-        GameProgression.Instance.ResetProgress();
         GameManager.Instance.levelLoader.LoadScene(GameManager.Instance.gameScene);
         
     }

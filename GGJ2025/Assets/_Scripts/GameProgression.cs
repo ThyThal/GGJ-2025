@@ -69,7 +69,8 @@ public class GameProgression : MonoBehaviour
 
     public void ResetProgress()
     {
-        unlockedCharacters = initialCharacters;
+        unlockedCharacters.Clear();
+        unlockedCharacters.AddRange(initialCharacters);
         BranchLoader.didIntro = false;
     }
 }
