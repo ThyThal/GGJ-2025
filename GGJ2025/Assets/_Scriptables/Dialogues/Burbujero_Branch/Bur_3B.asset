@@ -24,7 +24,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: "Tal vez fue a la oficina de la Srita. Arrozal\xEDa a confrontarla.
+    dialogueID: "Tal vez fue a la oficina de la Se\xF1orita Arrozal\xEDa a confrontarla.
       Oh dios... \xA1vaya ahora mismo por favor, mi esposa puede ser muy feroz!"
     isDecisionLine: 0
     emotion: 0

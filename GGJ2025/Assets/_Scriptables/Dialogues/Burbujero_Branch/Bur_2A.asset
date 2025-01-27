@@ -50,7 +50,7 @@ MonoBehaviour:
         branches: []
       - isPlayerLine: 0
         dialogueID: "Aunque los empleados se inventan historias sobre un romance
-          entre la Srita. Arrozal\xEDa y yo."
+          entre la Se\xF1orita Arrozal\xEDa y yo."
         isDecisionLine: 0
         emotion: 0
         typeSpeed: 0.045

@@ -61,7 +61,7 @@ MonoBehaviour:
     branches: []
   - isPlayerLine: 1
     dialogueID: "\xBFHay alguien en esta f\xE1brica que odie o quiera hacerle da\xF1o
-      a la Sra burbuja?"
+      a la se\xF1orita burbuja?"
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.05

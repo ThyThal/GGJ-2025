@@ -16,8 +16,8 @@ MonoBehaviour:
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "Mi esposa sabe que yo jam\xE1s le ser\xEDa infiel, pero tal vez
-      sea prudente consultar con la Srita. Arrozal\xEDa para saber si ella le dijo
-      algo."
+      sea prudente consultar con la Se\xF1orita Arrozal\xEDa para saber si ella le
+      dijo algo."
     isDecisionLine: 0
     emotion: 1
     typeSpeed: 0.04
