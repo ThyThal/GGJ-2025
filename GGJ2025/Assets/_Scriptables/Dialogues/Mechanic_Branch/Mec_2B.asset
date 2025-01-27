@@ -31,8 +31,8 @@ MonoBehaviour:
     isDecisionLine: 1
     emotion: 3
     typeSpeed: 0.05
-    dialogueTime: 0
-    decisionTime: 5
+    dialogueTime: 1
+    decisionTime: 10
     branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0

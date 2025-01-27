@@ -16,7 +16,7 @@ MonoBehaviour:
   - emotion: 3
     dialogueNode: {fileID: 11400000, guid: 3dbbb33ca1a3d5945a8509a55cfb37bd, type: 2}
   - emotion: 1
-    dialogueNode: {fileID: 0}
+    dialogueNode: {fileID: 11400000, guid: 3600f7d4aafc79f4c91f0df15e775bea, type: 2}
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "\u2026"
@@ -75,7 +75,7 @@ MonoBehaviour:
     emotion: 0
     typeSpeed: 0.045
     dialogueTime: 1.5
-    decisionTime: 0
+    decisionTime: 10
     branches: []
   initialPlayerEmotion: 0
   initialOtherEmotion: 0

@@ -40,7 +40,7 @@ MonoBehaviour:
     emotion: 0
     typeSpeed: 0.04
     dialogueTime: 1
-    decisionTime: 5
+    decisionTime: 10
     branches: []
   initialPlayerEmotion: 3
   initialOtherEmotion: 2

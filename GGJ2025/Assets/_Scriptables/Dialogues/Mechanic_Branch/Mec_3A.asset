@@ -20,7 +20,7 @@ MonoBehaviour:
     isDecisionLine: 0
     emotion: 2
     typeSpeed: 0.05
-    dialogueTime: 0
+    dialogueTime: 1
     decisionTime: 0
     branches: []
   initialPlayerEmotion: 0
