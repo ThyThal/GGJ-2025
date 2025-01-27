@@ -30,7 +30,7 @@ public class MenuController : MonoBehaviour
         GameManager.Instance.isIngame = true; 
         GameManager.Instance.SetPause(false);
         GameProgression.Instance.ResetProgress();
-        _levelLoader.LoadScene(GameManager.Instance.gameScene);
+        GameManager.Instance.levelLoader.LoadScene(GameManager.Instance.gameScene);
         
     }
     public void OnClickCredits() 
