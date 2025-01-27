@@ -43,7 +43,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "\xBFCu\xE1ndo fue la \xFAltima vez que vio a la Sra. Burbuja?"
+    dialogueID: "\xBFCu\xE1ndo fue la \xFAltima vez que vio a la Se\xF1ora Burbuja?"
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.05

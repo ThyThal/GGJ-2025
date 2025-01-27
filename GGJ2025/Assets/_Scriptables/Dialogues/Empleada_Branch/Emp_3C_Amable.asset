@@ -29,7 +29,7 @@ MonoBehaviour:
     branches: []
   - isPlayerLine: 0
     dialogueID: "Pero yo no tengo nada que ver, eh\u2026 No me interesa perjudicar
-      a la Sra. Burbuja."
+      a la Se\xF1ora Burbuja."
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.05
@@ -37,7 +37,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "\xBFY al Sr. Burbujero?"
+    dialogueID: "\xBFY al Se\xF1or Burbujero?"
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.06

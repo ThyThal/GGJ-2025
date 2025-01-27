@@ -32,8 +32,9 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: "\xBFPor qu\xE9 te parece?, m\xE1s barato. El Sr. Burbujero compr\xF3
-      toda la vida los jabones en el almac\xE9n de al lado y nunca tuvo un problema."
+    dialogueID: "\xBFPor qu\xE9 te parece?, m\xE1s barato. El Se\xF1or Burbujero
+      compr\xF3 toda la vida los jabones en el almac\xE9n de al lado y nunca tuvo
+      un problema."
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.05
@@ -42,7 +43,7 @@ MonoBehaviour:
     branches: []
   - isPlayerLine: 0
     dialogueID: "Los productos de mi abuela siempre fueron los mejores, pero bueno...
-      ella siempre me dijo que el Sr. Burbuja es un taca\xF1o."
+      ella siempre me dijo que el Se\xF1or Burbujero es un taca\xF1o."
     isDecisionLine: 0
     emotion: 6
     typeSpeed: 0.045
@@ -50,7 +51,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "\xBFTu abuela?, \xBFElla es la due\xF1a del almac\xE9n?"
+    dialogueID: "\xBFTu abuela? \xBFElla es la due\xF1a del almac\xE9n?"
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.05
