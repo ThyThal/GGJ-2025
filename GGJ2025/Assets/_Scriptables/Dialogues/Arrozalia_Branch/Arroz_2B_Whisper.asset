@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextDialogues:
   - emotion: 2
-    dialogueNode: {fileID: 0}
+    dialogueNode: {fileID: 11400000, guid: bc7484d119733b0449bac5a88603fac4, type: 2}
   - emotion: 5
-    dialogueNode: {fileID: 0}
+    dialogueNode: {fileID: 11400000, guid: d6137c2cc2eca0d4da384d6d2e780e6a, type: 2}
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "\xBFC\xF3mooo? Por favor nene, si yo me llevo bien con todo el mundo."
