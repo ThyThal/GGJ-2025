@@ -32,7 +32,7 @@ public class SpecialEvents : MonoBehaviour
             return;
         }
         
-        cutsceneController.Play(eventEntry.spriteDisplays);
+        cutsceneController.Play(eventEntry.spriteDisplays, eventType);
     }
 }
 
@@ -50,4 +50,5 @@ public class SpriteDisplay
 {
     [HideLabel] public Sprite sprite;
     [Range(0.1f, 10f)] public float displayTime = 2f;
+    [SerializeField] public AudioClip audioClip;
 }

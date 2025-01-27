@@ -25,7 +25,14 @@ public class BranchLoader : MonoBehaviour
         if (obj == GameEvents.Intro)
         {
             // FINISHED INTRO, load character selection
-            SceneManager.LoadScene(1);
+            CharacterBranch branchToStart = branches.FirstOrDefault();
+        
+            if(branchToStart != null) dialogueController.StartDialogues(branchToStart.initialNode);
+            else
+            {
+                Debug.LogError("Could not find character branch to load.");
+                return;
+            }
         }
     }
 
