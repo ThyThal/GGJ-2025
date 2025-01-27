@@ -5,7 +5,7 @@ Bienvenidos al repositorio oficial de **Burbu Jammers Studios**. Este es el hoga
 ---
 
 ## Sobre el Juego
-**"Burbujas Que Engañan"** es un emocionante juego de detectives donde tú, como un habilidoso investigador, debes determinar quién está ocultando a la misteriosa **Señora Burbuja** del burbujero. Sumérgete en un mundo lleno de intriga, descubre pistas e interactúa con diversos personajes peculiares para resolver el misterio. Con múltiples finales, cada decisión que tomes dará forma a tu aventura única.
+**"Burbujas Que Engañan"** es un intrigante juego de detectives en el que el jugador asume el rol de un hábil investigador llamado a resolver un misterioso drama. Todo comienza en la fábrica del Sr. Burbujero, donde un accidente desata un caótico mar de burbujas que culmina con la enigmática desaparición de su esposa, la Sra. Burbuja. En este emocionante juego, deberás explorar un mundo lleno de pistas, personajes peculiares y decisiones que alteran el rumbo de la historia. Con múltiples finales, cada elección que hagas te llevará más cerca de descubrir la verdad oculta tras las burbujas.
 
 ---
 
