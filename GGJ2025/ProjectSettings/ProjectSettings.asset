@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Burbu Jammers Studios
   productName: "Burbujas Que Enga\xF1an"
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: 92117859bd80684468071e7b84abcb22, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -109,7 +109,7 @@ PlayerSettings:
   xboxEnableFitness: 0
   visibleInBackground: 1
   allowFullscreenSwitch: 1
-  fullscreenMode: 3
+  fullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -164,7 +164,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Standalone: com.GGJ-2025-UADE-G9.GGJ-2025-UADE-G9
+    Standalone: com.Burbu-Jammers-Studios.Burbujas-Que-Enga--an
   buildNumber:
     Bratwurst: 0
     Standalone: 0
