@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     [SerializeField] private AudioClip lockSound;
     [SerializeField] private AudioClip unlockSound;
+    [SerializeField] private AudioClip clickSound;
+    [SerializeField] private AudioClip hoverSound;
 
     public void PlayClip(AudioClip clip)
     {
@@ -21,5 +23,15 @@ public class AudioManager : MonoBehaviour
     public void PlayLockCharacter()
     {
         PlayClip(lockSound);
+    }
+
+    public void PlayClickButton()
+    {
+        PlayClip(clickSound);
+    }
+
+    public void PlayHoverButton()
+    {
+        PlayClip(hoverSound);
     }
 }

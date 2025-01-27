@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ButtonEffects : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private Button _button;
     private void Awake()
@@ -15,6 +15,7 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (!_button.interactable) return;
+        GameManager.Instance.audioManager.PlayHoverButton();
         LeanTween.scale(gameObject, Vector3.one * 1.1f, .25f).setEaseInOutBack();
     }
 
@@ -22,5 +23,10 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if (!_button.interactable) return;
         LeanTween.scale(gameObject, Vector3.one, .25f).setEaseInOutBack();
+    }
+
+    public void OnClick()
+    {
+        GameManager.Instance.audioManager.PlayClickButton();
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CharacterButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class CharacterButtonUI : MonoBehaviour
 {
     [SerializeField] private CharacterSelection selection;
     [SerializeField] private CharacterDataSO characterData;
@@ -25,17 +25,7 @@ public class CharacterButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
         bool unlocked = GameProgression.Instance.IsCharacterUnlocked(characterData);
         if(!unlocked) DisableButton();
     }
-
-    public void OnHoverEnter()
-    {
-        LeanTween.scale(gameObject, Vector3.one * 1.1f, .25f).setEaseInOutBack();
-    }
     
-    public void OnHoverExit()
-    {
-        LeanTween.scale(gameObject, Vector3.one, .25f).setEaseInOutBack();
-    }
-
     void DisableButton()
     {
         _button.interactable = false;
@@ -46,17 +36,5 @@ public class CharacterButtonUI : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void OnClick()
     {
         selection.CharacterSelected(characterData);
-    }
-
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (!_button.interactable) return;
-        LeanTween.scale(gameObject, Vector3.one * 1.1f, .25f).setEaseInOutBack();
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if (!_button.interactable) return;
-        LeanTween.scale(gameObject, Vector3.one, .25f).setEaseInOutBack();
     }
 }

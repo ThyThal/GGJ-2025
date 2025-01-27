@@ -37,7 +37,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "\xBFY Al Sr. Burbujero?"
+    dialogueID: "\xBFY al Sr. Burbujero?"
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.06
