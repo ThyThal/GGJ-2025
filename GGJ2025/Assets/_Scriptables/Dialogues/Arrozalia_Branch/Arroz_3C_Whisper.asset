@@ -43,8 +43,9 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: "El Sr. Burbujero es muy tonto para darse cuenta, pero la Sra. Burbuja
-      no lo ama hace tiempo. Lo m\xE1s probable es que haya escapado, con o sin amante."
+    dialogueID: "El Burbujero es muy tonto para darse cuenta, pero la Se\xF1orita
+      Burbuja no lo ama hace tiempo. Lo m\xE1s probable es que haya escapado, con
+      o sin amante."
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.04
@@ -52,7 +53,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "\xBFCree que la Sra. Burbuja pudo haberse fugado con su amante?"
+    dialogueID: "\xBFCree que la Se\xF1orita Burbuja pudo haberse fugado con su amante?"
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.05

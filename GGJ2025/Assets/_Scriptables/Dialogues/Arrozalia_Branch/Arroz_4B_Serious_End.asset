@@ -16,7 +16,8 @@ MonoBehaviour:
   dialogueLines:
   - isPlayerLine: 0
     dialogueID: "Es lo m\xE1s probable. Y si me pregunta a m\xED, yo no intervendr\xEDa.
-      Si la Sra. Burbuja se quiere fugar con su amante, bien por ella, todos ganamos."
+      Si la Se\xF1orita Burbuja se quiere fugar con su amante, bien por ella, todos
+      ganamos."
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.05
@@ -24,7 +25,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: Todos menos el Sr. Burbujero.
+    dialogueID: "Todos menos el Se\xF1or Burbujero."
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.05
@@ -40,7 +41,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "El Sr. Burbujero me llam\xF3 para ayudarlo, y eso pienso hacer."
+    dialogueID: "El Se\xF1or Burbujero me llam\xF3 para ayudarlo, y eso pienso hacer."
     isDecisionLine: 0
     emotion: 3
     typeSpeed: 0.04

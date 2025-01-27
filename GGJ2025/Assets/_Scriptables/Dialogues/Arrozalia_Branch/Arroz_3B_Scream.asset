@@ -28,8 +28,8 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "Si realmente se preocupa por el Sr. Burbujero, usted querr\xEDa
-      que sea feliz, \xBFno? \xC9l est\xE1 realmente preocupado por su esposa."
+    dialogueID: "Si realmente se preocupa por el Burbujero, usted querr\xEDa que
+      sea feliz, \xBFno? \xC9l est\xE1 realmente preocupado por su esposa."
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.04
@@ -37,9 +37,9 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 0
-    dialogueID: "El Sr. Burbujero ama a alguien que no lo ama, eso a largo plazo
-      no es felicidad. Adem\xE1s, as\xED de calladita como la ves, la Sra. Burbuja
-      esconde muchas cosas\u2026"
+    dialogueID: "El Burbujero ama a alguien que no lo ama, eso a largo plazo no es
+      felicidad. Adem\xE1s, as\xED de calladita como la ves, la Sra. Burbuja esconde
+      muchas cosas\u2026"
     isDecisionLine: 0
     emotion: 0
     typeSpeed: 0.04
@@ -47,7 +47,7 @@ MonoBehaviour:
     decisionTime: 0
     branches: []
   - isPlayerLine: 1
-    dialogueID: "\xBFCree que la Sra. Burbuja pudo haberse fugado con su amante?"
+    dialogueID: "\xBFCree que la Se\xF1orita Burbuja pudo haberse fugado con su amante?"
     isDecisionLine: 1
     emotion: 0
     typeSpeed: 0.05
