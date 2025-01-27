@@ -311,7 +311,6 @@ public class SceneController : MonoBehaviour
         }
 
         targetBubble.gameObject.SetActive(true);
-        isWritingDialogue = true;
 
         // Clear the existing text in the bubble
         var bubbleComponents = targetBubble.GetCurrentBubbleComponents();
@@ -331,6 +330,7 @@ public class SceneController : MonoBehaviour
 
         var textComp = targetBubble.GetCurrentBubbleComponents().textComponent;
         textComp.text = string.Empty;
+        isWritingDialogue = true;
         for (int i = 0; i < line.Length; i++)
         {
             textComp.text += line[i];

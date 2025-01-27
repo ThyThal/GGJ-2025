@@ -37,11 +37,13 @@ public class GameUIManager : MonoBehaviour
         if (show)
         {
             nextButton.gameObject.transform.position = new Vector3(nextButton.gameObject.transform.position.x, buttonHidePositionY, nextButton.gameObject.transform.position.z);
+            nextButton.interactable = true;
             nextButton.gameObject.SetActive(true);
             LeanTween.moveY(nextButton.gameObject, initialHeight, 0.2f).setEaseOutBack();
         }
         else
         {
+            nextButton.interactable = false;
             LeanTween.moveY(nextButton.gameObject, buttonHidePositionY, 0.2f).setEaseInQuad().setOnComplete(() => nextButton.gameObject.SetActive(false));
         }
     }
@@ -51,11 +53,13 @@ public class GameUIManager : MonoBehaviour
         if (show)
         {
             backButton.gameObject.transform.position = new Vector3(backButton.gameObject.transform.position.x, buttonHidePositionY, backButton.gameObject.transform.position.z);
+            backButton.interactable = true;
             backButton.gameObject.SetActive(true);
             LeanTween.moveY(backButton.gameObject, initialHeight, 0.2f).setEaseOutBack();
         }
         else
         {
+            backButton.interactable = false;
             LeanTween.moveY(backButton.gameObject, buttonHidePositionY, 0.2f).setEaseInQuad().setOnComplete(() => backButton.gameObject.SetActive(false));
         }
     }
@@ -65,11 +69,13 @@ public class GameUIManager : MonoBehaviour
         if (show)
         {
             menuButton.gameObject.transform.position = new Vector3(backButton.gameObject.transform.position.x, buttonHidePositionY, backButton.gameObject.transform.position.z);
+            menuButton.interactable = true;
             menuButton.gameObject.SetActive(true);
             LeanTween.moveY(menuButton.gameObject, initialHeight, 0.2f).setEaseOutBack();
         }
         else
         {
+            menuButton.interactable = false;
             LeanTween.moveY(menuButton.gameObject, buttonHidePositionY, 0.2f).setEaseInQuad().setOnComplete(() => backButton.gameObject.SetActive(false));
         }
     }
