@@ -2235,6 +2235,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 962890049}
+    - target: {fileID: 559975439933749519, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 559975439933749519, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d1e01b32131ed814c83b2b03a556ee34, type: 3}
     - target: {fileID: 1565738085323891509, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2278,6 +2286,18 @@ PrefabInstance:
     - target: {fileID: 3705209229524086073, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452922125922623071, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452922125922623071, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ce21a810b5d313344af68e407a97913f, type: 3}
+    - target: {fileID: 6171781676627594864, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
