@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using _Scripts.Enums;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 

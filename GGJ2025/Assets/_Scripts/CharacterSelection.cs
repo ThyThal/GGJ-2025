@@ -1,13 +1,10 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class CharacterSelection : MonoBehaviour
 {
-    bool isSelected = false;
+    private bool isSelected = false;
 
     private void Start()
     {
@@ -23,13 +20,9 @@ public class CharacterSelection : MonoBehaviour
             StartCoroutine(LoadScene(2)); // TODO: Cambiar a otro index/string/lo que sea
             isSelected = true;
         }
-        else
-        {
-            
-        }
     }
 
-    public IEnumerator LoadScene(int sceneIndex)
+    private IEnumerator LoadScene(int sceneIndex)
     {
         yield return new WaitForSeconds(FadeController.Instance.FadeOut());
         SceneManager.LoadScene(sceneIndex);

@@ -1,16 +1,14 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Serialization;
 
 public class BubbleUI : MonoBehaviour
 {
     [SerializeField] private float showTime = .25f;
     [SerializeField] private float hideTime = .25f;
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private Emotion CurrentEmotion;
+    [SerializeField] private Emotion currentEmotion;
     [SerializeField] public List<EmotionPrefab> emotionPrefabs;  // List of EmotionPrefab
     
     private bool isShowing;
@@ -20,7 +18,7 @@ public class BubbleUI : MonoBehaviour
 
     public Emotion GetEmotion()
     {
-        return CurrentEmotion;
+        return currentEmotion;
     }
 
     [SerializeField] private GameObject currentPrefab;
@@ -28,7 +26,7 @@ public class BubbleUI : MonoBehaviour
 
     public void SetEmotion(Emotion emotion)
     {
-        CurrentEmotion = emotion;
+        currentEmotion = emotion;
     }
     
     public BubbleComponents GetCurrentBubbleComponents()
@@ -37,7 +35,7 @@ public class BubbleUI : MonoBehaviour
         if (currentPrefab == null)
         {
             // Find the prefab corresponding to the current emotion
-            var emotionPrefab = emotionPrefabs.Find(ep => ep.emotion == CurrentEmotion);
+            var emotionPrefab = emotionPrefabs.Find(ep => ep.emotion == currentEmotion);
 
             // Check if the prefab inside EmotionPrefab is not null
             if (emotionPrefab.prefab != null)
@@ -60,7 +58,7 @@ public class BubbleUI : MonoBehaviour
     public void Show(string forceText = null)
     {
         // Find the prefab corresponding to the current emotion
-        var emotionPrefab = emotionPrefabs.Find(ep => ep.emotion == CurrentEmotion);
+        var emotionPrefab = emotionPrefabs.Find(ep => ep.emotion == currentEmotion);
 
         // If a prefab exists for this emotion
         if (emotionPrefab.prefab != null)

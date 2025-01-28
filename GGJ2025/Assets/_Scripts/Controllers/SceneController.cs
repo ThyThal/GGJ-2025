@@ -1,46 +1,31 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using _Scripts.Enums;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
-using TMPro;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class SceneController : MonoBehaviour
 {
-    /*[SerializeField] private CharacterObject characterPrefab;
-    [SerializeField] private Vector3 playerPosition;
-    [SerializeField] private Vector3 otherCharacterPosition;*/
-    
     [SerializeField] private DialogueController dialogueController;
     [SerializeField] private BubblesUIManager bubblesUIManager;
     [SerializeField] private DecisionsUIManager decisionsUIManager;
     [SerializeField] private GameUIManager gameUIManager;
-    [SerializeField] SpecialEvents specialEvents;
+    [SerializeField] private SpecialEvents specialEvents;
     [SerializeField] private SpriteRenderer backgroundRenderer;
     [SerializeField] private Image barRenderer;
     [SerializeField] private Image timerFill;
     [SerializeField] private CharacterObject playerCharacter;
     [SerializeField] private CharacterObject otherCharacter;    
+    [SerializeField] private TimerUI timerUI;
+    [SerializeField] private AudioSource audioSource;
 
-    [SerializeField] TimerUI timerUI;
-    
-    [SerializeField] AudioSource audioSource;
-
-    SceneDataSO currentSceneData;
-
+    private SceneDataSO currentSceneData;
     private float decisionTimer;
-
     private bool isWritingDialogue = false;
-    bool skippedDialogue = false;
+    private bool skippedDialogue = false;
     private bool playerChose = false;
     private Emotion playerDecision;
+    
     private void OnEnable()
     {
         dialogueController.OnDialogueChanged += DialogueChangedHandler;
@@ -92,12 +77,12 @@ public class SceneController : MonoBehaviour
             {
                 GameProgression.Instance.TryLockCharacter(dialogue.characterToBlock);
                 // Avoid making both sounds at once
-                if(!dialogue.characterToUnlock) GameManager.Instance.audioManager.PlayLockCharacter();
+                if(!dialogue.characterToUnlock) GameManager.Instance.AudioManager.PlayLockCharacter();
             }
             if (dialogue.characterToUnlock)
             {
                 GameProgression.Instance.TryUnlockCharacter(dialogue.characterToUnlock);
-                GameManager.Instance.audioManager.PlayUnlockCharacter();
+                GameManager.Instance.AudioManager.PlayUnlockCharacter();
             }
 
             if (GameProgression.Instance.TotalUnlockedCharacters == 0)

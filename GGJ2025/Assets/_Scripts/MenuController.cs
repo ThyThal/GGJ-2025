@@ -1,16 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class MenuController : MonoBehaviour
 {
-    [SerializeField] private LevelLoader _levelLoader;
-    [SerializeField] private Animator _animator;
-
-    [SerializeField] private AudioSource PressSound = null;
-
+    [SerializeField] private LevelLoader levelLoader;
+    [SerializeField] private Animator animator;
+    [SerializeField] private AudioSource pressSound = null;
     [SerializeField] private AudioClip soundIn = null;
     [SerializeField] private AudioClip soundOut = null;
 
@@ -19,12 +15,7 @@ public class MenuController : MonoBehaviour
         FadeController.Instance.TryFadeIn();
         GameProgression.Instance.ResetProgress();
     }
-
-    void Update()
-    {
-        
-    }
-
+    
     public void OnClickPlay() 
     {
         PlaySound(soundIn);
@@ -37,13 +28,13 @@ public class MenuController : MonoBehaviour
     {
         PlaySound(soundIn);
 
-        _animator.SetTrigger("ShowCredits"); 
+        animator.SetTrigger("ShowCredits"); 
     }
     public void OnClickBack() 
     {
         PlaySound(soundOut);
         
-        _animator.SetTrigger("HideCredits"); 
+        animator.SetTrigger("HideCredits"); 
     }
     public void OnClickHelp() 
     {
@@ -60,8 +51,8 @@ public class MenuController : MonoBehaviour
 
     private void PlaySound(AudioClip soundToPlay)
     {
-        PressSound.clip = soundToPlay;
+        pressSound.clip = soundToPlay;
 
-        PressSound.Play(); 
+        pressSound.Play(); 
     }
 }

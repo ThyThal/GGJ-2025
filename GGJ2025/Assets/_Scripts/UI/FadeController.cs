@@ -1,15 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FadeController : MonoBehaviour
 {
-    [SerializeField] float fadeSpeed = 1f;
-    [SerializeField] CanvasGroup canvasGroup;
+    [SerializeField] private float fadeSpeed = 1f;
+    [SerializeField] private CanvasGroup canvasGroup;
     public static FadeController Instance {get; private set;}
 
-    public bool IsFaded => canvasGroup.alpha > 0;
+    private bool IsFaded => canvasGroup.alpha > 0;
     
     private void Awake()
     {

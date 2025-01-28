@@ -1,11 +1,8 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.TextCore.Text;
 
 [CreateAssetMenu(fileName = "New Character Data", menuName = "Scriptable Objects/Character Data")]
 public class CharacterDataSO : ScriptableObject
@@ -22,18 +19,18 @@ public class CharacterDataSO : ScriptableObject
     [SerializeField]
     private List<EmotionAudio> emotionAudioList;
 
-    private Dictionary<Emotion, List<AudioClip>> _emotionAudioClips;
+    private Dictionary<Emotion, List<AudioClip>> emotionAudioClips;
 
     [ShowInInspector]
     public Dictionary<Emotion, List<AudioClip>> EmotionAudioClips
     {
         get
         {
-            if (_emotionAudioClips == null)
+            if (emotionAudioClips == null)
             {
-                _emotionAudioClips = emotionAudioList.ToDictionary(e => e.emotion, e => e.audioClips);
+                emotionAudioClips = emotionAudioList.ToDictionary(e => e.emotion, e => e.audioClips);
             }
-            return _emotionAudioClips;
+            return emotionAudioClips;
         }
     }
 

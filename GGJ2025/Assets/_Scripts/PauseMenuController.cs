@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
@@ -19,10 +20,8 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] public GameObject helpMenu;
     [SerializeField] public GameObject background;
     [SerializeField] public CanvasGroup canvasGroup;
-    [SerializeField] private Animator _animator;
-
-   
-
+    [SerializeField] private Animator animator;
+    
     //Extras
     private bool pauseMenuActive;
 

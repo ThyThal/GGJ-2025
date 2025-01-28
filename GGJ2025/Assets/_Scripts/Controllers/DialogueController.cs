@@ -23,13 +23,6 @@ public class DialogueController : MonoBehaviour
 
     private List<DialogueLine> currentLines;
 
-    private void Awake()
-    {
-        //if (!testingScene) return;
-        //_currentDialogue = initialDialogue;
-        //currentLines = initialDialogue.dialogueLines.ToList();
-    }
-
     void Start()
     {
         // TODO: Para iniciar facil, cambiar
