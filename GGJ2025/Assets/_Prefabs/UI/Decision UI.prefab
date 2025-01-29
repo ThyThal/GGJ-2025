@@ -209,7 +209,7 @@ MonoBehaviour:
   decisionButtons:
   - {fileID: 2565111352311165471}
   - {fileID: 428017757124625836}
-  spriteSprites: {fileID: 11400000, guid: 80b78b216e10c3445ba066efd64522dc, type: 2}
+  decisionSpritesSound: {fileID: 11400000, guid: 7549b38311da6d04487bad7a2bbf951e, type: 2}
 --- !u!1 &2511226677647781941
 GameObject:
   m_ObjectHideFlags: 0

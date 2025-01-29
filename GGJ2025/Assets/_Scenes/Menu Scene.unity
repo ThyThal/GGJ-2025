@@ -492,6 +492,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470375730}
   m_CullTransparentMesh: 0
+--- !u!114 &490226973 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3193451690089950755, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+  m_PrefabInstance: {fileID: 1880764452186428392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdfee9fe6e6434749b6f6af2ef153a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &490829954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,6 +1746,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1809775463 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 575452867955874607, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+  m_PrefabInstance: {fileID: 1880764452186428392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c02480f8cea644bb66cf166e21c310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1938618205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,9 +1960,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 465d7fea4f42c684cb3b88849e8635e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelLoader: {fileID: 0}
-  _animator: {fileID: 2001464848}
-  PressSound: {fileID: 1629136771}
+  levelLoader: {fileID: 0}
+  animator: {fileID: 0}
+  pressSound: {fileID: 0}
   soundIn: {fileID: 8300000, guid: ff2c8c5475a806048b7e412b05f50ffe, type: 3}
   soundOut: {fileID: 8300000, guid: 42b74cbd86e11084090093e382a22767, type: 3}
 --- !u!114 &2001464844
@@ -2283,6 +2305,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2102440935808436974, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 1809775463}
+    - target: {fileID: 2102440935808436974, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 490226973}
     - target: {fileID: 3705209229524086073, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
       propertyPath: m_Name
       value: GameManager
