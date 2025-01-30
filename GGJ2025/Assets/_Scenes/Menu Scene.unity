@@ -503,6 +503,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfee9fe6e6434749b6f6af2ef153a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &490226975 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1880764452186428394, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+  m_PrefabInstance: {fileID: 1880764452186428392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &490829954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1262,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1228142019}
   m_CullTransparentMesh: 0
+--- !u!95 &1237259426 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 858012821942962911, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+  m_PrefabInstance: {fileID: 1880764452186428392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1267228092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,7 +1972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 0}
   animator: {fileID: 0}
-  pressSound: {fileID: 0}
+  pressSound: {fileID: 490226975}
   soundIn: {fileID: 8300000, guid: ff2c8c5475a806048b7e412b05f50ffe, type: 3}
   soundOut: {fileID: 8300000, guid: 42b74cbd86e11084090093e382a22767, type: 3}
 --- !u!114 &2001464844
@@ -2313,6 +2323,10 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 490226973}
+    - target: {fileID: 2897087871354548376, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1237259426}
     - target: {fileID: 3705209229524086073, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
       propertyPath: m_Name
       value: GameManager
