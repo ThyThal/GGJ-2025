@@ -18,7 +18,7 @@ MonoBehaviour:
   - emotion: 6
     dialogueNode: {fileID: 11400000, guid: e207eb6601c11104e9db24ba40dc50dd, type: 2}
   dialogueLines:
-  - isPlayerLine: 1
+  - isPlayerLine: 0
     dialogueID: "\xBFQu\xE9? No, le estoy diciendo que nosotras saboteamos la mezcladora."
     isDecisionLine: 0
     emotion: 0
