@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using _Scripts.Enums;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +18,6 @@ public class CutsceneController : MonoBehaviour
 
     IEnumerator DisplaySprites(List<SpriteDisplay> cutsceneSprites, GameEvents eventType)
     {
-        Debug.Log("PLAY CUTSCENE");
         for (int i = 0; i < cutsceneSprites.Count; i++)
         {
             cutsceneImages[i].sprite = cutsceneSprites[i].sprite;

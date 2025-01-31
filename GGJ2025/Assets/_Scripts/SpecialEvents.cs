@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using _Scripts.Enums;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -8,7 +7,7 @@ public class SpecialEvents : MonoBehaviour
 {
     [SerializeField] private CutsceneController cutsceneController;
     [TableList] public List<GameEventEntry> specialEvents = new();
-    GameEvents currentGameEvent;
+    private GameEvents currentGameEvent;
 
     public event Action<GameEvents> OnEventEnded;
 

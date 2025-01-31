@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class GameProgression : MonoBehaviour
 {
-    [SerializeField] List <CharacterDataSO> unlockedCharacters = new List<CharacterDataSO>();
-    [SerializeField] List <CharacterDataSO> initialCharacters = new List<CharacterDataSO>();
+    [SerializeField] private List <CharacterDataSO> unlockedCharacters = new();
+    [SerializeField] private List <CharacterDataSO> initialCharacters = new();
     
     public CharacterDataSO SelectedCharacter {get; private set;}
     public int TotalUnlockedCharacters => unlockedCharacters.Count;

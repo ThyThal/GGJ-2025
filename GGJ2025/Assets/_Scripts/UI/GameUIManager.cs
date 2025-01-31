@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using _Scripts.Enums;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +6,7 @@ public class GameUIManager : MonoBehaviour
     [SerializeField] private Button nextButton;
     [SerializeField] private Button backButton;
     [SerializeField] private Button menuButton;
-    [SerializeField] SpecialEvents events;
+    [SerializeField] private SpecialEvents events;
     [SerializeField] private float buttonHidePositionY = -6;
 
     private float initialHeight;

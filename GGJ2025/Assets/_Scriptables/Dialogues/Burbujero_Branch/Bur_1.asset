@@ -81,7 +81,7 @@ MonoBehaviour:
         branches: []
       - isPlayerLine: 0
         dialogueID: "Aunque ultimamente se junta mucho con el Conserje y eso me pone
-          muy nervioso, \xBFle viste el tama\xF1o de sus espinas?"
+          muy nervioso, \xBFle vio el tama\xF1o de sus espinas?"
         isDecisionLine: 0
         emotion: 5
         typeSpeed: 0.04

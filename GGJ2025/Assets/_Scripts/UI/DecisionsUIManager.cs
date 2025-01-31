@@ -1,13 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class DecisionsUIManager : MonoBehaviour
 {
     [SerializeField] private DecisionUI[] decisionButtons;
-    [FormerlySerializedAs("decisionSprites")] [SerializeField] private EmotionSpriteSoundDataSO decisionSpritesSound;
+    [SerializeField] private EmotionSpriteSoundDataSO decisionSpritesSound;
 
     private void Awake()
     {
@@ -44,7 +42,7 @@ public class DecisionsUIManager : MonoBehaviour
 
     public void PlayerDecided(Emotion emotion)
     {
-        GameManager.Instance.audioManager.PlayClip(decisionSpritesSound.GetSoundFromEmotion(emotion));
+        GameManager.Instance.AudioManager.PlayClip(decisionSpritesSound.GetSoundFromEmotion(emotion));
         OnPlayerClickedDecision?.Invoke(emotion);
     }
 }

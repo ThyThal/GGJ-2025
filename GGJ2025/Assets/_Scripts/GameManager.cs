@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,16 +9,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] public string gameScene = "Main Game";
     [SerializeField] public LevelLoader levelLoader;
     [SerializeField] public PauseMenuController pauseMenu;
-    [SerializeField] private AudioManager _audioManager;
-    public AudioManager audioManager => _audioManager;
+    [SerializeField] private AudioManager audioManager;
+    public AudioManager AudioManager => audioManager;
 
     private AudioSource audioSrc;
 
     public static GameManager Instance;
 
-    public bool hasWon = false;
-    public bool isIngame = false;
-    private bool isPaused = false;
+    [SerializeField] public bool hasWon = false;
+    [SerializeField] public bool isIngame = false;
+    [SerializeField] private bool isPaused = false;
 
     private void Awake()
     {
@@ -53,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isPaused)
         {
-            ShowPause();
+            ShowPauseMenu();
             isPaused = true;
             Input.ResetInputAxes();
             Time.timeScale = 0;
@@ -61,9 +60,10 @@ public class GameManager : MonoBehaviour
 
         else
         {
+            if (pauseMenu.helpSubmenu) return;
             Time.timeScale = 1;
             isPaused = false;
-            HidePause();
+            HidePauseMenu();
         }
 
     }
@@ -72,20 +72,14 @@ public class GameManager : MonoBehaviour
         return isPaused;
     }
 
-    private void ShowPause()
+    private void ShowPauseMenu()
     {
-        //pauseMenu.canvasGroup.alpha = 1;
-        pauseMenu.background.SetActive(true);
-        pauseMenu.pauseButtons.SetActive(true);
-        pauseMenu.canvasGroup.interactable = true;
+        pauseMenu.ShowPauseMenu();
     }
 
-    public void HidePause()
+    public void HidePauseMenu()
     {
-        //pauseMenu.canvasGroup.alpha = 0;
-        pauseMenu.background.SetActive(false);
-        pauseMenu.pauseButtons.SetActive(false);
-        pauseMenu.canvasGroup.interactable = false;
+        pauseMenu.HidePauseMenu();
     }
 
     public void SetPause(bool value)

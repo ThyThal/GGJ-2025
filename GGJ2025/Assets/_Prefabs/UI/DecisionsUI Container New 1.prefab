@@ -283,7 +283,7 @@ MonoBehaviour:
   - {fileID: 3457853301067075067}
   - {fileID: 1877071952054422462}
   - {fileID: 4894738016566016546}
-  decisionSprites: {fileID: 11400000, guid: 7549b38311da6d04487bad7a2bbf951e, type: 2}
+  decisionSpritesSound: {fileID: 11400000, guid: 7549b38311da6d04487bad7a2bbf951e, type: 2}
 --- !u!114 &8119759157691915572
 MonoBehaviour:
   m_ObjectHideFlags: 0

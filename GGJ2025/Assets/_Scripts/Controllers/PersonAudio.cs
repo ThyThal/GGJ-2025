@@ -7,7 +7,6 @@ public class PersonAudio : MonoBehaviour
 {
     [SerializeField] private CharacterDataSO characterData;
     [SerializeField] private List<AudioComponents> emotionAudio = new();
-    
     [SerializeField] private AudioClip lastPlayedClip;
 
     private void Start()

@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,7 +19,7 @@ public class LevelLoader : MonoBehaviour
         // Play Animation
         //_animator.SetTrigger("Start");
         yield return new WaitForSeconds(FadeController.Instance.FadeOut());
-        GameManager.Instance.HidePause();
+        GameManager.Instance.HidePauseMenu();
         SceneManager.LoadScene(sceneName);
     }
 }

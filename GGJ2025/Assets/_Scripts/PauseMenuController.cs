@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
@@ -14,17 +13,17 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private Button buttonQuit;
     [SerializeField] private Button buttonGoBack;
 
-    [Header("Menu")]
+    [Header("Menu")] 
+    [SerializeField] private GameObject pauseButton;
     [SerializeField] public GameObject pauseButtons;
     [SerializeField] public GameObject helpMenu;
     [SerializeField] public GameObject background;
     [SerializeField] public CanvasGroup canvasGroup;
-    [SerializeField] private Animator _animator;
-
-   
-
+    [SerializeField] private Animator animator;
+    
     //Extras
-    private bool pauseMenuActive;
+    [SerializeField] public bool pauseMenuActive;
+    [SerializeField] public bool helpSubmenu;
 
     private void Awake()
     {
@@ -40,6 +39,8 @@ public class PauseMenuController : MonoBehaviour
         {
             GameManager.Instance.pauseMenu = this;
         }
+        
+        SceneManager.sceneLoaded += OnSceneLoaded;
         buttonResume.onClick.AddListener(OnClickResume);
         buttonHelp.onClick.AddListener(OnClickHelp);
         buttonQuit.onClick.AddListener(OnClickQuit);
@@ -49,6 +50,7 @@ public class PauseMenuController : MonoBehaviour
         pauseMenuActive = true;
         helpMenu.SetActive(false);
         background.SetActive(false);
+        TryEnabledPauseButton(SceneManager.GetActiveScene());
     }
 
     void Update()
@@ -66,6 +68,52 @@ public class PauseMenuController : MonoBehaviour
             Input.ResetInputAxes();
         }
     }
+    
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //Debug.Log("Enable Pause for Loaded Scene: " + scene.name);
+        TryEnabledPauseButton(scene);
+    }
+
+    private void TryEnabledPauseButton(Scene scene)
+    {
+        if (pauseButton == null) return;
+        if (helpSubmenu) return;
+        
+        //Debug.Log("Enable Pause for Loading Scene: " + scene);
+        if (scene.name != "Menu Scene")
+        {
+            //Debug.Log("Enabled: " + scene);
+            pauseButton?.SetActive(true);
+            canvasGroup.interactable = true;
+        }
+
+        else
+        {
+            //Debug.Log("Disabled: " + scene);
+            canvasGroup.interactable = false;
+            HidePauseButton();
+        }
+    }
+    
+    public void ShowPauseMenu()
+    {
+        background.SetActive(true);
+        pauseButtons.SetActive(true);
+        pauseButton.SetActive(false);
+    }
+    
+    public void HidePauseMenu()
+    {
+        background.SetActive(false);
+        pauseButtons.SetActive(false);
+        pauseButton.SetActive(true);
+    }
+    
+    public void HidePauseButton()
+    {
+        pauseButton.SetActive(false);
+    }
 
     public void OnClickResume() 
     {
@@ -77,6 +125,7 @@ public class PauseMenuController : MonoBehaviour
         if (pauseMenuActive)
         {
             pauseMenuActive = false;
+            helpSubmenu = true;
             pauseButtons.SetActive(false);
             helpMenu.SetActive(true);
         }
@@ -85,6 +134,7 @@ public class PauseMenuController : MonoBehaviour
     public void OnClickMenu()
     {
         Time.timeScale = 1;
+        GetComponent<CanvasGroup>().interactable = false;
         GameManager.Instance.levelLoader.LoadScene("Menu Scene");
     }
 
@@ -93,6 +143,7 @@ public class PauseMenuController : MonoBehaviour
         if (!pauseMenuActive)
         {
             pauseMenuActive = true;
+            helpSubmenu = false;
             pauseButtons.SetActive(true);
             helpMenu.SetActive(false);
         }
@@ -100,6 +151,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void OnClickQuit()
     {
+        GetComponent<CanvasGroup>().interactable = false;
         #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
         #endif

@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class CharacterObject : MonoBehaviour
 {
@@ -46,7 +42,7 @@ public class CharacterObject : MonoBehaviour
     public void EnterScene()
     {
         //transform.parent.position = leavePosition.position;
-        Debug.Log(data.characterName + " entered scene");
+        //Debug.Log(data.characterName + " entered scene");
         transform.parent.gameObject.SetActive(true);
         LeanTween.move(transform.parent.gameObject, dialoguePosition.position, 1.5f).setEaseOutElastic();
     }

@@ -12,6 +12,11 @@ PluginImporter:
   validateReferences: 1
   platformData:
   - first:
+      Android: Android
+    second:
+      enabled: 1
+      settings: {}
+  - first:
       Any: 
     second:
       enabled: 0
@@ -24,6 +29,11 @@ PluginImporter:
         DefaultValueInitialized: true
   - first:
       Standalone: Win64
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      WebGL: WebGL
     second:
       enabled: 1
       settings: {}
