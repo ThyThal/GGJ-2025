@@ -45,8 +45,7 @@ Somos un grupo de 7 desarrolladores, artistas y narradores apasionados que colab
 
 ## Créditos
 - **Motor de Juego**: Unity
-- **Herramientas de Arte**: []
-- **Herramientas de Audio**: []
+- **Herramientas de Arte**: Procreate
 
 ---
 
