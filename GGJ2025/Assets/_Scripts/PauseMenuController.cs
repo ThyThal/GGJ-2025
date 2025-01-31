@@ -12,7 +12,8 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private Button buttonQuit;
     [SerializeField] private Button buttonGoBack;
 
-    [Header("Menu")]
+    [Header("Menu")] 
+    [SerializeField] private GameObject pauseButton;
     [SerializeField] public GameObject pauseButtons;
     [SerializeField] public GameObject helpMenu;
     [SerializeField] public GameObject background;
@@ -36,6 +37,8 @@ public class PauseMenuController : MonoBehaviour
         {
             GameManager.Instance.pauseMenu = this;
         }
+        
+        SceneManager.sceneLoaded += OnSceneLoaded;
         buttonResume.onClick.AddListener(OnClickResume);
         buttonHelp.onClick.AddListener(OnClickHelp);
         buttonQuit.onClick.AddListener(OnClickQuit);
@@ -45,6 +48,7 @@ public class PauseMenuController : MonoBehaviour
         pauseMenuActive = true;
         helpMenu.SetActive(false);
         background.SetActive(false);
+        TryEnabledPauseButton(SceneManager.GetActiveScene());
     }
 
     void Update()
@@ -61,6 +65,49 @@ public class PauseMenuController : MonoBehaviour
 
             Input.ResetInputAxes();
         }
+    }
+    
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Enable Pause for Loaded Scene: " + scene.name);
+        TryEnabledPauseButton(scene);
+    }
+
+    public void TryEnabledPauseButton(Scene scene)
+    {
+        Debug.Log("Enable Pause for Loading Scene: " + scene);
+        if (scene.name != "Menu Scene")
+        {
+            Debug.Log("Enabled: " + scene);
+            pauseButton.SetActive(true);
+            canvasGroup.interactable = true;
+        }
+
+        else
+        {
+            Debug.Log("Disabled: " + scene);
+            canvasGroup.interactable = false;
+            HidePauseButton();
+        }
+    }
+    
+    public void ShowPauseMenu()
+    {
+        background.SetActive(true);
+        pauseButtons.SetActive(true);
+        pauseButton.SetActive(false);
+    }
+    
+    public void HidePauseMenu()
+    {
+        background.SetActive(false);
+        pauseButtons.SetActive(false);
+        pauseButton.SetActive(true);
+    }
+    
+    public void HidePauseButton()
+    {
+        pauseButton.SetActive(false);
     }
 
     public void OnClickResume() 

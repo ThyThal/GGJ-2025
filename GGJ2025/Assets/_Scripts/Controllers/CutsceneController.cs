@@ -18,7 +18,6 @@ public class CutsceneController : MonoBehaviour
 
     IEnumerator DisplaySprites(List<SpriteDisplay> cutsceneSprites, GameEvents eventType)
     {
-        Debug.Log("PLAY CUTSCENE");
         for (int i = 0; i < cutsceneSprites.Count; i++)
         {
             cutsceneImages[i].sprite = cutsceneSprites[i].sprite;

@@ -42,7 +42,7 @@ public class CharacterObject : MonoBehaviour
     public void EnterScene()
     {
         //transform.parent.position = leavePosition.position;
-        Debug.Log(data.characterName + " entered scene");
+        //Debug.Log(data.characterName + " entered scene");
         transform.parent.gameObject.SetActive(true);
         LeanTween.move(transform.parent.gameObject, dialoguePosition.position, 1.5f).setEaseOutElastic();
     }

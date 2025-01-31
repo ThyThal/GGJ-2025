@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isPaused)
         {
-            ShowPause();
+            ShowPauseMenu();
             isPaused = true;
             Input.ResetInputAxes();
             Time.timeScale = 0;
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1;
             isPaused = false;
-            HidePause();
+            HidePauseMenu();
         }
 
     }
@@ -71,20 +71,14 @@ public class GameManager : MonoBehaviour
         return isPaused;
     }
 
-    private void ShowPause()
+    private void ShowPauseMenu()
     {
-        //pauseMenu.canvasGroup.alpha = 1;
-        pauseMenu.background.SetActive(true);
-        pauseMenu.pauseButtons.SetActive(true);
-        pauseMenu.canvasGroup.interactable = true;
+        pauseMenu.ShowPauseMenu();
     }
 
-    public void HidePause()
+    public void HidePauseMenu()
     {
-        //pauseMenu.canvasGroup.alpha = 0;
-        pauseMenu.background.SetActive(false);
-        pauseMenu.pauseButtons.SetActive(false);
-        pauseMenu.canvasGroup.interactable = false;
+        pauseMenu.HidePauseMenu();
     }
 
     public void SetPause(bool value)

@@ -283,7 +283,7 @@ public class SceneController : MonoBehaviour
     private IEnumerator WriteDialogueLineRoutine(DialogueLine newLine, bool isDecisionLine = false)
     {
         // Debug: Log the beginning of the method and the parameters
-        Debug.Log($"WriteDialogueLineRoutine started. Player Line: {newLine.isPlayerLine}, Decision Line: {isDecisionLine}");
+        //Debug.Log($"WriteDialogueLineRoutine started. Player Line: {newLine.isPlayerLine}, Decision Line: {isDecisionLine}");
 
         var targetBubble = bubblesUIManager.GetTargetBubble(newLine.isPlayerLine);
         
@@ -292,11 +292,7 @@ public class SceneController : MonoBehaviour
         {
             Debug.LogError("Target bubble is null.");
         }
-        else
-        {
-            Debug.Log($"Target bubble for {newLine.isPlayerLine} is: {targetBubble.gameObject.name}");
-        }
-
+        
         targetBubble.gameObject.SetActive(true);
 
         // Clear the existing text in the bubble
@@ -339,7 +335,7 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(newLine.dialogueTime);
         
         // Debug: Log end of dialogue line writing
-        Debug.Log("Dialogue line writing complete.");
+        //Debug.Log("Dialogue line writing complete.");
 
         // Move to the next line
         dialogueController.NextLine();
