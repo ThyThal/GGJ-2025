@@ -16,9 +16,9 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-    public bool hasWon = false;
-    public bool isIngame = false;
-    private bool isPaused = false;
+    [SerializeField] public bool hasWon = false;
+    [SerializeField] public bool isIngame = false;
+    [SerializeField] private bool isPaused = false;
 
     private void Awake()
     {
@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
 
         else
         {
+            if (pauseMenu.helpSubmenu) return;
             Time.timeScale = 1;
             isPaused = false;
             HidePauseMenu();

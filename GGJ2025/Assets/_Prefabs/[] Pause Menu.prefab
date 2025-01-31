@@ -1503,7 +1503,7 @@ MonoBehaviour:
   buttonHelp: {fileID: 5723264230834786409}
   buttonQuit: {fileID: 3120157164264789179}
   buttonGoBack: {fileID: 6598514144453501410}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 5403813391599159724}
   pauseButtons: {fileID: 3472282373907557563}
   helpMenu: {fileID: 6670239226180770067}
   background: {fileID: 4540820933503839907}

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class PauseMenuController : MonoBehaviour
@@ -21,7 +22,8 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private Animator animator;
     
     //Extras
-    private bool pauseMenuActive;
+    [SerializeField] public bool pauseMenuActive;
+    [SerializeField] public bool helpSubmenu;
 
     private void Awake()
     {
@@ -69,23 +71,26 @@ public class PauseMenuController : MonoBehaviour
     
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Enable Pause for Loaded Scene: " + scene.name);
+        //Debug.Log("Enable Pause for Loaded Scene: " + scene.name);
         TryEnabledPauseButton(scene);
     }
 
-    public void TryEnabledPauseButton(Scene scene)
+    private void TryEnabledPauseButton(Scene scene)
     {
-        Debug.Log("Enable Pause for Loading Scene: " + scene);
+        if (pauseButton == null) return;
+        if (helpSubmenu) return;
+        
+        //Debug.Log("Enable Pause for Loading Scene: " + scene);
         if (scene.name != "Menu Scene")
         {
-            Debug.Log("Enabled: " + scene);
-            pauseButton.SetActive(true);
+            //Debug.Log("Enabled: " + scene);
+            pauseButton?.SetActive(true);
             canvasGroup.interactable = true;
         }
 
         else
         {
-            Debug.Log("Disabled: " + scene);
+            //Debug.Log("Disabled: " + scene);
             canvasGroup.interactable = false;
             HidePauseButton();
         }
@@ -120,6 +125,7 @@ public class PauseMenuController : MonoBehaviour
         if (pauseMenuActive)
         {
             pauseMenuActive = false;
+            helpSubmenu = true;
             pauseButtons.SetActive(false);
             helpMenu.SetActive(true);
         }
@@ -136,6 +142,7 @@ public class PauseMenuController : MonoBehaviour
         if (!pauseMenuActive)
         {
             pauseMenuActive = true;
+            helpSubmenu = false;
             pauseButtons.SetActive(true);
             helpMenu.SetActive(false);
         }

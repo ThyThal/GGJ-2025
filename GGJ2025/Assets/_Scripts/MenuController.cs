@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,6 +10,11 @@ public class MenuController : MonoBehaviour
     [SerializeField] private AudioSource pressSound = null;
     [SerializeField] private AudioClip soundIn = null;
     [SerializeField] private AudioClip soundOut = null;
+
+    private void Awake()
+    {
+        pressSound = GameManager.Instance.GetComponent<AudioSource>();
+    }
 
     private void Start()
     {

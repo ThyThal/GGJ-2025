@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 858012821942962911}
+    - target: {fileID: 5209195653555503924, guid: f591428ec0853924da90116859deea2c, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 3062573567784073728}
     - target: {fileID: 5380147264230235946, guid: f591428ec0853924da90116859deea2c, type: 3}
       propertyPath: m_Name
       value: '[] Pause Menu'
@@ -391,6 +395,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ed42a8e3a607246ad0f94eb8b93ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3062573567784073728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5403813391599159724, guid: f591428ec0853924da90116859deea2c, type: 3}
+  m_PrefabInstance: {fileID: 6953067206796211116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5555646884128788517 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3271828496745358217, guid: f591428ec0853924da90116859deea2c, type: 3}
