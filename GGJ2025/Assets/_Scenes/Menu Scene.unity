@@ -1048,6 +1048,11 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &975139419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3062573567784073728, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+  m_PrefabInstance: {fileID: 1880764452186428392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1157841098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2241,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 731041063992360784, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1565738085323891509, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2276,25 +2285,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3062573567784073728, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 2897087871354548376, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 975139419}
     - target: {fileID: 3705209229524086073, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4390784191636236991, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5786641346020073239, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6879949221473426703, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 4017543467294441397, guid: 1583aa4a1537a5b4e8cdb58d21fd4528, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
