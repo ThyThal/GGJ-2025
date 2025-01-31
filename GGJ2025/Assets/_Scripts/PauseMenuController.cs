@@ -134,6 +134,7 @@ public class PauseMenuController : MonoBehaviour
     public void OnClickMenu()
     {
         Time.timeScale = 1;
+        GetComponent<CanvasGroup>().interactable = false;
         GameManager.Instance.levelLoader.LoadScene("Menu Scene");
     }
 
@@ -150,6 +151,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void OnClickQuit()
     {
+        GetComponent<CanvasGroup>().interactable = false;
         #if UNITY_EDITOR
         EditorApplication.ExitPlaymode();
         #endif

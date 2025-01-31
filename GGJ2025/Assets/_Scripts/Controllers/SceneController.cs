@@ -11,7 +11,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private DecisionsUIManager decisionsUIManager;
     [SerializeField] private GameUIManager gameUIManager;
     [SerializeField] private SpecialEvents specialEvents;
-    [SerializeField] private SpriteRenderer backgroundRenderer;
+    [SerializeField] private Image backgroundRenderer;
     [SerializeField] private Image barRenderer;
     [SerializeField] private Image timerFill;
     [SerializeField] private CharacterObject playerCharacter;
